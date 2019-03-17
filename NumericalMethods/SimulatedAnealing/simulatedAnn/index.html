@@ -1,0 +1,1597 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
+    
+    
+      
+        <title>Simulated Annealing - Computational Physics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#simulated-annealing" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Computational Physics" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Computational Physics
+            </span>
+            <span class="md-header-nav__topic">
+              Simulated Annealing
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Computational Physics" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Computational Physics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../WhyComputationalPhysics/" title="Why Computational Physics" class="md-nav__link">
+      Why Computational Physics
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Getting started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Getting started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GettingStarted/anaconda/" title="Guide to starting Python" class="md-nav__link">
+      Guide to starting Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GettingStarted/lib/" title="Guide to Python Libraries" class="md-nav__link">
+      Guide to Python Libraries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GettingStarted/env/" title="Setting up Python Environment" class="md-nav__link">
+      Setting up Python Environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GettingStarted/jupyter/" title="Installing Jupyter Notebook" class="md-nav__link">
+      Installing Jupyter Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GettingStarted/cloud.md" title="Lunching an EC2 instance in AWS Cloud" class="md-nav__link">
+      Lunching an EC2 instance in AWS Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GettingStarted/git/" title="How to Git" class="md-nav__link">
+      How to Git
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Python/ds/" title="Data Structure" class="md-nav__link">
+      Data Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Python/lnc/" title="Loops and Conditions" class="md-nav__link">
+      Loops and Conditions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Python/fnc/" title="Function and Class" class="md-nav__link">
+      Function and Class
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Numerical Methods
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Numerical Methods
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Simulated Annealing
+      </label>
+    
+    <a href="./" title="Simulated Annealing" class="md-nav__link md-nav__link--active">
+      Simulated Annealing
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-simulated-annealing" title="Introduction to Simulated Annealing" class="md-nav__link">
+    Introduction to Simulated Annealing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-i-problem-set-up" title="Part -I : Problem set up" class="md-nav__link">
+    Part -I : Problem set up
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-objective-function" title="Define Objective function" class="md-nav__link">
+    Define Objective function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-plot-of-surface-potential" title="3D plot of surface potential" class="md-nav__link">
+    3D plot of surface potential
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#density-plot-of-surface-potential" title="Density Plot of surface potential" class="md-nav__link">
+    Density Plot of surface potential
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-ii-simulation" title="Part - II : Simulation" class="md-nav__link">
+    Part - II : Simulation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task" title="Task" class="md-nav__link">
+    Task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Diffusion/diffusion.md" title="Diffusion" class="md-nav__link">
+      Diffusion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Ncharges/Ncharges/" title="Ncharges" class="md-nav__link">
+      Ncharges
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Fractals and Chaos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Fractals and Chaos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../FractalChaos/Fern/fern/" title="Fern" class="md-nav__link">
+      Fern
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Monte Carlo Simulation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Monte Carlo Simulation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/GettingStarted/intro/" title="Getting Started Monte Carlo Simulation" class="md-nav__link">
+      Getting Started Monte Carlo Simulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/GettingStarted/intro/" title="Algorithms in Monte Carlo Simulation" class="md-nav__link">
+      Algorithms in Monte Carlo Simulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/RandomWalk/Rwalk/" title="Random Walk" class="md-nav__link">
+      Random Walk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/Lotto/lotto/" title="Lottary Model" class="md-nav__link">
+      Lottary Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/IdealGas/IdealGas/" title="Ideal Gas" class="md-nav__link">
+      Ideal Gas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/Oscillator/Oscillator/" title="Harmonic Oscillator" class="md-nav__link">
+      Harmonic Oscillator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/IzingModel/Izing2D/" title="Ising Model" class="md-nav__link">
+      Ising Model
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/Percolation/percol/" title="Percolation" class="md-nav__link">
+      Percolation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/HardDisk/hd/" title="Hard Disk" class="md-nav__link">
+      Hard Disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/Levy/levy/" title="Quantum Monte Carlo" class="md-nav__link">
+      Quantum Monte Carlo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montecarlo/BEC/bec/" title="Bose-Einstein Condensation" class="md-nav__link">
+      Bose-Einstein Condensation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Path Integral
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Path Integral
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../PathIntegral/Intro/Intro/" title="Getting Started with Path Integral" class="md-nav__link">
+      Getting Started with Path Integral
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Signal Processing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Signal Processing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Getting Started with Signal Processing" class="md-nav__link">
+      Getting Started with Signal Processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Fourier Transform" class="md-nav__link">
+      Fourier Transform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Fast Fourier Transform" class="md-nav__link">
+      Fast Fourier Transform
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Partial Differential Equations
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Partial Differential Equations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../PDE/Laplace/laplace/" title="Laplace Equation" class="md-nav__link">
+      Laplace Equation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Network and Complex System
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Network and Complex System
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Complex System" class="md-nav__link">
+      Complex System
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Emergence" class="md-nav__link">
+      Emergence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Phase Transition" class="md-nav__link">
+      Phase Transition
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Neural Networks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Neural Networks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="introduction" class="md-nav__link">
+      introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Deep Learning" class="md-nav__link">
+      Deep Learning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Nature Inspired Computing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Nature Inspired Computing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="introduction" class="md-nav__link">
+      introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Cellular Automaton" class="md-nav__link">
+      Cellular Automaton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Molecular syatem" class="md-nav__link">
+      Molecular syatem
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Parallel and Distributed Computing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        Parallel and Distributed Computing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Parallel Computing" class="md-nav__link">
+      Parallel Computing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Distributed Computing" class="md-nav__link">
+      Distributed Computing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      Blockchain
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        Blockchain
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="introduction" class="md-nav__link">
+      introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Blockchain as Database" class="md-nav__link">
+      Blockchain as Database
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      Quantum Computing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        Quantum Computing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Quantum Circuits" class="md-nav__link">
+      Quantum Circuits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../UnderConstruction/" title="Quantum Cryptography" class="md-nav__link">
+      Quantum Cryptography
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../References/" title="References" class="md-nav__link">
+      References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-simulated-annealing" title="Introduction to Simulated Annealing" class="md-nav__link">
+    Introduction to Simulated Annealing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-i-problem-set-up" title="Part -I : Problem set up" class="md-nav__link">
+    Part -I : Problem set up
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-objective-function" title="Define Objective function" class="md-nav__link">
+    Define Objective function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-plot-of-surface-potential" title="3D plot of surface potential" class="md-nav__link">
+    3D plot of surface potential
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#density-plot-of-surface-potential" title="Density Plot of surface potential" class="md-nav__link">
+    Density Plot of surface potential
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-ii-simulation" title="Part - II : Simulation" class="md-nav__link">
+    Part - II : Simulation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task" title="Task" class="md-nav__link">
+    Task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <hr />
+<h1 id="simulated-annealing">Simulated Annealing</h1>
+<p>By Dibakar Sigdel  :   Date April-26-2016</p>
+<h3 id="introduction-to-simulated-annealing">Introduction to Simulated Annealing</h3>
+<p>Simulated annealing [1] copies a phenomenon in nature--the annealing of solids--to optimize a complex system. Annealing refers to heating a solid and then cooling it slowly. Atoms then assume a nearly globally minimum energy state. In 1953 Metropolis created an algorithm to simulate the annealing process. The algorithm simulates a small random displacement of an atom that results in a change in energy. If the change in energy is negative, the energy state of the new configuration is lower and the new configuration is accepted. If the change in energy is positive, the new configuration has a higher energy state; however, it may still be accepted according to the Boltzmann probability factor:</p>
+<p>$P  = exp(\frac{-\triangle E}{K_{b}T})$</p>
+<p>where $K_b$ is the Boltzmann constant and T is the current temperature. By examining this equation we should note two things: the probability is proportional to temperature--as the solid cools, the probability gets smaller; and inversely proportional to --as the change in energy is larger the probability of accepting the change gets smaller. </p>
+<ul>
+<li>Pictorial Algorithm</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">IPython.display</span> <span style="color: #006699; font-weight: bold">import</span> Image
+Image(filename<span style="color: #555555">=</span><span style="color: #CC3300">&#39;sim.png&#39;</span>)
+</pre></div>
+
+
+<p><img alt="png" src="../output_8_0.png" /></p>
+<p>When applied to engineering design, an analogy is made between energy and the objective function. The design is started at a high “temperature”, where it has a high objective (we assume we are minimizing). Random perturbations are then made to the design. If the objective is lower, the new design is made the current design; if it is higher, it may still be accepted according the probability given by the Boltzmann factor. The Boltzmann probability is compared to a random number drawn from a uniform distribution between 0 and 1; if the random number is smaller than the Boltzmann probability, the configuration is accepted. This allows the algorithm to escape local minima. </p>
+<ul>
+<li>Required Libraries</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">mpl_toolkits.mplot3d</span> <span style="color: #006699; font-weight: bold">import</span> Axes3D
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">matplotlib</span> <span style="color: #006699; font-weight: bold">import</span> cm
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.ticker</span> <span style="color: #006699; font-weight: bold">import</span> LinearLocator, FormatStrFormatter
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #555555">%</span>matplotlib inline
+</pre></div>
+
+
+<hr />
+<h2 id="part-i-problem-set-up">Part -I : Problem set up</h2>
+<h4 id="define-objective-function">Define Objective function</h4>
+<p>Consider a  2D system where atoms are interacting with the surface of a material. A model for the interaction potential is</p>
+<p>$V(x) = V_{o}\left \lbrace nA + \sum_{i=1}^{n}[x_{i}^{2} - A \cos(2\pi x_{i})]\right \rbrace $</p>
+<p>where $n = 2$: two dimensions.</p>
+<p>A = 10; $V_{o}$ is in energy unit.</p>
+<p>Consider the section $x_{1,2} \in [-4,4]$ of the surface.</p>
+<hr />
+<ul>
+<li>Surface Potential function</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">potential</span>(x1,x2):
+    obj <span style="color: #555555">=</span> (<span style="color: #FF6600">2</span><span style="color: #555555">*</span><span style="color: #FF6600">10.0</span>) <span style="color: #555555">+</span> x1<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> x2<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">-</span> (<span style="color: #FF6600">10.0</span>)<span style="color: #555555">*</span>(math<span style="color: #555555">.</span>cos(<span style="color: #FF6600">2.0</span><span style="color: #555555">*</span><span style="color: #FF6600">3.1415</span><span style="color: #555555">*</span>x1) <span style="color: #555555">-</span> math<span style="color: #555555">.</span>cos(<span style="color: #FF6600">2.0</span><span style="color: #555555">*</span><span style="color: #FF6600">3.1415</span><span style="color: #555555">*</span>x2))
+    <span style="color: #006699; font-weight: bold">return</span> obj
+</pre></div>
+
+
+<ul>
+<li>Design variables for mesh points</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>ix <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">4.0</span>, <span style="color: #FF6600">4.0</span>, <span style="color: #FF6600">0.05</span>)
+iy <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">4.0</span>, <span style="color: #FF6600">4.0</span>, <span style="color: #FF6600">0.05</span>)
+X,Y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(ix, iy)
+fz <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros(X<span style="color: #555555">.</span>shape)
+<span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(X<span style="color: #555555">.</span>shape[<span style="color: #FF6600">0</span>]):
+    <span style="color: #006699; font-weight: bold">for</span> j <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(X<span style="color: #555555">.</span>shape[<span style="color: #FF6600">1</span>]):
+        fz[i][j] <span style="color: #555555">=</span> potential(X[i][j],Y[i][j])   
+</pre></div>
+
+
+<h4 id="3d-plot-of-surface-potential">3D plot of surface potential</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>fig <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>figure(figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">14</span>, <span style="color: #FF6600">10</span>))
+ax <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>gca(projection<span style="color: #555555">=</span><span style="color: #CC3300">&#39;3d&#39;</span>)
+surf <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(X, Y, fz, rstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, cstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>coolwarm,
+                       linewidth<span style="color: #555555">=</span><span style="color: #FF6600">0</span>, antialiased<span style="color: #555555">=</span><span style="color: #336666">False</span>)
+ax<span style="color: #555555">.</span>set_zlim(<span style="color: #555555">-</span><span style="color: #FF6600">0.01</span>, <span style="color: #FF6600">60.01</span>)
+ax<span style="color: #555555">.</span>zaxis<span style="color: #555555">.</span>set_major_locator(LinearLocator(<span style="color: #FF6600">10</span>))
+ax<span style="color: #555555">.</span>zaxis<span style="color: #555555">.</span>set_major_formatter(FormatStrFormatter(<span style="color: #CC3300">&#39;</span><span style="color: #AA0000">%.02f</span><span style="color: #CC3300">&#39;</span>))
+fig<span style="color: #555555">.</span>colorbar(surf, shrink<span style="color: #555555">=</span><span style="color: #FF6600">0.5</span>, aspect<span style="color: #555555">=</span><span style="color: #FF6600">5</span>)
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_24_0.png" /></p>
+<h4 id="density-plot-of-surface-potential">Density Plot of surface potential</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">12</span>, <span style="color: #FF6600">8</span>))
+<span style="color: #0099FF; font-style: italic"># Specify contour lines</span>
+CS <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>contour(x1m, x2m, fm)<span style="color: #0099FF; font-style: italic">#,lines)</span>
+<span style="color: #0099FF; font-style: italic"># Label contours</span>
+plt<span style="color: #555555">.</span>clabel(CS, inline<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, fontsize<span style="color: #555555">=</span><span style="color: #FF6600">10</span>)
+<span style="color: #0099FF; font-style: italic"># Add some text to the plot</span>
+plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&#39;Density plot of surface potential&#39;</span>)
+plt<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&#39;x1&#39;</span>)
+plt<span style="color: #555555">.</span>ylabel(<span style="color: #CC3300">&#39;x2&#39;</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.text.Text at 0x12e704410&amp;gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_26_1.png" /></p>
+<hr />
+<h2 id="part-ii-simulation">Part - II : Simulation</h2>
+<h4 id="task">Task</h4>
+<p>Put $N = 1000$ atoms on the surface. Compute a configuration $X_{o} = {x_{1},...,x_{N}}$ of minial potential energy $E[X_{o}]$ using simulated annealing. Apply Bose statistics, any number of atoms may occupy a local minimum $\vec{x}_{min}$.</p>
+<hr />
+<ul>
+<li>Simulation setting</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># Start location</span>
+x_start <span style="color: #555555">=</span> [<span style="color: #FF6600">0.5</span>, <span style="color: #555555">-</span><span style="color: #FF6600">0.5</span>]
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic">#Number of particles</span>
+N <span style="color: #555555">=</span><span style="color: #FF6600">1000</span>
+<span style="color: #0099FF; font-style: italic"># Number of cycles</span>
+n <span style="color: #555555">=</span> <span style="color: #FF6600">1000</span>
+<span style="color: #0099FF; font-style: italic"># Number of trials per cycle</span>
+m <span style="color: #555555">=</span> <span style="color: #FF6600">500</span>
+<span style="color: #0099FF; font-style: italic"># Number of accepted solutions</span>
+na <span style="color: #555555">=</span> <span style="color: #FF6600">0.0</span>
+<span style="color: #0099FF; font-style: italic"># Probability of accepting worse solution at the start</span>
+p1 <span style="color: #555555">=</span> <span style="color: #FF6600">0.7</span>
+<span style="color: #0099FF; font-style: italic"># Probability of accepting worse solution at the end</span>
+p50 <span style="color: #555555">=</span> <span style="color: #FF6600">0.001</span>
+<span style="color: #0099FF; font-style: italic"># Initial temperature</span>
+t1 <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">1.0</span><span style="color: #555555">/</span>math<span style="color: #555555">.</span>log(p1)
+<span style="color: #0099FF; font-style: italic"># Final temperature</span>
+t50 <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">1.0</span><span style="color: #555555">/</span>math<span style="color: #555555">.</span>log(p50)
+<span style="color: #0099FF; font-style: italic"># Fractional reduction every cycle</span>
+frac <span style="color: #555555">=</span> (t50<span style="color: #555555">/</span>t1)<span style="color: #555555">**</span>(<span style="color: #FF6600">1.0</span><span style="color: #555555">/</span>(n<span style="color: #555555">-</span><span style="color: #FF6600">1.0</span>))
+<span style="color: #0099FF; font-style: italic"># Initialize x</span>
+x <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros((n<span style="color: #555555">+</span><span style="color: #FF6600">1</span>,<span style="color: #FF6600">2</span>))
+x[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> x_start
+xi <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros(<span style="color: #FF6600">2</span>)
+xi <span style="color: #555555">=</span> x_start
+na <span style="color: #555555">=</span> na <span style="color: #555555">+</span> <span style="color: #FF6600">1.0</span>
+<span style="color: #0099FF; font-style: italic"># Current best results so far</span>
+xc <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros(<span style="color: #FF6600">2</span>)
+xc <span style="color: #555555">=</span> x[<span style="color: #FF6600">0</span>]
+fc <span style="color: #555555">=</span> potential(xi[<span style="color: #FF6600">0</span>],xi[<span style="color: #FF6600">1</span>])
+fs <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros(n<span style="color: #555555">+</span><span style="color: #FF6600">1</span>)
+fs[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> fc
+<span style="color: #0099FF; font-style: italic"># Current temperature</span>
+t <span style="color: #555555">=</span> t1
+<span style="color: #0099FF; font-style: italic"># DeltaE Average</span>
+DeltaE_avg <span style="color: #555555">=</span> <span style="color: #FF6600">0.0</span>
+</pre></div>
+
+
+<ul>
+<li>Simulation</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n):
+    <span style="color: #0099FF; font-style: italic">#print &#39;Cycle: &#39; + str(i) + &#39; with Temperature: &#39; + str(t)</span>
+    <span style="color: #006699; font-weight: bold">for</span> j <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(m):
+        <span style="color: #0099FF; font-style: italic"># Generate new trial points</span>
+        xi[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> xc[<span style="color: #FF6600">0</span>] <span style="color: #555555">+</span> random<span style="color: #555555">.</span>random() <span style="color: #555555">-</span> <span style="color: #FF6600">0.5</span>
+        xi[<span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> xc[<span style="color: #FF6600">1</span>] <span style="color: #555555">+</span> random<span style="color: #555555">.</span>random() <span style="color: #555555">-</span> <span style="color: #FF6600">0.5</span>
+        <span style="color: #0099FF; font-style: italic"># Clip to upper and lower bounds</span>
+        xi[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> <span style="color: #336666">max</span>(<span style="color: #336666">min</span>(xi[<span style="color: #FF6600">0</span>],<span style="color: #FF6600">1.0</span>),<span style="color: #555555">-</span><span style="color: #FF6600">1.0</span>)
+        xi[<span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> <span style="color: #336666">max</span>(<span style="color: #336666">min</span>(xi[<span style="color: #FF6600">1</span>],<span style="color: #FF6600">1.0</span>),<span style="color: #555555">-</span><span style="color: #FF6600">1.0</span>)
+        DeltaE <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(f(xi)<span style="color: #555555">-</span>fc)
+        <span style="color: #006699; font-weight: bold">if</span> (potential(xi[<span style="color: #FF6600">0</span>],xi[<span style="color: #FF6600">1</span>])<span style="color: #555555">&gt;</span>fc):
+            <span style="color: #0099FF; font-style: italic"># Initialize DeltaE_avg if a worse solution was found</span>
+            <span style="color: #0099FF; font-style: italic">#   on the first iteration</span>
+            <span style="color: #006699; font-weight: bold">if</span> (i<span style="color: #555555">==</span><span style="color: #FF6600">0</span> <span style="color: #000000; font-weight: bold">and</span> j<span style="color: #555555">==</span><span style="color: #FF6600">0</span>): DeltaE_avg <span style="color: #555555">=</span> DeltaE
+            <span style="color: #0099FF; font-style: italic"># objective function is worse</span>
+            <span style="color: #0099FF; font-style: italic"># generate probability of acceptance</span>
+            p <span style="color: #555555">=</span> math<span style="color: #555555">.</span>exp(<span style="color: #555555">-</span>DeltaE<span style="color: #555555">/</span>(DeltaE_avg <span style="color: #555555">*</span> t))
+            <span style="color: #0099FF; font-style: italic"># determine whether to accept worse point</span>
+            <span style="color: #006699; font-weight: bold">if</span> (random<span style="color: #555555">.</span>random()<span style="color: #555555">&lt;</span>p):
+                <span style="color: #0099FF; font-style: italic"># accept the worse solution</span>
+                accept <span style="color: #555555">=</span> <span style="color: #336666">True</span>
+            <span style="color: #006699; font-weight: bold">else</span>:
+                <span style="color: #0099FF; font-style: italic"># don&#39;t accept the worse solution</span>
+                accept <span style="color: #555555">=</span> <span style="color: #336666">False</span>
+        <span style="color: #006699; font-weight: bold">else</span>:
+            <span style="color: #0099FF; font-style: italic"># objective function is lower, automatically accept</span>
+            accept <span style="color: #555555">=</span> <span style="color: #336666">True</span>
+        <span style="color: #006699; font-weight: bold">if</span> (accept<span style="color: #555555">==</span><span style="color: #336666">True</span>):
+            <span style="color: #0099FF; font-style: italic"># update currently accepted solution</span>
+            xc[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> xi[<span style="color: #FF6600">0</span>]
+            xc[<span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> xi[<span style="color: #FF6600">1</span>]
+            fc <span style="color: #555555">=</span> potential(xc[<span style="color: #FF6600">0</span>],xc[<span style="color: #FF6600">1</span>])
+            <span style="color: #0099FF; font-style: italic"># increment number of accepted solutions</span>
+            na <span style="color: #555555">=</span> na <span style="color: #555555">+</span> <span style="color: #FF6600">1.0</span>
+            <span style="color: #0099FF; font-style: italic"># update DeltaE_avg</span>
+            DeltaE_avg <span style="color: #555555">=</span> (DeltaE_avg <span style="color: #555555">*</span> (na<span style="color: #555555">-</span><span style="color: #FF6600">1.0</span>) <span style="color: #555555">+</span>  DeltaE) <span style="color: #555555">/</span> na
+    <span style="color: #0099FF; font-style: italic"># Record the best x values at the end of every cycle</span>
+    x[i<span style="color: #555555">+</span><span style="color: #FF6600">1</span>][<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> xc[<span style="color: #FF6600">0</span>]
+    x[i<span style="color: #555555">+</span><span style="color: #FF6600">1</span>][<span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> xc[<span style="color: #FF6600">1</span>]
+    fs[i<span style="color: #555555">+</span><span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> fc
+    <span style="color: #0099FF; font-style: italic"># Lower the temperature for next cycle</span>
+    t <span style="color: #555555">=</span> frac <span style="color: #555555">*</span> t
+
+<span style="color: #0099FF; font-style: italic"># print solution</span>
+<span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;Best solution: &#39;</span> <span style="color: #555555">+</span> <span style="color: #336666">str</span>(xc)
+<span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;Best objective: &#39;</span> <span style="color: #555555">+</span> <span style="color: #336666">str</span>(fc)
+plt<span style="color: #555555">.</span>figure(figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">10</span>, <span style="color: #FF6600">8</span>))
+plt<span style="color: #555555">.</span>plot(x[:,<span style="color: #FF6600">0</span>],x[:,<span style="color: #FF6600">1</span>],<span style="color: #CC3300">&#39;y-o&#39;</span>)
+<span style="color: #0099FF; font-style: italic">#plt.savefig(&#39;contour.png&#39;)</span>
+
+fig <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>figure(figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">10</span>, <span style="color: #FF6600">8</span>))
+ax1 <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>add_subplot(<span style="color: #FF6600">211</span>)
+ax1<span style="color: #555555">.</span>plot(fs,<span style="color: #CC3300">&#39;r.-&#39;</span>)
+ax1<span style="color: #555555">.</span>legend([<span style="color: #CC3300">&#39;Objective&#39;</span>])
+ax2 <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>add_subplot(<span style="color: #FF6600">212</span>)
+ax2<span style="color: #555555">.</span>plot(x[:,<span style="color: #FF6600">0</span>],<span style="color: #CC3300">&#39;b.-&#39;</span>)
+ax2<span style="color: #555555">.</span>plot(x[:,<span style="color: #FF6600">1</span>],<span style="color: #CC3300">&#39;g--&#39;</span>)
+ax2<span style="color: #555555">.</span>legend([<span style="color: #CC3300">&#39;x1&#39;</span>,<span style="color: #CC3300">&#39;x2&#39;</span>])
+
+<span style="color: #0099FF; font-style: italic"># Save the figure as a PNG</span>
+<span style="color: #0099FF; font-style: italic">#plt.savefig(&#39;iterations.png&#39;)</span>
+
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Best solution: [ 0.91536557 -0.66902677]
+Best objective: 7.79514624035
+</pre></div>
+
+
+<p><img alt="png" src="../output_36_1.png" /></p>
+<p><img alt="png" src="../output_36_2.png" /></p>
+<ul>
+<li>Repeat this for 1000 particles</li>
+</ul>
+<hr />
+<h3 id="references">References</h3>
+<p>1 . Simulated Annealing Tutorial http://apmonitor.com/me575/index.php/Main/SimulatedAnnealing</p>
+<p>2 . The Simulated Annealing Algorithm http://katrinaeg.com/simulated-annealing.html</p>
+<p>3 . Simulated Annealing for beginners  http://www.theprojectspot.com/tutorial-post/simulated-annealing-algorithm-for-beginners/6</p>
+<p>4 . Simulated Annealing: http://csg.sph.umich.edu/abecasis/class/2006/615.19.pdf</p>
+<p>5 . Simulated Annealing : http://mathworld.wolfram.com/SimulatedAnnealing.html</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../Python/fnc/" title="Function and Class" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Function and Class
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Ncharges/Ncharges/" title="Ncharges" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Ncharges
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.d9aa80ab.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
