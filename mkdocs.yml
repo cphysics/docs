@@ -1,0 +1,125 @@
+site_name: Computational Physics
+
+
+theme:
+  name: 'material'
+  highlightjs: true
+  hljs_languages: []
+  include_homepage_in_sidebar: true
+  prev_next_buttons_location: bottom
+  navigation_depth: 4
+  titles_only: false
+  sticky_navigation: true
+  collapse_navigation: true
+ 
+ 
+  
+      
+markdown_extensions:
+  - codehilite:
+      linenums: false
+      guess_lang: false
+      use_pygments: true
+      noclasses: true
+      pygments_style: manni
+
+
+nav:
+- Home: index.md
+- Why Computational Physics: WhyComputationalPhysics.md
+
+
+- Getting started:
+  - Guide to starting Python: GettingStarted/anaconda.md
+  - Guide to Python Libraries: GettingStarted/lib.md
+  - Setting up Python Environment: GettingStarted/env.md
+  - Installing Jupyter Notebook : GettingStarted/jupyter.md
+  - Lunching an EC2 instance in AWS Cloud: GettingStarted/cloud.md
+  - How to Git: GettingStarted/git.md
+  
+- Python:
+  - Data Structure : Python/ds.md
+  - Loops and Conditions: Python/lnc.md
+  - Function and Class: Python/fnc.md
+  
+  
+- Numerical Methods:
+  - Simulated Annealing: NumericalMethods/SimulatedAnealing/simulatedAnn.md
+  - Diffusion: NumericalMethods/Diffusion/diffusion.md
+  - Ncharges: NumericalMethods/Ncharges/Ncharges.md
+  
+  
+- Fractals and Chaos:
+  - Fern: FractalChaos/Fern/fern.md
+ 
+  
+- Monte Carlo Simulation:
+  - Getting Started Monte Carlo Simulation : Montecarlo/GettingStarted/intro.md
+  - Algorithms in Monte Carlo Simulation : Montecarlo/GettingStarted/intro.md
+  - Random Walk: Montecarlo/RandomWalk/Rwalk.md
+  - Lottary Model: Montecarlo/Lotto/lotto.md
+  - Ideal Gas: Montecarlo/IdealGas/IdealGas.md
+  - Harmonic Oscillator: Montecarlo/Oscillator/Oscillator.md
+  - Ising Model: Montecarlo/IzingModel/Izing2D.md
+  - Percolation : Montecarlo/Percolation/percol.md
+  - Hard Disk : Montecarlo/HardDisk/hd.md
+  - Quantum Monte Carlo: Montecarlo/Levy/levy.md
+  - Bose-Einstein Condensation: Montecarlo/BEC/bec.md
+  
+  
+  
+- Path Integral:
+  - Getting Started with Path Integral: PathIntegral/Intro/Intro.md
+ 
+  
+  
+- Signal Processing:
+  - Getting Started with Signal Processing: UnderConstruction.md
+  - Fourier Transform: UnderConstruction.md
+  - Fast Fourier Transform: UnderConstruction.md
+  
+  
+- Partial Differential Equations:
+  - Laplace Equation: PDE/Laplace/laplace.md
+  
+  
+- Network and Complex System:
+  - Networks: UnderConstruction.md
+  - Complex System: UnderConstruction.md
+  - Emergence: UnderConstruction.md
+  - Phase Transition: UnderConstruction.md
+  
+  
+- Neural Networks:
+  - introduction: UnderConstruction.md
+  - Deep Learning: UnderConstruction.md
+  
+  
+- Nature Inspired Computing:
+  - introduction: UnderConstruction.md
+  - Cellular Automaton: UnderConstruction.md
+  - Molecular syatem: UnderConstruction.md
+  
+  
+- Parallel and Distributed Computing:
+  - Parallel Computing: UnderConstruction.md
+  - Distributed Computing: UnderConstruction.md
+  
+  
+- Blockchain:
+  - introduction: UnderConstruction.md
+  - Blockchain as Database: UnderConstruction.md
+  
+  
+- Quantum Computing:
+  - Introduction: UnderConstruction.md
+  - Quantum Circuits: UnderConstruction.md
+  - Quantum Cryptography: UnderConstruction.md
+
+            
+- References: References.md
+  
+   
+      
+
+
