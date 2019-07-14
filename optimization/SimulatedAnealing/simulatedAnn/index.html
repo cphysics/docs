@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Simulated Annealing - Computational Physics</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Simulated Annealing";
+    var mkdocs_page_input_path = "optimization/SimulatedAnealing/simulatedAnn.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Computational Physics</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../WhyComputationalPhysics/">Why Computational Physics</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/git/">How to Git</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Python</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Python/ds/">Data Structure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Python/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Python/fnc/">Function and Class</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numerical Methods</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/intro/Numerical-Methods/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/special-function/Special-Functions/">Special Functions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/Diffusion/Diffusion/">Diffusion</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/Ncharges/Ncharges/">Ncharges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/Laplace/laplace/">Laplace</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Monte Carlo Simulation</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/GettingStarted/intro/">Getting Started Monte Carlo Simulation</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/GettingStarted/intro/">Algorithms in Monte Carlo Simulation</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/RandomWalk/Rwalk/">Random Walk</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/Lotto/lotto/">Lottary Model</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/IdealGas/IdealGas/">Ideal Gas</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/Oscillator/Oscillator/">Harmonic Oscillator</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/IzingModel/Izing2D/">Ising Model</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/Percolation/percol/">Percolation</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/HardDisk/hd/">Hard Disk</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/Levy/levy/">Quantum Monte Carlo</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Montecarlo/BEC/bec/">Bose-Einstein Condensation</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Optimization</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../intro/Optimization/">Optimization</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Simulated Annealing
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#introduction-to-simulated-annealing">Introduction to Simulated Annealing</a>
+        </li>
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#part-i-problem-set-up">
+      Part -I : Problem set up
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#define-objective-function">Define Objective function</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#3d-plot-of-surface-potential">3D plot of surface potential</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#density-plot-of-surface-potential">Density Plot of surface potential</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#part-ii-simulation">
+      Part - II : Simulation
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#task">Task</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#references">References</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+    </ul>
+  </li>
+
+
+  
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Path Integral</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../PathIntegral/Intro/Intro/">Getting Started with Path Integral</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Fractals and Chaos</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FractalChaos/Fern/fern/">Fern</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../References/">References</a>
+  </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Computational Physics</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Optimization &raquo;</li>
+        
+      
+    
+    <li>Simulated Annealing</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <hr />
+<h1 id="simulated-annealing">Simulated Annealing</h1>
+<p>By Dibakar Sigdel  :   Date April-26-2016</p>
+<h3 id="introduction-to-simulated-annealing">Introduction to Simulated Annealing</h3>
+<p>Simulated annealing [1] copies a phenomenon in nature--the annealing of solids--to optimize a complex system. Annealing refers to heating a solid and then cooling it slowly. Atoms then assume a nearly globally minimum energy state. In 1953 Metropolis created an algorithm to simulate the annealing process. The algorithm simulates a small random displacement of an atom that results in a change in energy. If the change in energy is negative, the energy state of the new configuration is lower and the new configuration is accepted. If the change in energy is positive, the new configuration has a higher energy state; however, it may still be accepted according to the Boltzmann probability factor:</p>
+<p>$$P  = exp(\frac{-\triangle E}{K_{b}T})$$</p>
+<p>where $K_b$ is the Boltzmann constant and T is the current temperature. By examining this equation we should note two things: the probability is proportional to temperature--as the solid cools, the probability gets smaller; and inversely proportional to --as the change in energy is larger the probability of accepting the change gets smaller. </p>
+<ul>
+<li>Pictorial Algorithm</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">IPython.display</span> <span style="color: #006699; font-weight: bold">import</span> Image
+Image(filename<span style="color: #555555">=</span><span style="color: #CC3300">&#39;sim.png&#39;</span>)
+</pre></div>
+
+
+<p><img alt="png" src="../output_8_0.png" /></p>
+<p>When applied to engineering design, an analogy is made between energy and the objective function. The design is started at a high “temperature”, where it has a high objective (we assume we are minimizing). Random perturbations are then made to the design. If the objective is lower, the new design is made the current design; if it is higher, it may still be accepted according the probability given by the Boltzmann factor. The Boltzmann probability is compared to a random number drawn from a uniform distribution between 0 and 1; if the random number is smaller than the Boltzmann probability, the configuration is accepted. This allows the algorithm to escape local minima. </p>
+<ul>
+<li>Required Libraries</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">mpl_toolkits.mplot3d</span> <span style="color: #006699; font-weight: bold">import</span> Axes3D
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">matplotlib</span> <span style="color: #006699; font-weight: bold">import</span> cm
+<span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.ticker</span> <span style="color: #006699; font-weight: bold">import</span> LinearLocator, FormatStrFormatter
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #555555">%</span>matplotlib inline
+</pre></div>
+
+
+<hr />
+<h2 id="part-i-problem-set-up">Part -I : Problem set up</h2>
+<h4 id="define-objective-function">Define Objective function</h4>
+<p>Consider a  2D system where atoms are interacting with the surface of a material. A model for the interaction potential is</p>
+<p>$$V(x) = V_{o}\left \lbrace nA + \sum_{i=1}^{n}[x_{i}^{2} - A \cos(2\pi x_{i})]\right \rbrace $$</p>
+<p>where $n = 2$: two dimensions.</p>
+<p>A = 10; $V_{o}$ is in energy unit.</p>
+<p>Consider the section $x_{1,2} \in [-4,4]$ of the surface.</p>
+<hr />
+<ul>
+<li>Surface Potential function</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">potential</span>(x1,x2):
+    obj <span style="color: #555555">=</span> (<span style="color: #FF6600">2</span><span style="color: #555555">*</span><span style="color: #FF6600">10.0</span>) <span style="color: #555555">+</span> x1<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> x2<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">-</span> (<span style="color: #FF6600">10.0</span>)<span style="color: #555555">*</span>(math<span style="color: #555555">.</span>cos(<span style="color: #FF6600">2.0</span><span style="color: #555555">*</span><span style="color: #FF6600">3.1415</span><span style="color: #555555">*</span>x1) <span style="color: #555555">-</span> math<span style="color: #555555">.</span>cos(<span style="color: #FF6600">2.0</span><span style="color: #555555">*</span><span style="color: #FF6600">3.1415</span><span style="color: #555555">*</span>x2))
+    <span style="color: #006699; font-weight: bold">return</span> obj
+</pre></div>
+
+
+<ul>
+<li>Design variables for mesh points</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>ix <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">4.0</span>, <span style="color: #FF6600">4.0</span>, <span style="color: #FF6600">0.05</span>)
+iy <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #555555">-</span><span style="color: #FF6600">4.0</span>, <span style="color: #FF6600">4.0</span>, <span style="color: #FF6600">0.05</span>)
+X,Y <span style="color: #555555">=</span> np<span style="color: #555555">.</span>meshgrid(ix, iy)
+fz <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros(X<span style="color: #555555">.</span>shape)
+<span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(X<span style="color: #555555">.</span>shape[<span style="color: #FF6600">0</span>]):
+    <span style="color: #006699; font-weight: bold">for</span> j <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(X<span style="color: #555555">.</span>shape[<span style="color: #FF6600">1</span>]):
+        fz[i][j] <span style="color: #555555">=</span> potential(X[i][j],Y[i][j])   
+</pre></div>
+
+
+<h4 id="3d-plot-of-surface-potential">3D plot of surface potential</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>fig <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>figure(figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">14</span>, <span style="color: #FF6600">10</span>))
+ax <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>gca(projection<span style="color: #555555">=</span><span style="color: #CC3300">&#39;3d&#39;</span>)
+surf <span style="color: #555555">=</span> ax<span style="color: #555555">.</span>plot_surface(X, Y, fz, rstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, cstride<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, cmap<span style="color: #555555">=</span>cm<span style="color: #555555">.</span>coolwarm,
+                       linewidth<span style="color: #555555">=</span><span style="color: #FF6600">0</span>, antialiased<span style="color: #555555">=</span><span style="color: #336666">False</span>)
+ax<span style="color: #555555">.</span>set_zlim(<span style="color: #555555">-</span><span style="color: #FF6600">0.01</span>, <span style="color: #FF6600">60.01</span>)
+ax<span style="color: #555555">.</span>zaxis<span style="color: #555555">.</span>set_major_locator(LinearLocator(<span style="color: #FF6600">10</span>))
+ax<span style="color: #555555">.</span>zaxis<span style="color: #555555">.</span>set_major_formatter(FormatStrFormatter(<span style="color: #CC3300">&#39;</span><span style="color: #AA0000">%.02f</span><span style="color: #CC3300">&#39;</span>))
+fig<span style="color: #555555">.</span>colorbar(surf, shrink<span style="color: #555555">=</span><span style="color: #FF6600">0.5</span>, aspect<span style="color: #555555">=</span><span style="color: #FF6600">5</span>)
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_24_0.png" /></p>
+<h4 id="density-plot-of-surface-potential">Density Plot of surface potential</h4>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>figure(figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">12</span>, <span style="color: #FF6600">8</span>))
+<span style="color: #0099FF; font-style: italic"># Specify contour lines</span>
+CS <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>contour(x1m, x2m, fm)<span style="color: #0099FF; font-style: italic">#,lines)</span>
+<span style="color: #0099FF; font-style: italic"># Label contours</span>
+plt<span style="color: #555555">.</span>clabel(CS, inline<span style="color: #555555">=</span><span style="color: #FF6600">1</span>, fontsize<span style="color: #555555">=</span><span style="color: #FF6600">10</span>)
+<span style="color: #0099FF; font-style: italic"># Add some text to the plot</span>
+plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&#39;Density plot of surface potential&#39;</span>)
+plt<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&#39;x1&#39;</span>)
+plt<span style="color: #555555">.</span>ylabel(<span style="color: #CC3300">&#39;x2&#39;</span>)
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.text.Text at 0x12e704410&amp;gt;
+</pre></div>
+
+
+<p><img alt="png" src="../output_26_1.png" /></p>
+<hr />
+<h2 id="part-ii-simulation">Part - II : Simulation</h2>
+<h4 id="task">Task</h4>
+<p>Put $N = 1000$ atoms on the surface. Compute a configuration $X_{o} = {x_{1},...,x_{N}}$ of minial potential energy $E[X_{o}]$ using simulated annealing. Apply Bose statistics, any number of atoms may occupy a local minimum $\vec{x}_{min}$.</p>
+<hr />
+<ul>
+<li>Simulation setting</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic"># Start location</span>
+x_start <span style="color: #555555">=</span> [<span style="color: #FF6600">0.5</span>, <span style="color: #555555">-</span><span style="color: #FF6600">0.5</span>]
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #0099FF; font-style: italic">#Number of particles</span>
+N <span style="color: #555555">=</span><span style="color: #FF6600">1000</span>
+<span style="color: #0099FF; font-style: italic"># Number of cycles</span>
+n <span style="color: #555555">=</span> <span style="color: #FF6600">1000</span>
+<span style="color: #0099FF; font-style: italic"># Number of trials per cycle</span>
+m <span style="color: #555555">=</span> <span style="color: #FF6600">500</span>
+<span style="color: #0099FF; font-style: italic"># Number of accepted solutions</span>
+na <span style="color: #555555">=</span> <span style="color: #FF6600">0.0</span>
+<span style="color: #0099FF; font-style: italic"># Probability of accepting worse solution at the start</span>
+p1 <span style="color: #555555">=</span> <span style="color: #FF6600">0.7</span>
+<span style="color: #0099FF; font-style: italic"># Probability of accepting worse solution at the end</span>
+p50 <span style="color: #555555">=</span> <span style="color: #FF6600">0.001</span>
+<span style="color: #0099FF; font-style: italic"># Initial temperature</span>
+t1 <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">1.0</span><span style="color: #555555">/</span>math<span style="color: #555555">.</span>log(p1)
+<span style="color: #0099FF; font-style: italic"># Final temperature</span>
+t50 <span style="color: #555555">=</span> <span style="color: #555555">-</span><span style="color: #FF6600">1.0</span><span style="color: #555555">/</span>math<span style="color: #555555">.</span>log(p50)
+<span style="color: #0099FF; font-style: italic"># Fractional reduction every cycle</span>
+frac <span style="color: #555555">=</span> (t50<span style="color: #555555">/</span>t1)<span style="color: #555555">**</span>(<span style="color: #FF6600">1.0</span><span style="color: #555555">/</span>(n<span style="color: #555555">-</span><span style="color: #FF6600">1.0</span>))
+<span style="color: #0099FF; font-style: italic"># Initialize x</span>
+x <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros((n<span style="color: #555555">+</span><span style="color: #FF6600">1</span>,<span style="color: #FF6600">2</span>))
+x[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> x_start
+xi <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros(<span style="color: #FF6600">2</span>)
+xi <span style="color: #555555">=</span> x_start
+na <span style="color: #555555">=</span> na <span style="color: #555555">+</span> <span style="color: #FF6600">1.0</span>
+<span style="color: #0099FF; font-style: italic"># Current best results so far</span>
+xc <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros(<span style="color: #FF6600">2</span>)
+xc <span style="color: #555555">=</span> x[<span style="color: #FF6600">0</span>]
+fc <span style="color: #555555">=</span> potential(xi[<span style="color: #FF6600">0</span>],xi[<span style="color: #FF6600">1</span>])
+fs <span style="color: #555555">=</span> np<span style="color: #555555">.</span>zeros(n<span style="color: #555555">+</span><span style="color: #FF6600">1</span>)
+fs[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> fc
+<span style="color: #0099FF; font-style: italic"># Current temperature</span>
+t <span style="color: #555555">=</span> t1
+<span style="color: #0099FF; font-style: italic"># DeltaE Average</span>
+DeltaE_avg <span style="color: #555555">=</span> <span style="color: #FF6600">0.0</span>
+</pre></div>
+
+
+<ul>
+<li>Simulation</li>
+</ul>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n):
+    <span style="color: #0099FF; font-style: italic">#print &#39;Cycle: &#39; + str(i) + &#39; with Temperature: &#39; + str(t)</span>
+    <span style="color: #006699; font-weight: bold">for</span> j <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(m):
+        <span style="color: #0099FF; font-style: italic"># Generate new trial points</span>
+        xi[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> xc[<span style="color: #FF6600">0</span>] <span style="color: #555555">+</span> random<span style="color: #555555">.</span>random() <span style="color: #555555">-</span> <span style="color: #FF6600">0.5</span>
+        xi[<span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> xc[<span style="color: #FF6600">1</span>] <span style="color: #555555">+</span> random<span style="color: #555555">.</span>random() <span style="color: #555555">-</span> <span style="color: #FF6600">0.5</span>
+        <span style="color: #0099FF; font-style: italic"># Clip to upper and lower bounds</span>
+        xi[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> <span style="color: #336666">max</span>(<span style="color: #336666">min</span>(xi[<span style="color: #FF6600">0</span>],<span style="color: #FF6600">1.0</span>),<span style="color: #555555">-</span><span style="color: #FF6600">1.0</span>)
+        xi[<span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> <span style="color: #336666">max</span>(<span style="color: #336666">min</span>(xi[<span style="color: #FF6600">1</span>],<span style="color: #FF6600">1.0</span>),<span style="color: #555555">-</span><span style="color: #FF6600">1.0</span>)
+        DeltaE <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(f(xi)<span style="color: #555555">-</span>fc)
+        <span style="color: #006699; font-weight: bold">if</span> (potential(xi[<span style="color: #FF6600">0</span>],xi[<span style="color: #FF6600">1</span>])<span style="color: #555555">&gt;</span>fc):
+            <span style="color: #0099FF; font-style: italic"># Initialize DeltaE_avg if a worse solution was found</span>
+            <span style="color: #0099FF; font-style: italic">#   on the first iteration</span>
+            <span style="color: #006699; font-weight: bold">if</span> (i<span style="color: #555555">==</span><span style="color: #FF6600">0</span> <span style="color: #000000; font-weight: bold">and</span> j<span style="color: #555555">==</span><span style="color: #FF6600">0</span>): DeltaE_avg <span style="color: #555555">=</span> DeltaE
+            <span style="color: #0099FF; font-style: italic"># objective function is worse</span>
+            <span style="color: #0099FF; font-style: italic"># generate probability of acceptance</span>
+            p <span style="color: #555555">=</span> math<span style="color: #555555">.</span>exp(<span style="color: #555555">-</span>DeltaE<span style="color: #555555">/</span>(DeltaE_avg <span style="color: #555555">*</span> t))
+            <span style="color: #0099FF; font-style: italic"># determine whether to accept worse point</span>
+            <span style="color: #006699; font-weight: bold">if</span> (random<span style="color: #555555">.</span>random()<span style="color: #555555">&lt;</span>p):
+                <span style="color: #0099FF; font-style: italic"># accept the worse solution</span>
+                accept <span style="color: #555555">=</span> <span style="color: #336666">True</span>
+            <span style="color: #006699; font-weight: bold">else</span>:
+                <span style="color: #0099FF; font-style: italic"># don&#39;t accept the worse solution</span>
+                accept <span style="color: #555555">=</span> <span style="color: #336666">False</span>
+        <span style="color: #006699; font-weight: bold">else</span>:
+            <span style="color: #0099FF; font-style: italic"># objective function is lower, automatically accept</span>
+            accept <span style="color: #555555">=</span> <span style="color: #336666">True</span>
+        <span style="color: #006699; font-weight: bold">if</span> (accept<span style="color: #555555">==</span><span style="color: #336666">True</span>):
+            <span style="color: #0099FF; font-style: italic"># update currently accepted solution</span>
+            xc[<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> xi[<span style="color: #FF6600">0</span>]
+            xc[<span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> xi[<span style="color: #FF6600">1</span>]
+            fc <span style="color: #555555">=</span> potential(xc[<span style="color: #FF6600">0</span>],xc[<span style="color: #FF6600">1</span>])
+            <span style="color: #0099FF; font-style: italic"># increment number of accepted solutions</span>
+            na <span style="color: #555555">=</span> na <span style="color: #555555">+</span> <span style="color: #FF6600">1.0</span>
+            <span style="color: #0099FF; font-style: italic"># update DeltaE_avg</span>
+            DeltaE_avg <span style="color: #555555">=</span> (DeltaE_avg <span style="color: #555555">*</span> (na<span style="color: #555555">-</span><span style="color: #FF6600">1.0</span>) <span style="color: #555555">+</span>  DeltaE) <span style="color: #555555">/</span> na
+    <span style="color: #0099FF; font-style: italic"># Record the best x values at the end of every cycle</span>
+    x[i<span style="color: #555555">+</span><span style="color: #FF6600">1</span>][<span style="color: #FF6600">0</span>] <span style="color: #555555">=</span> xc[<span style="color: #FF6600">0</span>]
+    x[i<span style="color: #555555">+</span><span style="color: #FF6600">1</span>][<span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> xc[<span style="color: #FF6600">1</span>]
+    fs[i<span style="color: #555555">+</span><span style="color: #FF6600">1</span>] <span style="color: #555555">=</span> fc
+    <span style="color: #0099FF; font-style: italic"># Lower the temperature for next cycle</span>
+    t <span style="color: #555555">=</span> frac <span style="color: #555555">*</span> t
+
+<span style="color: #0099FF; font-style: italic"># print solution</span>
+<span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;Best solution: &#39;</span> <span style="color: #555555">+</span> <span style="color: #336666">str</span>(xc)
+<span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;Best objective: &#39;</span> <span style="color: #555555">+</span> <span style="color: #336666">str</span>(fc)
+plt<span style="color: #555555">.</span>figure(figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">10</span>, <span style="color: #FF6600">8</span>))
+plt<span style="color: #555555">.</span>plot(x[:,<span style="color: #FF6600">0</span>],x[:,<span style="color: #FF6600">1</span>],<span style="color: #CC3300">&#39;y-o&#39;</span>)
+<span style="color: #0099FF; font-style: italic">#plt.savefig(&#39;contour.png&#39;)</span>
+
+fig <span style="color: #555555">=</span> plt<span style="color: #555555">.</span>figure(figsize<span style="color: #555555">=</span>(<span style="color: #FF6600">10</span>, <span style="color: #FF6600">8</span>))
+ax1 <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>add_subplot(<span style="color: #FF6600">211</span>)
+ax1<span style="color: #555555">.</span>plot(fs,<span style="color: #CC3300">&#39;r.-&#39;</span>)
+ax1<span style="color: #555555">.</span>legend([<span style="color: #CC3300">&#39;Objective&#39;</span>])
+ax2 <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>add_subplot(<span style="color: #FF6600">212</span>)
+ax2<span style="color: #555555">.</span>plot(x[:,<span style="color: #FF6600">0</span>],<span style="color: #CC3300">&#39;b.-&#39;</span>)
+ax2<span style="color: #555555">.</span>plot(x[:,<span style="color: #FF6600">1</span>],<span style="color: #CC3300">&#39;g--&#39;</span>)
+ax2<span style="color: #555555">.</span>legend([<span style="color: #CC3300">&#39;x1&#39;</span>,<span style="color: #CC3300">&#39;x2&#39;</span>])
+
+<span style="color: #0099FF; font-style: italic"># Save the figure as a PNG</span>
+<span style="color: #0099FF; font-style: italic">#plt.savefig(&#39;iterations.png&#39;)</span>
+
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Best solution: [ 0.91536557 -0.66902677]
+Best objective: 7.79514624035
+</pre></div>
+
+
+<p><img alt="png" src="../output_36_1.png" /></p>
+<p><img alt="png" src="../output_36_2.png" /></p>
+<ul>
+<li>Repeat this for 1000 particles</li>
+</ul>
+<hr />
+<h3 id="references">References</h3>
+<p>1 . Simulated Annealing Tutorial http://apmonitor.com/me575/index.php/Main/SimulatedAnnealing</p>
+<p>2 . The Simulated Annealing Algorithm http://katrinaeg.com/simulated-annealing.html</p>
+<p>3 . Simulated Annealing for beginners  http://www.theprojectspot.com/tutorial-post/simulated-annealing-algorithm-for-beginners/6</p>
+<p>4 . Simulated Annealing: http://csg.sph.umich.edu/abecasis/class/2006/615.19.pdf</p>
+<p>5 . Simulated Annealing : http://mathworld.wolfram.com/SimulatedAnnealing.html</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../PathIntegral/Intro/Intro/" class="btn btn-neutral float-right" title="Getting Started with Path Integral">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../intro/Optimization/" class="btn btn-neutral" title="Optimization"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../intro/Optimization/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../../PathIntegral/Intro/Intro/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>
