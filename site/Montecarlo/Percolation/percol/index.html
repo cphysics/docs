@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Percolation - Computational Physics</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Percolation";
+    var mkdocs_page_input_path = "Montecarlo/Percolation/percol.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Computational Physics</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../WhyComputationalPhysics/">Why Computational Physics</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/git/">How to Git</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Python</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Python/ds/">Data Structure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Python/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Python/fnc/">Function and Class</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numerical Methods</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/intro/Numerical-Methods/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/special-function/Special-Functions/">Special Functions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/Diffusion/Diffusion/">Diffusion</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/Ncharges/Ncharges/">Ncharges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/Laplace/laplace/">Laplace</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Monte Carlo Simulation</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/intro/">Getting Started Monte Carlo Simulation</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/intro/">Algorithms in Monte Carlo Simulation</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../RandomWalk/Rwalk/">Random Walk</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Lotto/lotto/">Lottary Model</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../IdealGas/IdealGas/">Ideal Gas</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Oscillator/Oscillator/">Harmonic Oscillator</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../IzingModel/Izing2D/">Ising Model</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Percolation
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#percolation_1">Percolation</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#final">Final</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../HardDisk/hd/">Hard Disk</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Levy/levy/">Quantum Monte Carlo</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../BEC/bec/">Bose-Einstein Condensation</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Optimization</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../optimization/intro/Optimization/">Optimization</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../optimization/SimulatedAnealing/simulatedAnn/">Simulated Annealing</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Path Integral</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../PathIntegral/Intro/Intro/">Getting Started with Path Integral</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Fractals and Chaos</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FractalChaos/Fern/fern/">Fern</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../References/">References</a>
+  </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Computational Physics</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Monte Carlo Simulation &raquo;</li>
+        
+      
+    
+    <li>Percolation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="percolation">Percolation</h1>
+<h3 id="percolation_1">Percolation</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>from pylab import *
+from scipy.ndimage import measurements
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>L = 100
+r = rand(L,L)
+p = 0.4
+z = r &lt; p
+
+imshow(z, origin=&#39;lower&#39;, interpolation=&#39;nearest&#39;)
+colorbar()
+title(&quot;Matrix&quot;)
+show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_3_0.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>lw, num = measurements.label(z)
+imshow(lw, origin=&#39;lower&#39;, interpolation=&#39;nearest&#39;)
+colorbar()
+title(&quot;Labeled clusters&quot;)
+show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_4_0.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>b = arange(lw.max() + 1)
+shuffle(b)
+shuffledLw = b[lw]
+imshow(shuffledLw, origin=&#39;lower&#39;, interpolation=&#39;nearest&#39;)
+colorbar()
+title(&quot;Labeled clusters&quot;)
+show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_5_0.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>area = measurements.sum(z, lw, index=arange(lw.max() + 1))
+areaImg = area[lw]
+im3 = imshow(areaImg, origin=&#39;lower&#39;, interpolation=&#39;nearest&#39;)
+colorbar()
+title(&quot;Clusters by area&quot;)
+show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_6_0.png" /></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>sliced = measurements.find_objects(areaImg == areaImg.max())
+if(len(sliced) &gt; 0):
+    sliceX = sliced[0][1]
+    sliceY = sliced[0][0]
+    plotxlim=im3.axes.get_xlim()
+    plotylim=im3.axes.get_ylim()
+    plot([sliceX.start, sliceX.start, sliceX.stop, sliceX.stop, sliceX.start], \
+                      [sliceY.start, sliceY.stop, sliceY.stop, sliceY.start, sliceY.start], \
+                      color=&quot;red&quot;)
+    xlim(plotxlim)
+    ylim(plotylim)
+
+show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_7_0.png" /></p>
+<h3 id="final">Final</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>from pylab import *
+from scipy.ndimage import measurements
+
+L = 100
+r = rand(L,L)
+p = 0.4
+z = r&lt;p
+
+figure(figsize=(16,5))
+subplot(1,3,1)
+imshow(z, origin=&#39;lower&#39;, interpolation=&#39;nearest&#39;)
+colorbar()
+title(&quot;Matrix&quot;)
+
+# Show image of labeled clusters (shuffled)
+lw, num = measurements.label(z)
+subplot(1,3,2)
+b = arange(lw.max() + 1) # create an array of values from 0 to lw.max() + 1
+shuffle(b) # shuffle this array
+shuffledLw = b[lw] # replace all values with values from b
+imshow(shuffledLw, origin=&#39;lower&#39;, interpolation=&#39;nearest&#39;) # show image clusters as labeled by a shuffled lw
+colorbar()
+title(&quot;Labeled clusters&quot;)
+
+# Calculate areas
+subplot(1,3,3)
+area = measurements.sum(z, lw, index=arange(lw.max() + 1))
+areaImg = area[lw]
+im3 = imshow(areaImg, origin=&#39;lower&#39;, interpolation=&#39;nearest&#39;)
+colorbar()
+title(&quot;Clusters by area&quot;)
+
+# Bounding box
+sliced = measurements.find_objects(areaImg == areaImg.max())
+if(len(sliced) &gt; 0):
+    sliceX = sliced[0][1]
+    sliceY = sliced[0][0]
+    plotxlim=im3.axes.get_xlim()
+    plotylim=im3.axes.get_ylim()
+    plot([sliceX.start, sliceX.start, sliceX.stop, sliceX.stop, sliceX.start], \
+                      [sliceY.start, sliceY.stop, sliceY.stop, sliceY.start, sliceY.start], \
+                      color=&quot;red&quot;)
+    xlim(plotxlim)
+    ylim(plotylim)
+
+show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_9_0.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../HardDisk/hd/" class="btn btn-neutral float-right" title="Hard Disk">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../IzingModel/Izing2D/" class="btn btn-neutral" title="Ising Model"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../IzingModel/Izing2D/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../HardDisk/hd/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

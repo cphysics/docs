@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Harmonic Oscillator - Computational Physics</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Harmonic Oscillator";
+    var mkdocs_page_input_path = "Montecarlo/Oscillator/Oscillator.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Computational Physics</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../..">Home</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../WhyComputationalPhysics/">Why Computational Physics</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Getting started</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../GettingStarted/git/">How to Git</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Python</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Python/ds/">Data Structure</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Python/lnc/">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../Python/fnc/">Function and Class</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Numerical Methods</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/intro/Numerical-Methods/">Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/special-function/Special-Functions/">Special Functions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/Diffusion/Diffusion/">Diffusion</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/Ncharges/Ncharges/">Ncharges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../NumericalMethods/Laplace/laplace/">Laplace</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Monte Carlo Simulation</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/intro/">Getting Started Monte Carlo Simulation</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../GettingStarted/intro/">Algorithms in Monte Carlo Simulation</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../RandomWalk/Rwalk/">Random Walk</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Lotto/lotto/">Lottary Model</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../IdealGas/IdealGas/">Ideal Gas</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Harmonic Oscillator
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#harmonic-oscillator-using-hmc">
+      Harmonic Oscillator using HMC
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#import-the-library">Import the Library</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#hamiltonian">Hamiltonian</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#generating-random-momentum">Generating Random Momentum</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#leap-frog">Leap Frog</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#hmc">HMC</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#run-hmc">Run HMC</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#seting-constants">Seting Constants</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#plot">Plot</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../IzingModel/Izing2D/">Ising Model</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Percolation/percol/">Percolation</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../HardDisk/hd/">Hard Disk</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Levy/levy/">Quantum Monte Carlo</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../BEC/bec/">Bose-Einstein Condensation</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Optimization</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../optimization/intro/Optimization/">Optimization</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../optimization/SimulatedAnealing/simulatedAnn/">Simulated Annealing</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Path Integral</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../PathIntegral/Intro/Intro/">Getting Started with Path Integral</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Fractals and Chaos</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FractalChaos/Fern/fern/">Fern</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../../References/">References</a>
+  </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Computational Physics</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Monte Carlo Simulation &raquo;</li>
+        
+      
+    
+    <li>Harmonic Oscillator</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="harmonic-oscillator-using-hmc">Harmonic Oscillator using HMC</h1>
+<h3 id="import-the-library">Import the Library</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;import section&#39;&#39;&#39;</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span> <span style="color: #006699; font-weight: bold">as</span>  <span style="color: #00CCFF; font-weight: bold">math</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+</pre></div>
+
+
+<p>We want to apply HMC to collection of 100 independent Harmonic Oscillator to get equilibrium configuration.</p>
+<h3 id="hamiltonian">Hamiltonian</h3>
+<p>Hamiltonian of Harmonic Oscillator in 1D is:</p>
+<p>$$ H = \frac{1}{2} p^{2} + \frac{1}{2}q^{2}$$
+ with
+$$ m = 1,k = 1 $$</p>
+<p>This function calculates the  total Hamiltonian of the configuration</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">hamiltonian</span>(x,p,np):
+    <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;x,p: x and p are list of position and momentum&#39;&#39;&#39;</span>
+    <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;np : number of particles in the system &#39;&#39;&#39;</span>
+    H <span style="color: #555555">=</span> <span style="color: #FF6600">0.0</span>
+    <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(np):
+            H <span style="color: #555555">=</span> H <span style="color: #555555">+</span> ((x[k]<span style="color: #555555">*</span>x[k])<span style="color: #555555">/</span><span style="color: #FF6600">2.0</span> <span style="color: #555555">+</span> (p[k]<span style="color: #555555">*</span>p[k])<span style="color: #555555">/</span><span style="color: #FF6600">2.0</span> )
+    <span style="color: #006699; font-weight: bold">return</span> H      
+</pre></div>
+
+
+<h3 id="generating-random-momentum">Generating Random Momentum</h3>
+<p>In order to generate random momentum we use "random.gauss"</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">drawp</span>(np):
+    <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;this function returns a list of random numbers&#39;&#39;&#39;</span>
+    t <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(np)]
+    <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(np):
+        r <span style="color: #555555">=</span> random<span style="color: #555555">.</span>gauss(<span style="color: #FF6600">0.0</span>,<span style="color: #FF6600">1.0</span>)
+        t[k] <span style="color: #555555">=</span> r
+    <span style="color: #006699; font-weight: bold">return</span>(t)       
+</pre></div>
+
+
+<p>One can check whether the generated numbers are normally distributed or not by doing:</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>N <span style="color: #555555">=</span> <span style="color: #FF6600">100000</span> 
+p <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(N)]
+p <span style="color: #555555">=</span> drawp(N)
+num_bins <span style="color: #555555">=</span> <span style="color: #FF6600">20</span>
+plt<span style="color: #555555">.</span>figure(<span style="color: #FF6600">1</span>)
+plt<span style="color: #555555">.</span>hist(p,num_bins, normed<span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>, facecolor<span style="color: #555555">=</span><span style="color: #CC3300">&#39;green&#39;</span>, alpha <span style="color: #555555">=</span> <span style="color: #FF6600">0.5</span>)
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_12_0.png" /></p>
+<h3 id="leap-frog">Leap Frog</h3>
+<p>We will use leap frog approximation to evolve the system according to time.</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">leap_frog</span>(N,dt,ix,ip,np):
+
+        <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39; N : number of steps to evolve</span>
+<span style="color: #CC3300; font-style: italic">            dt:  fraction of time ie T  = dt*N</span>
+<span style="color: #CC3300; font-style: italic">            ix,ip : initial position and momentum</span>
+<span style="color: #CC3300; font-style: italic">            np : number of the particles in the system</span>
+<span style="color: #CC3300; font-style: italic">        &#39;&#39;&#39;</span>
+        <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39; Returns</span>
+<span style="color: #CC3300; font-style: italic">          x,p : final position and momentum&#39;&#39;&#39;</span>   
+
+
+        x <span style="color: #555555">=</span> ix
+        p <span style="color: #555555">=</span> ip
+        k <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
+        <span style="color: #006699; font-weight: bold">while</span> k <span style="color: #555555">&lt;</span> N:
+            <span style="color: #006699; font-weight: bold">if</span> k <span style="color: #555555">==</span> <span style="color: #FF6600">0</span>:
+                    <span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(np):
+                        p[i] <span style="color: #555555">=</span> p[i] <span style="color: #555555">-</span> ((dt<span style="color: #555555">/</span><span style="color: #FF6600">2.0</span>)<span style="color: #555555">*</span>x[i])
+            <span style="color: #006699; font-weight: bold">elif</span> k <span style="color: #555555">&gt;</span> <span style="color: #FF6600">0</span> :
+                    <span style="color: #006699; font-weight: bold">if</span> k <span style="color: #555555">&lt;</span> N <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>:
+                        <span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(np):   
+                            x[i] <span style="color: #555555">=</span> x[i] <span style="color: #555555">+</span> (dt<span style="color: #555555">*</span>p[i])
+                            p[i] <span style="color: #555555">=</span>   p[i] <span style="color: #555555">-</span> (dt<span style="color: #555555">*</span>x[i])
+                            <span style="color: #0099FF; font-style: italic">#S1 = hamiltonian(x,p,np)</span>
+                            <span style="color: #0099FF; font-style: italic">#print &quot;k =&quot;,k,&quot;S1=&quot;,S1</span>
+
+            <span style="color: #006699; font-weight: bold">elif</span> k <span style="color: #555555">==</span> N <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>:
+                          <span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(np): 
+                            p[i] <span style="color: #555555">=</span> (p[i] <span style="color: #555555">-</span> (dt<span style="color: #555555">/</span><span style="color: #FF6600">2.0</span>)<span style="color: #555555">*</span>x[i])
+
+            k <span style="color: #555555">=</span> k<span style="color: #555555">+</span><span style="color: #FF6600">1</span>
+        <span style="color: #006699; font-weight: bold">return</span> x,p
+</pre></div>
+
+
+<h3 id="hmc">HMC</h3>
+<p>Here we run the HMC - simulation</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">HMC</span>(np,N,dt,steps,x0):
+
+    <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39; np : number of particles in the system</span>
+<span style="color: #CC3300; font-style: italic">        N = number of steps in Leap - Frog</span>
+<span style="color: #CC3300; font-style: italic">        dt = fraction of time in Leap - Frog</span>
+<span style="color: #CC3300; font-style: italic">        steps: total steps in HMC &#39;&#39;&#39;</span>
+
+
+
+    xt <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(np)]
+    pt <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(np)]
+
+
+    p0 <span style="color: #555555">=</span> drawp(np)
+    H <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(steps)]
+
+    S0 <span style="color: #555555">=</span> hamiltonian(x0,p0,np)
+    <span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&quot;=======&gt;&quot;</span>, <span style="color: #FF6600">0</span>,<span style="color: #CC3300">&quot;S0=&quot;</span>, S0
+
+
+
+    chain <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
+    total_frac <span style="color: #555555">=</span>  <span style="color: #FF6600">0.0</span>
+    <span style="color: #006699; font-weight: bold">while</span> chain <span style="color: #555555">&lt;</span> steps:
+        s_stor <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span>]
+        xt,pt <span style="color: #555555">=</span> leap_frog(N,dt,x0,p0,np)
+        S1 <span style="color: #555555">=</span> hamiltonian(xt,pt,np)
+        frac <span style="color: #555555">=</span> math<span style="color: #555555">.</span>exp(<span style="color: #555555">-</span>(S1<span style="color: #555555">-</span>S0))
+        <span style="color: #0099FF; font-style: italic">#print frac</span>
+        a <span style="color: #555555">=</span> <span style="color: #336666">min</span>(<span style="color: #FF6600">1</span>,frac)
+        b <span style="color: #555555">=</span> random<span style="color: #555555">.</span>uniform(<span style="color: #FF6600">0.0</span>,<span style="color: #FF6600">1.0</span>)
+
+        <span style="color: #006699; font-weight: bold">if</span> b <span style="color: #555555">&lt;</span> a:
+            <span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&quot;=======&gt;&quot;</span>, chain, <span style="color: #CC3300">&quot;S1=&quot;</span>,S1,frac,a,b
+            H[chain] <span style="color: #555555">=</span> S1
+            x0 <span style="color: #555555">=</span> xt
+            p0 <span style="color: #555555">=</span> drawp(np)
+            S0 <span style="color: #555555">=</span> hamiltonian(x0,p0,np)
+        <span style="color: #006699; font-weight: bold">else</span>:
+            H[chain] <span style="color: #555555">=</span> S0
+            p0 <span style="color: #555555">=</span> drawp(np)
+
+        chain <span style="color: #555555">=</span> chain<span style="color: #555555">+</span><span style="color: #FF6600">1</span>
+
+    <span style="color: #006699; font-weight: bold">return</span> H   
+</pre></div>
+
+
+<h3 id="run-hmc">Run HMC</h3>
+<p>Steps to run</p>
+<h3 id="seting-constants">Seting Constants</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>np <span style="color: #555555">=</span> <span style="color: #FF6600">1000</span>
+N <span style="color: #555555">=</span> <span style="color: #FF6600">1000</span>
+dt <span style="color: #555555">=</span> <span style="color: #FF6600">0.001</span>
+steps <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
+</pre></div>
+
+
+<p>Call HMC</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>x0 <span style="color: #555555">=</span> [<span style="color: #FF6600">1.0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(np)]
+x0 <span style="color: #555555">=</span> [random<span style="color: #555555">.</span>uniform(<span style="color: #FF6600">0.0</span>,<span style="color: #FF6600">1.0</span>) <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(np)]
+H <span style="color: #555555">=</span> HMC(np,N,dt,steps,x0)  
+</pre></div>
+
+
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>=======&amp;gt; 0 S0= 634.329642425
+=======&amp;gt; 1 S1= 634.176644431 1.1653226407 1 0.733718825241
+=======&amp;gt; 2 S1= 860.433247645 1.04820040462 1 0.118879577619
+=======&amp;gt; 3 S1= 959.0880056 1.02823941879 1 0.494715009236
+=======&amp;gt; 4 S1= 995.098781516 1.00201905305 1 0.26041376277
+=======&amp;gt; 5 S1= 1014.46067223 0.996173462387 0.996173462387 0.973534507459
+=======&amp;gt; 6 S1= 1060.1975905 1.00650260273 1 0.0433863045125
+=======&amp;gt; 7 S1= 1056.67125783 1.0046068542 1 0.318541041274
+=======&amp;gt; 8 S1= 1007.92542371 0.972470680716 0.972470680716 0.641673826227
+=======&amp;gt; 9 S1= 1019.45210409 0.999868096288 0.999868096288 0.673753652179
+=======&amp;gt; 10 S1= 1033.75761347 1.01455345167 1 0.904224474449
+=======&amp;gt; 11 S1= 1039.33277255 1.00067885822 1 0.922841618884
+=======&amp;gt; 12 S1= 977.786623826 0.969824483296 0.969824483296 0.0534599327409
+=======&amp;gt; 13 S1= 982.135607524 0.981771694716 0.981771694716 0.0888855631239
+=======&amp;gt; 14 S1= 984.434076216 1.00314168125 1 0.900050557869
+=======&amp;gt; 15 S1= 979.489618274 1.00009113341 1 0.65844667362
+=======&amp;gt; 16 S1= 971.111139684 0.999416129807 0.999416129807 0.655811347266
+=======&amp;gt; 17 S1= 968.559937229 0.988931685077 0.988931685077 0.423820846374
+=======&amp;gt; 18 S1= 1015.44100508 1.01079386585 1 0.286496247338
+=======&amp;gt; 19 S1= 1001.41694142 1.00450602184 1 0.083130176045
+=======&amp;gt; 20 S1= 960.860002507 0.990150380448 0.990150380448 0.0519649287677
+=======&amp;gt; 21 S1= 933.474638737 1.00388363176 1 0.46189851642
+=======&amp;gt; 22 S1= 934.623173003 1.00369016883 1 0.495986113076
+=======&amp;gt; 23 S1= 989.4356649 0.996338227827 0.996338227827 0.531254896848
+=======&amp;gt; 24 S1= 1025.92286005 1.00861885908 1 0.313190008068
+=======&amp;gt; 25 S1= 1013.92821481 0.99071689113 0.99071689113 0.758255203087
+=======&amp;gt; 26 S1= 984.231043708 1.00076682019 1 0.843966385214
+=======&amp;gt; 27 S1= 947.27251361 1.01126395915 1 0.583020435715
+=======&amp;gt; 28 S1= 940.456922734 1.02975887887 1 0.595715587061
+=======&amp;gt; 29 S1= 1021.02868528 1.0253436546 1 0.00374011822671
+=======&amp;gt; 30 S1= 1044.50742208 1.01629498318 1 0.879696971454
+=======&amp;gt; 31 S1= 1004.58078536 0.991459152846 0.991459152846 0.707240349329
+=======&amp;gt; 32 S1= 974.925563796 0.998420468809 0.998420468809 0.929684182116
+=======&amp;gt; 33 S1= 990.203727805 1.00391617234 1 0.698723615461
+=======&amp;gt; 34 S1= 970.184852439 0.972615104041 0.972615104041 0.568697026237
+=======&amp;gt; 35 S1= 1006.22736678 1.02654444157 1 0.852950015052
+=======&amp;gt; 36 S1= 998.92636329 0.988291037764 0.988291037764 0.379738519717
+=======&amp;gt; 37 S1= 1030.24158673 0.983339277845 0.983339277845 0.757129957835
+=======&amp;gt; 39 S1= 1025.25902821 2.57411624753e+11 1 0.0463867804879
+=======&amp;gt; 40 S1= 1014.17028424 1.00196224 1 0.43927515854
+=======&amp;gt; 41 S1= 969.658672095 0.99242843551 0.99242843551 0.607817867387
+=======&amp;gt; 42 S1= 965.791453024 0.997937568522 0.997937568522 0.208140784376
+=======&amp;gt; 43 S1= 915.270272438 0.984914926098 0.984914926098 0.0439698970697
+=======&amp;gt; 44 S1= 961.813210918 1.04321328147 1 0.219150007161
+=======&amp;gt; 45 S1= 950.972655041 0.999032011959 0.999032011959 0.469070790857
+=======&amp;gt; 46 S1= 979.203355916 1.00739610649 1 0.987271370304
+=======&amp;gt; 47 S1= 963.762907782 1.0269051626 1 0.228776920354
+=======&amp;gt; 48 S1= 949.920749247 1.00736064522 1 0.443149065727
+=======&amp;gt; 49 S1= 1021.89675351 1.02219667178 1 0.562416696674
+=======&amp;gt; 50 S1= 1045.94052152 1.01372753928 1 0.449516449873
+=======&amp;gt; 51 S1= 1022.03904161 1.00609459087 1 0.216552050456
+=======&amp;gt; 52 S1= 1008.12344917 0.986500719573 0.986500719573 0.484734159393
+=======&amp;gt; 53 S1= 983.162882167 1.00790784095 1 0.636702880429
+=======&amp;gt; 54 S1= 1013.81551942 1.01409814001 1 4.81073520403e-05
+=======&amp;gt; 55 S1= 1010.85292888 1.01025417351 1 0.149774761606
+=======&amp;gt; 56 S1= 999.558517909 1.00130374632 1 0.964433917429
+=======&amp;gt; 57 S1= 1007.70305301 0.991591621018 0.991591621018 0.441621732618
+=======&amp;gt; 58 S1= 1035.64389008 0.99519261928 0.99519261928 0.0886792040929
+=======&amp;gt; 59 S1= 1010.89736177 0.992819333052 0.992819333052 0.919392595293
+=======&amp;gt; 60 S1= 1018.43419346 1.03093518871 1 0.490427219365
+=======&amp;gt; 61 S1= 1029.3748498 1.02052172977 1 0.775699542826
+=======&amp;gt; 62 S1= 1008.38007901 0.981519448603 0.981519448603 0.103399004587
+=======&amp;gt; 63 S1= 1013.60095323 0.995815163828 0.995815163828 0.510309286351
+=======&amp;gt; 64 S1= 994.410649009 0.991837188211 0.991837188211 0.310897384492
+=======&amp;gt; 65 S1= 994.116396391 0.993409094913 0.993409094913 0.768301617641
+=======&amp;gt; 66 S1= 1006.13575458 0.989289998424 0.989289998424 0.0895708870016
+=======&amp;gt; 67 S1= 1050.91856039 0.99704078393 0.99704078393 0.121374733941
+=======&amp;gt; 68 S1= 1017.75278059 0.973890480407 0.973890480407 0.686366119542
+=======&amp;gt; 69 S1= 995.879923494 1.00767777078 1 0.735823324802
+=======&amp;gt; 70 S1= 943.442902305 0.99834110281 0.99834110281 0.55392468377
+=======&amp;gt; 71 S1= 1000.71447811 1.03263450015 1 0.251331122407
+=======&amp;gt; 72 S1= 1004.9542924 0.986986118235 0.986986118235 0.878474840287
+=======&amp;gt; 73 S1= 1006.77014848 1.00896660084 1 0.522078869728
+=======&amp;gt; 74 S1= 994.563680798 1.00299539687 1 0.484478355029
+=======&amp;gt; 75 S1= 992.464156392 1.01160947857 1 0.0726515554188
+=======&amp;gt; 76 S1= 1032.73546321 1.00979569001 1 0.135635688016
+=======&amp;gt; 82 S1= 972.617554632 516459.37774 1 0.218468658673
+=======&amp;gt; 83 S1= 954.034538674 0.988720489167 0.988720489167 0.787692132405
+=======&amp;gt; 84 S1= 987.112031092 1.00765876819 1 0.633473950464
+=======&amp;gt; 85 S1= 1017.30900049 0.987977157391 0.987977157391 0.845728433192
+=======&amp;gt; 86 S1= 1077.42941197 1.0187661378 1 0.220075666386
+=======&amp;gt; 87 S1= 1052.6648128 1.00363767186 1 0.486906416463
+=======&amp;gt; 88 S1= 1021.30595102 1.01204872528 1 0.925931423529
+=======&amp;gt; 89 S1= 997.770911129 1.0139249168 1 0.880471281482
+=======&amp;gt; 90 S1= 977.391794605 1.01080296415 1 0.00720408839598
+=======&amp;gt; 91 S1= 971.101936763 0.994794720856 0.994794720856 0.653042189832
+=======&amp;gt; 92 S1= 984.018511787 0.996881531283 0.996881531283 0.763730120442
+=======&amp;gt; 93 S1= 996.771079992 1.02931942658 1 0.982855323235
+=======&amp;gt; 94 S1= 986.597018438 0.994872537714 0.994872537714 0.81748404728
+=======&amp;gt; 95 S1= 957.950186927 0.99876353159 0.99876353159 0.19244008715
+=======&amp;gt; 96 S1= 986.873852747 1.00908608477 1 0.306752182025
+=======&amp;gt; 97 S1= 979.964652828 0.99670144889 0.99670144889 0.926651912953
+=======&amp;gt; 98 S1= 946.617639244 0.992433587915 0.992433587915 0.124414236105
+=======&amp;gt; 99 S1= 977.089862612 1.00594584499 1 0.32264646888
+</pre></div>
+
+
+<h3 id="plot">Plot</h3>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>t <span style="color: #555555">=</span> [<span style="color: #FF6600">1.0</span><span style="color: #555555">*</span>k <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span> (steps)] 
+plt<span style="color: #555555">.</span>figure(<span style="color: #FF6600">12</span>)
+plt<span style="color: #555555">.</span>scatter(t,H)
+plt<span style="color: #555555">.</span>show()
+</pre></div>
+
+
+<p><img alt="png" src="../output_26_0.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../IzingModel/Izing2D/" class="btn btn-neutral float-right" title="Ising Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../IdealGas/IdealGas/" class="btn btn-neutral" title="Ideal Gas"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../IdealGas/IdealGas/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../IzingModel/Izing2D/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

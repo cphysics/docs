@@ -1,8 +1,17 @@
 site_name: Computational Physics
 
 
+
+extra_javascript: 
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - mdx_math
+
+
+
 theme:
-  name: 'material'
+  name: 'rtd-dropdown'
   highlightjs: true
   hljs_languages: []
   include_homepage_in_sidebar: true
@@ -34,7 +43,6 @@ nav:
   - Guide to Python Libraries: GettingStarted/lib.md
   - Setting up Python Environment: GettingStarted/env.md
   - Installing Jupyter Notebook : GettingStarted/jupyter.md
-  - Lunching an EC2 instance in AWS Cloud: GettingStarted/cloud.md
   - How to Git: GettingStarted/git.md
   
 - Python:
@@ -44,14 +52,11 @@ nav:
   
   
 - Numerical Methods:
-  - Simulated Annealing: NumericalMethods/SimulatedAnealing/simulatedAnn.md
-  - Diffusion: NumericalMethods/Diffusion/diffusion.md
+  - Introduction : NumericalMethods/intro/Numerical-Methods.md
+  - Special Functions : NumericalMethods/special-function/Special-Functions.md
+  - Diffusion: NumericalMethods/Diffusion/Diffusion.md
   - Ncharges: NumericalMethods/Ncharges/Ncharges.md
-  
-  
-- Fractals and Chaos:
-  - Fern: FractalChaos/Fern/fern.md
- 
+  - Laplace : NumericalMethods/Laplace/laplace.md
   
 - Monte Carlo Simulation:
   - Getting Started Monte Carlo Simulation : Montecarlo/GettingStarted/intro.md
@@ -66,56 +71,16 @@ nav:
   - Quantum Monte Carlo: Montecarlo/Levy/levy.md
   - Bose-Einstein Condensation: Montecarlo/BEC/bec.md
   
-  
+- Optimization:
+  - Optimization: optimization/intro/Optimization.md
+  - Simulated Annealing: optimization/SimulatedAnealing/simulatedAnn.md
+
   
 - Path Integral:
   - Getting Started with Path Integral: PathIntegral/Intro/Intro.md
- 
   
-  
-- Signal Processing:
-  - Getting Started with Signal Processing: UnderConstruction.md
-  - Fourier Transform: UnderConstruction.md
-  - Fast Fourier Transform: UnderConstruction.md
-  
-  
-- Partial Differential Equations:
-  - Laplace Equation: PDE/Laplace/laplace.md
-  
-  
-- Network and Complex System:
-  - Networks: UnderConstruction.md
-  - Complex System: UnderConstruction.md
-  - Emergence: UnderConstruction.md
-  - Phase Transition: UnderConstruction.md
-  
-  
-- Neural Networks:
-  - introduction: UnderConstruction.md
-  - Deep Learning: UnderConstruction.md
-  
-  
-- Nature Inspired Computing:
-  - introduction: UnderConstruction.md
-  - Cellular Automaton: UnderConstruction.md
-  - Molecular syatem: UnderConstruction.md
-  
-  
-- Parallel and Distributed Computing:
-  - Parallel Computing: UnderConstruction.md
-  - Distributed Computing: UnderConstruction.md
-  
-  
-- Blockchain:
-  - introduction: UnderConstruction.md
-  - Blockchain as Database: UnderConstruction.md
-  
-  
-- Quantum Computing:
-  - Introduction: UnderConstruction.md
-  - Quantum Circuits: UnderConstruction.md
-  - Quantum Cryptography: UnderConstruction.md
-
+- Fractals and Chaos:
+  - Fern: FractalChaos/Fern/fern.md 
             
 - References: References.md
   

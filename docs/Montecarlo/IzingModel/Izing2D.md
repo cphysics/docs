@@ -77,7 +77,7 @@ Uplotter(HU)
 
 Hamiltonian of  L by L lattice is given by
 
-$H = - J \sum_{i\neq j} S_{i}S_{j}$
+$$H = - J \sum_{i\neq j} S_{i}S_{j}$$
 
 
 ```

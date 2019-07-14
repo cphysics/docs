@@ -17,7 +17,10 @@ We want to apply HMC to collection of 100 independent Harmonic Oscillator to get
 ### Hamiltonian
 
 Hamiltonian of Harmonic Oscillator in 1D is:
-    $H = \frac{1}{2} p^{2} + \frac{1}{2}q^{2}$ with $ m = 1,k = 1$
+
+$$ H = \frac{1}{2} p^{2} + \frac{1}{2}q^{2}$$
+ with
+$$ m = 1,k = 1 $$
 
 This function calculates the  total Hamiltonian of the configuration
 

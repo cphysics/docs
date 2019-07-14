@@ -58,33 +58,33 @@ For example, considering range of sample equal to 50, among millions of sample o
 
 Let us define a skewsymmetric distance matrix  by taking difference between digits in sample as the matrix elements. There is one distance matrix per sample.
 
-$D_{ij} =  (x_{i}-x_{j})$
+$$D_{ij} =  (x_{i}-x_{j})$$
 
 ie. 
 
-$D = \left( \begin{array}{ccc}
+$$D = \left( \begin{array}{ccc}
 0 & \color{blue}{(x_{1}-x_{2})} & (x_{1}-x_{3})& (x_{1}-x_{4}) & (x_{1}-x_{5}) \\
 (x_{2}-x_{1}) & 0 & \color{blue}{(x_{2}-x_{3})}& (x_{2}-x_{4}) & (x_{2}-x_{5}) \\
 (x_{3}-x_{1}) & (x_{3}-x_{2}) & 0& \color{blue}{(x_{3}-x_{4})} & (x_{3}-x_{5}) \\
 (x_{4}-x_{1}) & (x_{4}-x_{2}) & (x_{4}-x_{3})& 0 & \color{blue}{(x_{4}-x_{5})} \\
 \color{blue}{(x_{5}-x_{1})} & (x_{5}-x_{2}) & (x_{5}-x_{3})& (x_{5}-x_{4}) & 0 \\
-\end{array} \right)$
+\end{array} \right)$$
 
 Taking (N = 5) oscillators  with flexibility between seperation of numbers as spring constant (K=1). Simple  model of Action can be defined by taking single updiagonal terms only as:
 
 ##### Model-I (Linear)
 
-$ L = \frac{1}{2}K[(x_1 -x_2)^2 +(x_2 -x_3)^2 + (x_3 -x_4)^2 + (x_4 -x_5)^2 ] $
+$$ L = \frac{1}{2}K[(x_1 -x_2)^2 +(x_2 -x_3)^2 + (x_3 -x_4)^2 + (x_4 -x_5)^2 ] $$
 
 ##### Model-II (Linear &Periodic)
 
-$ L = \frac{1}{2}K[(x_1 -x_2)^2 +(x_2 -x_3)^2 + (x_3 -x_4)^2 + (x_4 -x_5)^2 + (x_5 -x_1)^2 ] $
+$$ L = \frac{1}{2}K[(x_1 -x_2)^2 +(x_2 -x_3)^2 + (x_3 -x_4)^2 + (x_4 -x_5)^2 + (x_5 -x_1)^2 ] $$
 
 Considering effect of all terms in distance matrix one can define new model of Action as:
 
 ##### Model - III (Quadratic & Periodic)
 
-$L = Tr(D^{\dagger}KD)$
+$$L = Tr(D^{\dagger}KD)$$
 
 $\color{red}{Warning:}$ Since each digit are not equally correlated to eachother, this form of action should be corrected by choosing appropriate spring constant for crossed terms like $x_{3}x_{4}$. K is another matrix(or tensor) of spring constants which can be determined by finding correlation cofficients between digits within several samples.
 
@@ -367,7 +367,7 @@ $\color{blue}{\text{Improved Action}}: \boxed{L =  D^{\dagger}KD}$ with K-matrix
 
 Total energy of the system of (N=100) coupled oscillator in integer space can be expressed as:
 
-$H =  \sum_{i=1}^{N} D^{\dagger}KD $
+$$H =  \sum_{i=1}^{N} D^{\dagger}KD $$
 
 Define some useful function for thermalization
 
