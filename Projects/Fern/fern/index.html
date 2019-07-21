@@ -19,7 +19,7 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Fern";
-    var mkdocs_page_input_path = "FractalChaos/Fern/fern.md";
+    var mkdocs_page_input_path = "Projects/Fern/fern.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -54,13 +54,6 @@
 
   <li class="navtree toctree-l1 inactive">
     <a class="" href="../../..">Home</a>
-  </li>
-    
-      
-
-
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../../WhyComputationalPhysics/">Why Computational Physics</a>
   </li>
     
       
@@ -114,7 +107,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Python</p>
+    <p class="caption">Python Programming</p>
   </li>
 
 
@@ -127,21 +120,56 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Python/ds/">Data Structure</a>
+    <a class="" href="../../../prog/">Introduction</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Python/lnc/">Loops and Conditions</a>
+    <a class="" href="../../../DataStructure/ds/">DataStructure</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Python/fnc/">Function and Class</a>
+    <a class="" href="../../../LoopsConditions/lnc.md">Loops and Conditions</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="./">Project Fern</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Diffusion/Diffusion/">Project Diffusion</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../../FunctionClass/fnc/">Functions and Class</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Ncharges/Ncharges/">Project N-charges</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../Rwalk/Rwalk/">Project Random Walk</a>
   </li>
         
       </ul>
@@ -176,14 +204,14 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/Diffusion/Diffusion/">Diffusion</a>
+    <a class="" href="../../Diffusion/Diffusion/">Diffusion</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/Ncharges/Ncharges/">Ncharges</a>
+    <a class="" href="../../Ncharges/Ncharges/">Ncharges</a>
   </li>
         
           
@@ -375,7 +403,7 @@
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#method-1-blind-implementation">Method - 1: Blind implementation</a>
+          <a class="toctree-l4" href="#method-1-direct-implementation">Method - 1: Direct implementation</a>
         </li>
     
       
@@ -451,8 +479,8 @@ sns<span style="color: #555555">.</span>set()
 </pre></div>
 
 
-<p><a href="https://en.wikipedia.org/wiki/Barnsley_fern">source</a></p>
-<h4 id="method-1-blind-implementation">Method - 1: Blind implementation</h4>
+<p>Read more about Fern <a href="https://en.wikipedia.org/wiki/Barnsley_fern">here</a>.</p>
+<h4 id="method-1-direct-implementation">Method - 1: Direct implementation</h4>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 x <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
 y <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
@@ -514,12 +542,13 @@ plt<span style="color: #555555">.</span>show()
 
 
 <p><img alt="png" src="../output_7_0.png" /></p>
+<hr />
 <h4 id="method-2-manual-matrix-multiplication">Method-2 : Manual Matrix Multiplication</h4>
 <p>These correspond to the following transformations:</p>
-<p>$$ {\displaystyle f_{1}(x,y)={\begin{bmatrix}\ 0.00&amp;\ 0.00\ \0.00&amp;\ 0.16\end{bmatrix}}{\begin{bmatrix}\ x\y\end{bmatrix}}}$$</p>
-<p>$${\displaystyle f_{2}(x,y)={\begin{bmatrix}\ 0.85&amp;\ 0.04\ \-0.04&amp;\ 0.85\end{bmatrix}}{\begin{bmatrix}\ x\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\1.60\end{bmatrix}}}$$</p>
-<p>$$ {\displaystyle f_{3}(x,y)={\begin{bmatrix}\ 0.20&amp;\ -0.26\ \0.23&amp;\ 0.22\end{bmatrix}}{\begin{bmatrix}\ x\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\1.60\end{bmatrix}}}$$</p>
-<p>$${\displaystyle f_{4}(x,y)={\begin{bmatrix}\ -0.15&amp;\ 0.28\ \0.26&amp;\ 0.24\end{bmatrix}}{\begin{bmatrix}\ x\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\0.44\end{bmatrix}}}$$</p>
+<p>$$ {\displaystyle f_{1}(x,y)={\begin{bmatrix}\ 0.00&amp;\ 0.00\ \\ 0.00&amp;\ 0.16\end{bmatrix}}{\begin{bmatrix}\ x\\y\end{bmatrix}}}$$</p>
+<p>$${\displaystyle f_{2}(x,y)={\begin{bmatrix}\ 0.85 &amp;\ 0.04\ \\ -0.04&amp;\ 0.85\end{bmatrix}}{\begin{bmatrix}\ x\\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\\ 1.60\end{bmatrix}}}$$</p>
+<p>$$ {\displaystyle f_{3}(x,y)={\begin{bmatrix}\ 0.20&amp;\ -0.26\ \\ 0.23&amp;\ 0.22\end{bmatrix}}{\begin{bmatrix}\ x\\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\\ 1.60\end{bmatrix}}}$$</p>
+<p>$${\displaystyle f_{4}(x,y)={\begin{bmatrix}\ -0.15&amp;\ 0.28\ \\ 0.26&amp;\ 0.24\end{bmatrix}}{\begin{bmatrix}\ x\\y\end{bmatrix}}+{\begin{bmatrix}\ 0.00\\0.44\end{bmatrix}}}$$</p>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>ITR <span style="color: #555555">=</span> <span style="color: #FF6600">100000</span>
 </pre></div>
 
@@ -607,6 +636,7 @@ plt<span style="color: #555555">.</span>show()
 
 
 <p><img alt="png" src="../output_14_0.png" /></p>
+<hr />
 <h3 id="method-3-numpy">Method 3-Numpy</h3>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;Matrices&#39;&#39;&#39;</span>
 A <span style="color: #555555">=</span> np<span style="color: #555555">.</span>array([[<span style="color: #FF6600">0.0</span>,<span style="color: #FF6600">0.0</span>],[<span style="color: #FF6600">0.0</span>,<span style="color: #FF6600">0.16</span>]])
