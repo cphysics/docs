@@ -65,7 +65,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Getting started</p>
+    <p class="caption">Scipy</p>
   </li>
 
 
@@ -78,119 +78,28 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+    <a class="" href="../../../Scipy/intro/Numerical-Methods/">Introduction</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+    <a class="" href="../../../Scipy/Harmonics/Harmonics/">Spherical Harmonics</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+    <a class="" href="../../../Scipy/Bessel/Bessel/">Oscillating Membrane</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/git/">How to Git</a>
-  </li>
-        
-      </ul>
-    </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Python</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Python/ds/">Data Structure</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Python/lnc/">Loops and Conditions</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Python/fnc/">Function and Class</a>
-  </li>
-        
-      </ul>
-    </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Numerical Methods</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/intro/Numerical-Methods/">Introduction</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/special-function/Special-Functions/">Special Functions</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/Diffusion/Diffusion/">Diffusion</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/Ncharges/Ncharges/">Ncharges</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/Laplace/laplace/">Laplace</a>
+    <a class="" href="../../../Scipy/Laplace/laplace/">Laplace Equation</a>
   </li>
         
       </ul>
@@ -211,21 +120,14 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../GettingStarted/intro/">Getting Started Monte Carlo Simulation</a>
+    <a class="" href="../../GettingStarted/intro/">Introduction</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../GettingStarted/intro/">Algorithms in Monte Carlo Simulation</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../RandomWalk/Rwalk/">Random Walk</a>
+    <a class="" href="../../GettingStarted/intro/">Algorithms</a>
   </li>
         
           
@@ -365,28 +267,7 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../PathIntegral/Intro/Intro/">Getting Started with Path Integral</a>
-  </li>
-        
-      </ul>
-    </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Fractals and Chaos</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../FractalChaos/Fern/fern/">Fern</a>
+    <a class="" href="../../../PathIntegral/Intro/Intro/">Path Integral</a>
   </li>
         
       </ul>
@@ -445,19 +326,19 @@
 
 N <span style="color: #555555">=</span> <span style="color: #FF6600">4</span>
 sigma <span style="color: #555555">=</span> <span style="color: #FF6600">0.2</span>
-condition <span style="color: #555555">=</span> <span style="color: #336666">False</span>
-<span style="color: #006699; font-weight: bold">while</span> condition <span style="color: #555555">==</span> <span style="color: #336666">False</span>:
+condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
+<span style="color: #006699; font-weight: bold">while</span> condition <span style="color: #555555">==</span> <span style="color: #006699; font-weight: bold">False</span>:
     L <span style="color: #555555">=</span> [(random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma), random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma))]
     <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">1</span>, N):
         a <span style="color: #555555">=</span> (random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma), random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma))
         min_dist <span style="color: #555555">=</span> <span style="color: #336666">min</span>(math<span style="color: #555555">.</span>sqrt((a[<span style="color: #FF6600">0</span>] <span style="color: #555555">-</span> b[<span style="color: #FF6600">0</span>]) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span> <span style="color: #555555">+</span> (a[<span style="color: #FF6600">1</span>] <span style="color: #555555">-</span> b[<span style="color: #FF6600">1</span>]) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span>) <span style="color: #006699; font-weight: bold">for</span> b <span style="color: #000000; font-weight: bold">in</span> L) 
         <span style="color: #006699; font-weight: bold">if</span> min_dist <span style="color: #555555">&lt;</span> <span style="color: #FF6600">2.0</span> <span style="color: #555555">*</span> sigma: 
-            condition <span style="color: #555555">=</span> <span style="color: #336666">False</span>
+            condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
             <span style="color: #006699; font-weight: bold">break</span>
         <span style="color: #006699; font-weight: bold">else</span>:
             L<span style="color: #555555">.</span>append(a)
-            condition <span style="color: #555555">=</span> <span style="color: #336666">True</span>
-<span style="color: #006699; font-weight: bold">print</span> L
+            condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">True</span>
+<span style="color: #336666">print</span> L
 </pre></div>
 
 
@@ -471,25 +352,25 @@ condition <span style="color: #555555">=</span> <span style="color: #336666">Fal
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span>
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">direct_disks_box</span>(N, sigma):
-    condition <span style="color: #555555">=</span> <span style="color: #336666">False</span>
-    <span style="color: #006699; font-weight: bold">while</span> condition <span style="color: #555555">==</span> <span style="color: #336666">False</span>:
+    condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
+    <span style="color: #006699; font-weight: bold">while</span> condition <span style="color: #555555">==</span> <span style="color: #006699; font-weight: bold">False</span>:
         L <span style="color: #555555">=</span> [(random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma), random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma))]
         <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">1</span>, N):
             a <span style="color: #555555">=</span> (random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma), random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma))
             min_dist <span style="color: #555555">=</span> <span style="color: #336666">min</span>(math<span style="color: #555555">.</span>sqrt((a[<span style="color: #FF6600">0</span>] <span style="color: #555555">-</span> b[<span style="color: #FF6600">0</span>]) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span> <span style="color: #555555">+</span> (a[<span style="color: #FF6600">1</span>] <span style="color: #555555">-</span> b[<span style="color: #FF6600">1</span>]) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span>) <span style="color: #006699; font-weight: bold">for</span> b <span style="color: #000000; font-weight: bold">in</span> L) 
             <span style="color: #006699; font-weight: bold">if</span> min_dist <span style="color: #555555">&lt;</span> <span style="color: #FF6600">2.0</span> <span style="color: #555555">*</span> sigma: 
-                condition <span style="color: #555555">=</span> <span style="color: #336666">False</span>
+                condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
                 <span style="color: #006699; font-weight: bold">break</span>
             <span style="color: #006699; font-weight: bold">else</span>:
                 L<span style="color: #555555">.</span>append(a)
-                condition <span style="color: #555555">=</span> <span style="color: #336666">True</span>
+                condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">True</span>
     <span style="color: #006699; font-weight: bold">return</span> L
 
 N <span style="color: #555555">=</span> <span style="color: #FF6600">4</span>
 sigma <span style="color: #555555">=</span> <span style="color: #FF6600">0.2</span>
 n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">10</span>
 <span style="color: #006699; font-weight: bold">for</span> run <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n_runs):
-    <span style="color: #006699; font-weight: bold">print</span> run, direct_disks_box(N, sigma)
+    <span style="color: #336666">print</span> run, direct_disks_box(N, sigma)
 </pre></div>
 
 
@@ -518,18 +399,18 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">10</sp
 output_dir <span style="color: #555555">=</span> <span style="color: #CC3300">&#39;direct_disks_box_movie&#39;</span>
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">direct_disks_box</span>(N, sigma):
-    condition <span style="color: #555555">=</span> <span style="color: #336666">False</span>
-    <span style="color: #006699; font-weight: bold">while</span> condition <span style="color: #555555">==</span> <span style="color: #336666">False</span>:
+    condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
+    <span style="color: #006699; font-weight: bold">while</span> condition <span style="color: #555555">==</span> <span style="color: #006699; font-weight: bold">False</span>:
         L <span style="color: #555555">=</span> [(random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma), random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma))]
         <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">1</span>, N):
             a <span style="color: #555555">=</span> (random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma), random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma))
             min_dist <span style="color: #555555">=</span> <span style="color: #336666">min</span>(math<span style="color: #555555">.</span>sqrt((a[<span style="color: #FF6600">0</span>] <span style="color: #555555">-</span> b[<span style="color: #FF6600">0</span>]) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span> <span style="color: #555555">+</span> (a[<span style="color: #FF6600">1</span>] <span style="color: #555555">-</span> b[<span style="color: #FF6600">1</span>]) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span>) <span style="color: #006699; font-weight: bold">for</span> b <span style="color: #000000; font-weight: bold">in</span> L) 
             <span style="color: #006699; font-weight: bold">if</span> min_dist <span style="color: #555555">&lt;</span> <span style="color: #FF6600">2.0</span> <span style="color: #555555">*</span> sigma: 
-                condition <span style="color: #555555">=</span> <span style="color: #336666">False</span>
+                condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
                 <span style="color: #006699; font-weight: bold">break</span>
             <span style="color: #006699; font-weight: bold">else</span>:
                 L<span style="color: #555555">.</span>append(a)
-                condition <span style="color: #555555">=</span> <span style="color: #336666">True</span>
+                condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">True</span>
     <span style="color: #006699; font-weight: bold">return</span> L
 
 img <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
@@ -580,7 +461,7 @@ n_steps <span style="color: #555555">=</span> <span style="color: #FF6600">1000<
     box_cond <span style="color: #555555">=</span> <span style="color: #336666">min</span>(b[<span style="color: #FF6600">0</span>], b[<span style="color: #FF6600">1</span>]) <span style="color: #555555">&lt;</span> sigma <span style="color: #000000; font-weight: bold">or</span> <span style="color: #336666">max</span>(b[<span style="color: #FF6600">0</span>], b[<span style="color: #FF6600">1</span>]) <span style="color: #555555">&gt;</span> <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma
     <span style="color: #006699; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">not</span> (box_cond <span style="color: #000000; font-weight: bold">or</span> min_dist <span style="color: #555555">&lt;</span> <span style="color: #FF6600">4.0</span> <span style="color: #555555">*</span> sigma <span style="color: #555555">**</span> <span style="color: #FF6600">2</span>):
         a[:] <span style="color: #555555">=</span> b
-<span style="color: #006699; font-weight: bold">print</span> L
+<span style="color: #336666">print</span> L
 </pre></div>
 
 
@@ -686,10 +567,10 @@ n_events <span style="color: #555555">=</span> <span style="color: #FF6600">10</
         <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">2</span>): 
             vel[a][k] <span style="color: #555555">+=</span> e_perp[k] <span style="color: #555555">*</span> scal 
             vel[b][k] <span style="color: #555555">-=</span> e_perp[k] <span style="color: #555555">*</span> scal 
-    <span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;event&#39;</span>, event
-    <span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;time&#39;</span>, t
-    <span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;pos&#39;</span>, pos
-    <span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;vel&#39;</span>, vel
+    <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;event&#39;</span>, event
+    <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;time&#39;</span>, t
+    <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;pos&#39;</span>, pos
+    <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;vel&#39;</span>, vel
 </pre></div>
 
 
@@ -833,9 +714,9 @@ snapshot(t, pos, vel, colors)
     t <span style="color: #555555">+=</span> remain_t
     next_event <span style="color: #555555">-=</span> remain_t
     snapshot(t, pos, vel, colors)
-    <span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;time&#39;</span>,t
+    <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;time&#39;</span>,t
 
-<span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&#39;Producing animation.gif using ImageMagick...&#39;</span>)
+<span style="color: #336666">print</span>(<span style="color: #CC3300">&#39;Producing animation.gif using ImageMagick...&#39;</span>)
 os<span style="color: #555555">.</span>system(<span style="color: #CC3300">&quot;convert -delay 1 -dispose Background +page &quot;</span> <span style="color: #555555">+</span> <span style="color: #336666">str</span>(output_dir)
           <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;/*.png -loop 0 &quot;</span> <span style="color: #555555">+</span> <span style="color: #336666">str</span>(output_dir) <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;/animation.gif&quot;</span>)
 </pre></div>
@@ -869,14 +750,14 @@ configurations <span style="color: #555555">=</span> {(<span style="color: #FF66
 counts <span style="color: #555555">=</span> {<span style="color: #CC3300">&#39;a&#39;</span>: <span style="color: #FF6600">0</span>, <span style="color: #CC3300">&#39;b&#39;</span>: <span style="color: #FF6600">0</span>, <span style="color: #CC3300">&#39;c&#39;</span>: <span style="color: #FF6600">0</span>, <span style="color: #CC3300">&#39;d&#39;</span>: <span style="color: #FF6600">0</span>, <span style="color: #CC3300">&#39;e&#39;</span>: <span style="color: #FF6600">0</span>, <span style="color: #CC3300">&#39;f&#39;</span>: <span style="color: #FF6600">0</span>}
 n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">10000</span>
 <span style="color: #006699; font-weight: bold">for</span> run <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n_runs):
-    <span style="color: #006699; font-weight: bold">while</span> <span style="color: #336666">True</span>:
+    <span style="color: #006699; font-weight: bold">while</span> <span style="color: #006699; font-weight: bold">True</span>:
         red_rod <span style="color: #555555">=</span> random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">4</span>)
         blue_rod <span style="color: #555555">=</span> random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">4</span>)
         <span style="color: #006699; font-weight: bold">if</span> <span style="color: #336666">abs</span>(red_rod <span style="color: #555555">-</span> blue_rod) <span style="color: #555555">&gt;</span> <span style="color: #FF6600">2</span>: <span style="color: #006699; font-weight: bold">break</span>
     conf <span style="color: #555555">=</span> configurations[(red_rod, blue_rod)]
     counts[conf] <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">for</span> conf <span style="color: #000000; font-weight: bold">in</span> counts:
-    <span style="color: #006699; font-weight: bold">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)
+    <span style="color: #336666">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)
 </pre></div>
 
 
@@ -901,13 +782,13 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">10000<
 <span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n_runs):
     red_rod <span style="color: #555555">=</span> random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">3</span>)
     <span style="color: #006699; font-weight: bold">if</span> red_rod <span style="color: #555555">&gt;=</span> <span style="color: #FF6600">2</span>: red_rod <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
-    <span style="color: #006699; font-weight: bold">while</span> <span style="color: #336666">True</span>:
+    <span style="color: #006699; font-weight: bold">while</span> <span style="color: #006699; font-weight: bold">True</span>:
         blue_rod <span style="color: #555555">=</span> random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">4</span>)
         <span style="color: #006699; font-weight: bold">if</span> <span style="color: #336666">abs</span>(red_rod <span style="color: #555555">-</span> blue_rod) <span style="color: #555555">&gt;</span> <span style="color: #FF6600">2</span>: <span style="color: #006699; font-weight: bold">break</span>
     conf <span style="color: #555555">=</span> configurations[(red_rod, blue_rod)]  
     counts[conf] <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">for</span> conf <span style="color: #000000; font-weight: bold">in</span> counts: 
-    <span style="color: #006699; font-weight: bold">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)    
+    <span style="color: #336666">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)    
 </pre></div>
 
 
@@ -928,11 +809,11 @@ f 0.1249
 N <span style="color: #555555">=</span> <span style="color: #FF6600">4</span>
 sigma <span style="color: #555555">=</span> <span style="color: #FF6600">0.2</span>
 pairs <span style="color: #555555">=</span> [(i, j) <span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(N <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>) <span style="color: #006699; font-weight: bold">for</span> j <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(i <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>, N)]
-<span style="color: #006699; font-weight: bold">while</span> <span style="color: #336666">True</span>:
+<span style="color: #006699; font-weight: bold">while</span> <span style="color: #006699; font-weight: bold">True</span>:
     L <span style="color: #555555">=</span> [(random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma), random<span style="color: #555555">.</span>uniform(sigma, <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma)) <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(N)]
     <span style="color: #006699; font-weight: bold">if</span>  <span style="color: #336666">min</span>((L[i][<span style="color: #FF6600">0</span>] <span style="color: #555555">-</span> L[j][<span style="color: #FF6600">0</span>]) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span> <span style="color: #555555">+</span> (L[i][<span style="color: #FF6600">1</span>] <span style="color: #555555">-</span> L[j][<span style="color: #FF6600">1</span>]) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span> <span style="color: #006699; font-weight: bold">for</span> i, j <span style="color: #000000; font-weight: bold">in</span> pairs) <span style="color: #555555">&gt;</span> <span style="color: #FF6600">4.0</span> <span style="color: #555555">*</span> sigma <span style="color: #555555">**</span> <span style="color: #FF6600">2</span>: 
         <span style="color: #006699; font-weight: bold">break</span>
-<span style="color: #006699; font-weight: bold">print</span> L
+<span style="color: #336666">print</span> L
 </pre></div>
 
 
@@ -954,32 +835,32 @@ pairs <span style="color: #555555">=</span> [(i, j) <span style="color: #006699;
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">direct_disks</span>(N, sigma):
     n_iter <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
-    condition <span style="color: #555555">=</span> <span style="color: #336666">False</span>
-    <span style="color: #006699; font-weight: bold">while</span> condition <span style="color: #555555">==</span> <span style="color: #336666">False</span>:
+    condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
+    <span style="color: #006699; font-weight: bold">while</span> condition <span style="color: #555555">==</span> <span style="color: #006699; font-weight: bold">False</span>:
         n_iter <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
         L <span style="color: #555555">=</span> [(random<span style="color: #555555">.</span>random(), random<span style="color: #555555">.</span>random())]
         <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">1</span>, N):
             a <span style="color: #555555">=</span> (random<span style="color: #555555">.</span>random(), random<span style="color: #555555">.</span>random())
             min_dist <span style="color: #555555">=</span> <span style="color: #336666">min</span>(dist(a, b) <span style="color: #006699; font-weight: bold">for</span> b <span style="color: #000000; font-weight: bold">in</span> L) 
             <span style="color: #006699; font-weight: bold">if</span> min_dist <span style="color: #555555">&lt;</span> <span style="color: #FF6600">2.0</span> <span style="color: #555555">*</span> sigma: 
-                condition <span style="color: #555555">=</span> <span style="color: #336666">False</span>
+                condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
                 <span style="color: #006699; font-weight: bold">break</span>
             <span style="color: #006699; font-weight: bold">else</span>:
                 L<span style="color: #555555">.</span>append(a)
-                condition <span style="color: #555555">=</span> <span style="color: #336666">True</span>
+                condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">True</span>
     <span style="color: #006699; font-weight: bold">return</span> n_iter, L
 
 N <span style="color: #555555">=</span> <span style="color: #FF6600">16</span>
 eta <span style="color: #555555">=</span> <span style="color: #FF6600">0.26</span>
 sigma <span style="color: #555555">=</span> math<span style="color: #555555">.</span>sqrt(eta <span style="color: #555555">/</span> N <span style="color: #555555">/</span> math<span style="color: #555555">.</span>pi)
 n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">3</span>
-<span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;Note that this program might take a while!&#39;</span>
+<span style="color: #336666">print</span> <span style="color: #CC3300">&#39;Note that this program might take a while!&#39;</span>
 <span style="color: #006699; font-weight: bold">for</span> run <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n_runs):
     iterations, config <span style="color: #555555">=</span>  direct_disks(N, sigma)
-    <span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;run&#39;</span>,run
-    <span style="color: #006699; font-weight: bold">print</span> iterations <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>, <span style="color: #CC3300">&#39;tabula rasa wipe-outs before producing the following configuration&#39;</span>
-    <span style="color: #006699; font-weight: bold">print</span> config
-    <span style="color: #006699; font-weight: bold">print</span>
+    <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;run&#39;</span>,run
+    <span style="color: #336666">print</span> iterations <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>, <span style="color: #CC3300">&#39;tabula rasa wipe-outs before producing the following configuration&#39;</span>
+    <span style="color: #336666">print</span> config
+    <span style="color: #336666">print</span>
 </pre></div>
 
 
@@ -1012,19 +893,19 @@ run 2
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">direct_disks</span>(N, sigma):
     n_iter <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
-    condition <span style="color: #555555">=</span> <span style="color: #336666">False</span>
-    <span style="color: #006699; font-weight: bold">while</span> condition <span style="color: #555555">==</span> <span style="color: #336666">False</span>:
+    condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
+    <span style="color: #006699; font-weight: bold">while</span> condition <span style="color: #555555">==</span> <span style="color: #006699; font-weight: bold">False</span>:
         n_iter <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
         L <span style="color: #555555">=</span> [(random<span style="color: #555555">.</span>random(), random<span style="color: #555555">.</span>random())]
         <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">1</span>, N):
             a <span style="color: #555555">=</span> (random<span style="color: #555555">.</span>random(), random<span style="color: #555555">.</span>random())
             min_dist <span style="color: #555555">=</span> <span style="color: #336666">min</span>(dist(a, b) <span style="color: #006699; font-weight: bold">for</span> b <span style="color: #000000; font-weight: bold">in</span> L) 
             <span style="color: #006699; font-weight: bold">if</span> min_dist <span style="color: #555555">&lt;</span> <span style="color: #FF6600">2.0</span> <span style="color: #555555">*</span> sigma: 
-                condition <span style="color: #555555">=</span> <span style="color: #336666">False</span>
+                condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
                 <span style="color: #006699; font-weight: bold">break</span>
             <span style="color: #006699; font-weight: bold">else</span>:
                 L<span style="color: #555555">.</span>append(a)
-                condition <span style="color: #555555">=</span> <span style="color: #336666">True</span>
+                condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">True</span>
     <span style="color: #006699; font-weight: bold">return</span> n_iter, L
 
 img <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
@@ -1056,10 +937,10 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">4</spa
 colors <span style="color: #555555">=</span> [<span style="color: #CC3300">&#39;r&#39;</span> <span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">8</span> <span style="color: #555555">*</span> N)]
 <span style="color: #006699; font-weight: bold">for</span> run <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n_runs):
     iterations, config <span style="color: #555555">=</span>  direct_disks(N, sigma)
-    <span style="color: #006699; font-weight: bold">print</span> <span style="color: #CC3300">&#39;run&#39;</span>,run
-    <span style="color: #006699; font-weight: bold">print</span> iterations <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>, <span style="color: #CC3300">&#39;tabula rasa wipe-outs before producing the following configuration&#39;</span>
-    <span style="color: #006699; font-weight: bold">print</span> config
-    <span style="color: #006699; font-weight: bold">print</span>
+    <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;run&#39;</span>,run
+    <span style="color: #336666">print</span> iterations <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>, <span style="color: #CC3300">&#39;tabula rasa wipe-outs before producing the following configuration&#39;</span>
+    <span style="color: #336666">print</span> config
+    <span style="color: #336666">print</span>
     config_per <span style="color: #555555">=</span> periodicize(config)
     snapshot(config_per, colors, border_color <span style="color: #555555">=</span> <span style="color: #CC3300">&#39;k&#39;</span>)
 </pre></div>
@@ -1105,13 +986,13 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">10000<
 <span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n_runs):
     red_rod <span style="color: #555555">=</span> random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">3</span>)
     <span style="color: #006699; font-weight: bold">if</span> red_rod <span style="color: #555555">&gt;=</span> <span style="color: #FF6600">2</span>: red_rod <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
-    <span style="color: #006699; font-weight: bold">while</span> <span style="color: #336666">True</span>:
+    <span style="color: #006699; font-weight: bold">while</span> <span style="color: #006699; font-weight: bold">True</span>:
         blue_rod <span style="color: #555555">=</span> random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">4</span>)
         <span style="color: #006699; font-weight: bold">if</span> <span style="color: #336666">abs</span>(red_rod <span style="color: #555555">-</span> blue_rod) <span style="color: #555555">&gt;</span> <span style="color: #FF6600">2</span>: <span style="color: #006699; font-weight: bold">break</span>
     conf <span style="color: #555555">=</span> configurations[(red_rod, blue_rod)]  
     counts[conf] <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">for</span> conf <span style="color: #000000; font-weight: bold">in</span> counts: 
-    <span style="color: #006699; font-weight: bold">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)    
+    <span style="color: #336666">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)    
 </pre></div>
 
 
@@ -1160,7 +1041,7 @@ trial <span style="color: #555555">=</span> <span style="color: #FF6600">0</span
     red_rod <span style="color: #555555">=</span> random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">3</span>)
     <span style="color: #006699; font-weight: bold">if</span> red_rod <span style="color: #555555">&gt;=</span> <span style="color: #FF6600">2</span>: red_rod <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
     trial <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
-    <span style="color: #006699; font-weight: bold">while</span> <span style="color: #336666">True</span>:
+    <span style="color: #006699; font-weight: bold">while</span> <span style="color: #006699; font-weight: bold">True</span>:
         blue_rod <span style="color: #555555">=</span> random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">4</span>)
         show_rods(red_rod, blue_rod, run, trial, frame)
         trial <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
@@ -1169,7 +1050,7 @@ trial <span style="color: #555555">=</span> <span style="color: #FF6600">0</span
     conf <span style="color: #555555">=</span> configurations[(red_rod, blue_rod)]
     counts[conf] <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">for</span> conf <span style="color: #000000; font-weight: bold">in</span> counts:
-    <span style="color: #006699; font-weight: bold">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)
+    <span style="color: #336666">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)
 </pre></div>
 
 

@@ -37,31 +37,16 @@ nav:
 - Home: index.md
 - Why Computational Physics: WhyComputationalPhysics.md
 
-
-- Getting started:
-  - Guide to starting Python: GettingStarted/anaconda.md
-  - Guide to Python Libraries: GettingStarted/lib.md
-  - Setting up Python Environment: GettingStarted/env.md
-  - Installing Jupyter Notebook : GettingStarted/jupyter.md
-  - How to Git: GettingStarted/git.md
   
-- Python:
-  - Data Structure : Python/ds.md
-  - Loops and Conditions: Python/lnc.md
-  - Function and Class: Python/fnc.md
-  
-  
-- Numerical Methods:
-  - Introduction : NumericalMethods/intro/Numerical-Methods.md
-  - Special Functions : NumericalMethods/special-function/Special-Functions.md
-  - Diffusion: NumericalMethods/Diffusion/Diffusion.md
-  - Ncharges: NumericalMethods/Ncharges/Ncharges.md
-  - Laplace : NumericalMethods/Laplace/laplace.md
+- Scipy:
+  - Introduction : Scipy/intro/Numerical-Methods.md
+  - Spherical Harmonics : Scipy/Harmonics/Harmonics.md
+  - Oscillating Membrane : Scipy/Bessel/Bessel.md
+  - Laplace Equation: Scipy/Laplace/laplace.md
   
 - Monte Carlo Simulation:
-  - Getting Started Monte Carlo Simulation : Montecarlo/GettingStarted/intro.md
-  - Algorithms in Monte Carlo Simulation : Montecarlo/GettingStarted/intro.md
-  - Random Walk: Montecarlo/RandomWalk/Rwalk.md
+  - Introduction : Montecarlo/GettingStarted/intro.md
+  - Algorithms : Montecarlo/GettingStarted/intro.md
   - Lottary Model: Montecarlo/Lotto/lotto.md
   - Ideal Gas: Montecarlo/IdealGas/IdealGas.md
   - Harmonic Oscillator: Montecarlo/Oscillator/Oscillator.md
@@ -75,13 +60,9 @@ nav:
   - Optimization: optimization/intro/Optimization.md
   - Simulated Annealing: optimization/SimulatedAnealing/simulatedAnn.md
 
-  
 - Path Integral:
-  - Getting Started with Path Integral: PathIntegral/Intro/Intro.md
-  
-- Fractals and Chaos:
-  - Fern: FractalChaos/Fern/fern.md 
-            
+  - Path Integral: PathIntegral/Intro/Intro.md
+        
 - References: References.md
   
    

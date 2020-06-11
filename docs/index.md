@@ -1,7 +1,7 @@
 # Computational Physics 
 
 
-Computational physics is the study and implementation of numerical analysis to solve problems in physics for which a quantitative theory already exists. Historically, computational physics was the first application of modern computers in science, and is now a subset of computational science ('Wikipedia').
+Computational physics is the study and implementation of numerical analysis to solve problems in physics for which a quantitative theory already exists. Historically, computational physics was the first application of modern computers in science, and is now a subset of computational science.
 
 ![img](https://young.physics.ucsc.edu/115/mandel_col.gif)
  

@@ -65,7 +65,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Getting started</p>
+    <p class="caption">Scipy</p>
   </li>
 
 
@@ -78,119 +78,28 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/anaconda/">Guide to starting Python</a>
+    <a class="" href="../../../Scipy/intro/Numerical-Methods/">Introduction</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/lib/">Guide to Python Libraries</a>
+    <a class="" href="../../../Scipy/Harmonics/Harmonics/">Spherical Harmonics</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/env/">Setting up Python Environment</a>
+    <a class="" href="../../../Scipy/Bessel/Bessel/">Oscillating Membrane</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/jupyter/">Installing Jupyter Notebook</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../GettingStarted/git/">How to Git</a>
-  </li>
-        
-      </ul>
-    </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Python</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Python/ds/">Data Structure</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Python/lnc/">Loops and Conditions</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Python/fnc/">Function and Class</a>
-  </li>
-        
-      </ul>
-    </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Numerical Methods</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/intro/Numerical-Methods/">Introduction</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/special-function/Special-Functions/">Special Functions</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/Diffusion/Diffusion/">Diffusion</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/Ncharges/Ncharges/">Ncharges</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../NumericalMethods/Laplace/laplace/">Laplace</a>
+    <a class="" href="../../../Scipy/Laplace/laplace/">Laplace Equation</a>
   </li>
         
       </ul>
@@ -211,21 +120,14 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Montecarlo/GettingStarted/intro/">Getting Started Monte Carlo Simulation</a>
+    <a class="" href="../../../Montecarlo/GettingStarted/intro/">Introduction</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Montecarlo/GettingStarted/intro/">Algorithms in Monte Carlo Simulation</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Montecarlo/RandomWalk/Rwalk/">Random Walk</a>
+    <a class="" href="../../../Montecarlo/GettingStarted/intro/">Algorithms</a>
   </li>
         
           
@@ -417,28 +319,7 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../PathIntegral/Intro/Intro/">Getting Started with Path Integral</a>
-  </li>
-        
-      </ul>
-    </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Fractals and Chaos</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../FractalChaos/Fern/fern/">Fern</a>
+    <a class="" href="../../../PathIntegral/Intro/Intro/">Path Integral</a>
   </li>
         
       </ul>
@@ -526,13 +407,13 @@ $$F(x,y) = x^{2} + y^{2}$$</p>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>fig <span style="color: #555555">=</span> pt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">8</span>,<span style="color: #FF6600">8</span>])
 ax <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>gca(projection<span style="color: #555555">=</span><span style="color: #CC3300">&quot;3d&quot;</span>)
 
-xmesh, ymesh <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[<span style="color: #555555">-</span><span style="color: #FF6600">2</span>:<span style="color: #FF6600">2</span>:<span style="color: #FF6600">50j</span>,<span style="color: #555555">-</span><span style="color: #FF6600">2</span>:<span style="color: #FF6600">2</span>:<span style="color: #FF6600">50j</span>]
+xmesh, ymesh <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[<span style="color: #555555">-</span><span style="color: #FF6600">2</span>:<span style="color: #FF6600">2</span>:<span style="color: #FF6600">50</span>j,<span style="color: #555555">-</span><span style="color: #FF6600">2</span>:<span style="color: #FF6600">2</span>:<span style="color: #FF6600">50</span>j]
 fmesh <span style="color: #555555">=</span> sphere(np<span style="color: #555555">.</span>array([xmesh, ymesh]))
 ax<span style="color: #555555">.</span>plot_surface(xmesh, ymesh, fmesh)
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;mpl_toolkits.mplot3d.art3d.Poly3DCollection at 0x1a18961550&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;mpl_toolkits.mplot3d.art3d.Poly3DCollection at 0x1a18961550&gt;
 </pre></div>
 
 
@@ -544,7 +425,7 @@ pt<span style="color: #555555">.</span>contour(xmesh, ymesh, fmesh,<span style="
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.contour.QuadContourSet at 0x7f0bfe84f7b8&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7f0bfe84f7b8&gt;
 </pre></div>
 
 
@@ -586,7 +467,7 @@ pt<span style="color: #555555">.</span>plot(it_array<span style="color: #555555"
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[&amp;lt;matplotlib.lines.Line2D at 0x7f0bfea38828&amp;gt;]
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[&lt;matplotlib.lines.Line2D at 0x7f0bfea38828&gt;]
 </pre></div>
 
 
@@ -617,13 +498,13 @@ pt<span style="color: #555555">.</span>plot(it_array<span style="color: #555555"
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>fig <span style="color: #555555">=</span> pt<span style="color: #555555">.</span>figure(figsize <span style="color: #555555">=</span> [<span style="color: #FF6600">8</span>,<span style="color: #FF6600">8</span>])
 ax <span style="color: #555555">=</span> fig<span style="color: #555555">.</span>gca(projection<span style="color: #555555">=</span><span style="color: #CC3300">&quot;3d&quot;</span>)
 
-xmesh, ymesh <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[<span style="color: #555555">-</span><span style="color: #FF6600">2</span>:<span style="color: #FF6600">2</span>:<span style="color: #FF6600">50j</span>,<span style="color: #555555">-</span><span style="color: #FF6600">2</span>:<span style="color: #FF6600">2</span>:<span style="color: #FF6600">50j</span>]
+xmesh, ymesh <span style="color: #555555">=</span> np<span style="color: #555555">.</span>mgrid[<span style="color: #555555">-</span><span style="color: #FF6600">2</span>:<span style="color: #FF6600">2</span>:<span style="color: #FF6600">50</span>j,<span style="color: #555555">-</span><span style="color: #FF6600">2</span>:<span style="color: #FF6600">2</span>:<span style="color: #FF6600">50</span>j]
 fmesh <span style="color: #555555">=</span> surface(np<span style="color: #555555">.</span>array([xmesh, ymesh]))
 ax<span style="color: #555555">.</span>plot_surface(xmesh, ymesh, fmesh)
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;mpl_toolkits.mplot3d.art3d.Poly3DCollection at 0x7f0bfea68cc0&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;mpl_toolkits.mplot3d.art3d.Poly3DCollection at 0x7f0bfea68cc0&gt;
 </pre></div>
 
 
@@ -635,7 +516,7 @@ pt<span style="color: #555555">.</span>contour(xmesh, ymesh, fmesh,<span style="
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&amp;lt;matplotlib.contour.QuadContourSet at 0x7f0bfeb2d390&amp;gt;
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7f0bfeb2d390&gt;
 </pre></div>
 
 
@@ -676,7 +557,7 @@ pt<span style="color: #555555">.</span>plot(it_array<span style="color: #555555"
 </pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[&amp;lt;matplotlib.lines.Line2D at 0x7f0bfdcb7e80&amp;gt;]
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[&lt;matplotlib.lines.Line2D at 0x7f0bfdcb7e80&gt;]
 </pre></div>
 
 
@@ -691,7 +572,7 @@ pt<span style="color: #555555">.</span>plot(it_array<span style="color: #555555"
 </ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>x0 <span style="color: #555555">=</span> [np<span style="color: #555555">.</span>array([<span style="color: #FF6600">5</span>,<span style="color: #FF6600">5</span>])]
 res <span style="color: #555555">=</span> minimize(sphere, x0, method<span style="color: #555555">=</span><span style="color: #CC3300">&#39;nelder-mead&#39;</span>,
-                options<span style="color: #555555">=</span>{<span style="color: #CC3300">&#39;xtol&#39;</span>: <span style="color: #FF6600">1e-8</span>, <span style="color: #CC3300">&#39;disp&#39;</span>: <span style="color: #336666">True</span>})
+                options<span style="color: #555555">=</span>{<span style="color: #CC3300">&#39;xtol&#39;</span>: <span style="color: #FF6600">1e-8</span>, <span style="color: #CC3300">&#39;disp&#39;</span>: <span style="color: #006699; font-weight: bold">True</span>})
 </pre></div>
 
 
@@ -724,7 +605,7 @@ res <span style="color: #555555">=</span> minimize(sphere, x0, method<span style
 </ul>
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>x0 <span style="color: #555555">=</span> [np<span style="color: #555555">.</span>array([<span style="color: #555555">-</span><span style="color: #FF6600">0.25</span>,<span style="color: #FF6600">0.5</span>])]
 res <span style="color: #555555">=</span> minimize(surface, x0, method<span style="color: #555555">=</span><span style="color: #CC3300">&#39;nelder-mead&#39;</span>,
-                options<span style="color: #555555">=</span>{<span style="color: #CC3300">&#39;xtol&#39;</span>: <span style="color: #FF6600">1e-8</span>, <span style="color: #CC3300">&#39;disp&#39;</span>: <span style="color: #336666">True</span>})
+                options<span style="color: #555555">=</span>{<span style="color: #CC3300">&#39;xtol&#39;</span>: <span style="color: #FF6600">1e-8</span>, <span style="color: #CC3300">&#39;disp&#39;</span>: <span style="color: #006699; font-weight: bold">True</span>})
 </pre></div>
 
 
@@ -793,7 +674,7 @@ res <span style="color: #555555">=</span> minimize(surface, x0, method<span styl
 
 
 <div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>res <span style="color: #555555">=</span> minimize(rosen, x0, method<span style="color: #555555">=</span><span style="color: #CC3300">&#39;Newton-CG&#39;</span>,jac<span style="color: #555555">=</span>rosen_der, hess<span style="color: #555555">=</span>rosen_hess,
-                options<span style="color: #555555">=</span>{<span style="color: #CC3300">&#39;xtol&#39;</span>: <span style="color: #FF6600">1e-8</span>, <span style="color: #CC3300">&#39;disp&#39;</span>: <span style="color: #336666">True</span>})
+                options<span style="color: #555555">=</span>{<span style="color: #CC3300">&#39;xtol&#39;</span>: <span style="color: #FF6600">1e-8</span>, <span style="color: #CC3300">&#39;disp&#39;</span>: <span style="color: #006699; font-weight: bold">True</span>})
 </pre></div>
 
 
