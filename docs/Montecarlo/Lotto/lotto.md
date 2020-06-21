@@ -54,7 +54,7 @@ For example, considering range of sample equal to 50, among millions of sample o
 
 ### 1.1.1.   Model Selection with Proper Action
 
-<img src="http://www.intechopen.com/source/html/40746/media/image22.jpeg">
+<img src="https://sites.science.oregonstate.edu/~roundyd/COURSES/ph427/figs/ring-of-oscillators.svg" width = 200 height =200>
 
 Let us define a skewsymmetric distance matrix  by taking difference between digits in sample as the matrix elements. There is one distance matrix per sample.
 
@@ -62,13 +62,13 @@ $$D_{ij} =  (x_{i}-x_{j})$$
 
 ie. 
 
-$$D = \left( \begin{array}{ccc}
+\\( D = \left( \begin{array}{ccc}
 0 & \color{blue}{(x_{1}-x_{2})} & (x_{1}-x_{3})& (x_{1}-x_{4}) & (x_{1}-x_{5}) \\
 (x_{2}-x_{1}) & 0 & \color{blue}{(x_{2}-x_{3})}& (x_{2}-x_{4}) & (x_{2}-x_{5}) \\
 (x_{3}-x_{1}) & (x_{3}-x_{2}) & 0& \color{blue}{(x_{3}-x_{4})} & (x_{3}-x_{5}) \\
 (x_{4}-x_{1}) & (x_{4}-x_{2}) & (x_{4}-x_{3})& 0 & \color{blue}{(x_{4}-x_{5})} \\
 \color{blue}{(x_{5}-x_{1})} & (x_{5}-x_{2}) & (x_{5}-x_{3})& (x_{5}-x_{4}) & 0 \\
-\end{array} \right)$$
+\end{array} \right) \\)
 
 Taking (N = 5) oscillators  with flexibility between seperation of numbers as spring constant (K=1). Simple  model of Action can be defined by taking single updiagonal terms only as:
 
