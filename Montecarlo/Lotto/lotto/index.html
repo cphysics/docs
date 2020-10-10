@@ -1,637 +1,655 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Lottary Model - Computational Physics</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Lottary Model";
-    var mkdocs_page_input_path = "Montecarlo/Lotto/lotto.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> Computational Physics</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+    
+    
+      
+        <title>Lotto Dynamics in Integer Space - Tutorials in Statistical Physics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lotto-dynamics-in-integer-space" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Tutorials in Statistical Physics" class="md-header-nav__button md-logo" aria-label="Tutorials in Statistical Physics">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Tutorials in Statistical Physics
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Lotto Dynamics in Integer Space
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="tocbase current">
+    </div>
+  </div>
+</div>
     
     
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
       
-
-
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../..">Home</a>
-  </li>
-    
       
-
-
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../../WhyComputationalPhysics/">Why Computational Physics</a>
-  </li>
-    
+        
       
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Scipy</p>
-  </li>
-
-
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Tutorials in Statistical Physics" class="md-nav__button md-logo" aria-label="Tutorials in Statistical Physics">
+      
   
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
+    </a>
+    Tutorials in Statistical Physics
+  </label>
   
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/intro/Numerical-Methods/">Introduction</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/Harmonics/Harmonics/">Spherical Harmonics</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/Bessel/Bessel/">Oscillating Membrane</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/Laplace/laplace/">Laplace Equation</a>
-  </li>
-        
-      </ul>
-    </li>
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Monte Carlo Simulation</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../GettingStarted/intro/">Introduction</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../GettingStarted/intro/">Algorithms</a>
-  </li>
-        
-          
-
-
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        Lottary Model
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
+      
       
 
-  <li class="toctree-l2 current with-children">
-    <a href="#lotto-dynamics-in-integer-space">
-      Lotto Dynamics in Integer Space
-      <span class="toctree-expand"></span>
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
     </a>
   </li>
 
-
-
-  <li class="toctree-l2 current">
-    <ul class="subnav-l2 current">
     
       
-          
+      
+      
 
-  <li class="toctree-l3 current with-children">
-    <a href="#11-construction-of-a-toy-model">
-      1.1.  Construction of a Toy Model
-      <span class="toctree-expand"></span>
+
+  <li class="md-nav__item">
+    <a href="../../../WhyComputationalPhysics/" class="md-nav__link">
+      Why Computational Physics
     </a>
   </li>
 
-
-
-  <li class="toctree-l3 current">
-    <ul class="subnav-l3 current">
     
       
-          
+      
+      
 
-  <li class="toctree-l4 current with-children">
-    <a href="#111-model-selection-with-proper-action">
-      1.1.1.   Model Selection with Proper Action
-      <span class="toctree-expand"></span>
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/intro/" class="md-nav__link">
+      Introduction
     </a>
   </li>
 
+    
+      
+      
+      
 
 
-  <li class="toctree-l4 current">
-    <ul class="subnav-l4 current">
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#model-i-linear">Model-I (Linear)</a>
-        </li>
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#model-ii-linear-periodic">Model-II (Linear &amp;Periodic)</a>
-        </li>
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#model-iii-quadratic-periodic">Model - III (Quadratic &amp; Periodic)</a>
-        </li>
-    
-    </ul>
-  </li>
-
-      
-    
-      
-          
-
-  <li class="toctree-l4">
-    <a href="#112-study-of-distance-matrix">
-      1.1.2. Study of Distance Matrix
-      <span class="toctree-expand"></span>
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/intro/" class="md-nav__link">
+      Algorithms
     </a>
   </li>
 
+    
+      
+      
+      
 
 
-  <li class="toctree-l4">
-    <ul class="subnav-l4 toc-hidden">
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#1121-enasmble-of-distance-matrices">1.1.2.1 Enasmble of Distance matrices</a>
-        </li>
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#principle-component-analysis-model-iii">Principle Component Analysis - Model -III</a>
-        </li>
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#principle-component-analysis-model-ii">Principle Component Analysis - Model - II</a>
-        </li>
-    
-    </ul>
-  </li>
-
-      
-    
-      
-          
-
-  <li class="toctree-l4">
-    <a href="#113-statistical-analysis-determination-of-spring-constants">
-      1.1.3. Statistical Analysis &amp; Determination of Spring Constants
-      <span class="toctree-expand"></span>
+  <li class="md-nav__item">
+    <a href="../../IdealGas/IdealGas/" class="md-nav__link">
+      Ideal Gas
     </a>
   </li>
 
-
-
-  <li class="toctree-l4">
-    <ul class="subnav-l4 toc-hidden">
     
       
-          
+      
+      
 
-  <li class="toctree-l5 current with-children">
-    <a href="#1131-study-of-variance-covariance-matrix-of-samples">
-      1.1.3.1.  Study of Variance-Covariance  Matrix of samples
-      <span class="toctree-expand"></span>
+
+  <li class="md-nav__item">
+    <a href="../../Oscillator/Oscillator/" class="md-nav__link">
+      Harmonic Oscillator
     </a>
   </li>
 
+    
+      
+      
+      
 
 
-  <li class="toctree-l5 current">
-    <ul class="subnav-l5 current">
-    
-      
-        <li class="toctree-l6">
-          <a class="toctree-l7" href="#1132a-variance-covariance-of-raw-samples">1.1.3.2.a. Variance-Covariance of Raw samples</a>
-        </li>
-    
-      
-        <li class="toctree-l6">
-          <a class="toctree-l7" href="#1132b-variance-covariance-of-normalized-samples-crrelation-cofficients">1.1.3.2.b. Variance-Covariance of Normalized samples : Crrelation cofficients</a>
-        </li>
-    
-    </ul>
-  </li>
-
-      
-    
-    </ul>
-  </li>
-
-      
-    
-      
-        <li class="toctree-l4">
-          <a class="toctree-l5" href="#1133-spring-constants">1.1.3.3. Spring Constants</a>
-        </li>
-    
-    </ul>
-  </li>
-
-      
-    
-      
-          
-
-  <li class="toctree-l3">
-    <a href="#12-montecarlo-simulation">
-      1.2 Montecarlo Simulation
-      <span class="toctree-expand"></span>
+  <li class="md-nav__item">
+    <a href="../../IzingModel/Izing2D/" class="md-nav__link">
+      Ising Model
     </a>
   </li>
 
-
-
-  <li class="toctree-l3">
-    <ul class="subnav-l3 toc-hidden">
     
       
-          
+      
+      
 
-  <li class="toctree-l4 current with-children">
-    <a href="#121-thermalization">
-      1.2.1 Thermalization
-      <span class="toctree-expand"></span>
+
+  <li class="md-nav__item">
+    <a href="../../Percolation/percol/" class="md-nav__link">
+      Percolation
     </a>
   </li>
 
+    
+      
+      
+      
 
 
-  <li class="toctree-l4 current">
-    <ul class="subnav-l4 current">
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#test-mode">Test mode</a>
-        </li>
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#thermal-mode">Thermal mode</a>
-        </li>
-    
-    </ul>
-  </li>
-
-      
-    
-      
-        <li class="toctree-l4">
-          <a class="toctree-l5" href="#measurement-of-average-absolute-difference">Measurement of average  absolute difference</a>
-        </li>
-    
-      
-        <li class="toctree-l4">
-          <a class="toctree-l5" href="#measurement-of-root-mean-square-absolute-difference">Measurement of root mean square absolute difference</a>
-        </li>
-    
-    </ul>
-  </li>
-
-      
-    
-      
-          
-
-  <li class="toctree-l3">
-    <a href="#13-interpretation">
-      1.3. Interpretation
-      <span class="toctree-expand"></span>
+  <li class="md-nav__item">
+    <a href="../../HardDisk/hd/" class="md-nav__link">
+      Hard Disk
     </a>
   </li>
 
-
-
-  <li class="toctree-l3">
-    <ul class="subnav-l3 toc-hidden">
     
       
-          
+      
+      
 
-  <li class="toctree-l4 current with-children">
-    <a href="#131-most-probable-samples-using-model-iii-constrained-by-rms-absolute-difference">
-      1.3.1. Most Probable Samples using Model -III : constrained by rms absolute difference
-      <span class="toctree-expand"></span>
+
+  <li class="md-nav__item">
+    <a href="../../Levy/levy/" class="md-nav__link">
+      Quantum Monte Carlo
     </a>
   </li>
 
+    
+      
+      
+      
 
 
-  <li class="toctree-l4 current">
-    <ul class="subnav-l4 current">
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#1312-generation-of-many-samples-and-their-actions">1.3.1.2. Generation of many  samples and their actions</a>
-        </li>
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#1313-histogram-plot-of-frequencies">1.3.1.3. Histogram Plot of frequencies</a>
-        </li>
-    
-    </ul>
-  </li>
-
-      
-    
-      
-        <li class="toctree-l4">
-          <a class="toctree-l5" href="#1314-generate-some-sample">1.3.1.4.  Generate some sample</a>
-        </li>
-    
-      
-          
-
-  <li class="toctree-l4">
-    <a href="#132-most-probable-samples-using-model-i-without-any-constraint-from-thermalization">
-      1.3.2. Most Probable Samples using Model -I : without any constraint from thermalization
-      <span class="toctree-expand"></span>
+  <li class="md-nav__item">
+    <a href="../../BEC/bec/" class="md-nav__link">
+      Bose-Einstein Condensation
     </a>
   </li>
 
-
-
-  <li class="toctree-l4">
-    <ul class="subnav-l4 toc-hidden">
     
       
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#1321-calculation-of-action-in-each-sample">1.3.2.1. Calculation of action in each sample</a>
-        </li>
-    
       
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#1322-generation-of-many-n_samples-samples-and-their-actions">1.3.2.2. Generation of many (N_samples) samples and their actions</a>
-        </li>
-    
-      
-        <li class="toctree-l5">
-          <a class="toctree-l6" href="#1323-histogram-plot-of-frequencies">1.3.2.3. Histogram Plot of frequencies</a>
-        </li>
-    
-    </ul>
-  </li>
-
-      
-    
-      
-        <li class="toctree-l4">
-          <a class="toctree-l5" href="#1324-generate-some-sample">1.3.2.4.  Generate some sample</a>
-        </li>
-    
-    </ul>
-  </li>
-
-      
-    
-    </ul>
-  </li>
-
-
-  
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../IdealGas/IdealGas/">Ideal Gas</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Oscillator/Oscillator/">Harmonic Oscillator</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../IzingModel/Izing2D/">Ising Model</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Percolation/percol/">Percolation</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../HardDisk/hd/">Hard Disk</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Levy/levy/">Quantum Monte Carlo</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../BEC/bec/">Bose-Einstein Condensation</a>
-  </li>
-        
-      </ul>
-    </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Optimization</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../optimization/intro/Optimization/">Optimization</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../optimization/SimulatedAnealing/simulatedAnn/">Simulated Annealing</a>
-  </li>
-        
-      </ul>
-    </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Path Integral</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../PathIntegral/Intro/Intro/">Path Integral</a>
-  </li>
-        
-      </ul>
-    </li>
-    
       
 
 
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../../References/">References</a>
+  <li class="md-nav__item">
+    <a href="../../../optimization/SimulatedAnealing/simulatedAnn/" class="md-nav__link">
+      Simulated Annealing
+    </a>
   </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../PathIntegral/Intro/Intro/" class="md-nav__link">
+      Path Integral
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../References/" class="md-nav__link">
+      References
+    </a>
+  </li>
+
     
   </ul>
-      </div>
-      &nbsp;
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-construction-of-a-toy-model" class="md-nav__link">
+    1.1.  Construction of a Toy Model
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.  Construction of a Toy Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-model-selection-with-proper-action" class="md-nav__link">
+    1.1.1.   Model Selection with Proper Action
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.1.   Model Selection with Proper Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-i-linear" class="md-nav__link">
+    Model-I (Linear)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-ii-linear-periodic" class="md-nav__link">
+    Model-II (Linear &amp;Periodic)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-iii-quadratic-periodic" class="md-nav__link">
+    Model - III (Quadratic &amp; Periodic)
+  </a>
+  
+</li>
+        
+      </ul>
     </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">Computational Physics</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../..">Docs</a> &raquo;</li>
-    
-      
+  
+</li>
         
-          <li>Monte Carlo Simulation &raquo;</li>
+          <li class="md-nav__item">
+  <a href="#112-study-of-distance-matrix" class="md-nav__link">
+    1.1.2. Study of Distance Matrix
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.2. Study of Distance Matrix">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#1121-enasmble-of-distance-matrices" class="md-nav__link">
+    1.1.2.1 Enasmble of Distance matrices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principle-component-analysis-model-iii" class="md-nav__link">
+    Principle Component Analysis - Model -III
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principle-component-analysis-model-ii" class="md-nav__link">
+    Principle Component Analysis - Model - II
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-statistical-analysis-determination-of-spring-constants" class="md-nav__link">
+    1.1.3. Statistical Analysis &amp; Determination of Spring Constants
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.3. Statistical Analysis &amp; Determination of Spring Constants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1131-study-of-variance-covariance-matrix-of-samples" class="md-nav__link">
+    1.1.3.1.  Study of Variance-Covariance  Matrix of samples
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.3.1.  Study of Variance-Covariance  Matrix of samples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1132a-variance-covariance-of-raw-samples" class="md-nav__link">
+    1.1.3.2.a. Variance-Covariance of Raw samples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1132b-variance-covariance-of-normalized-samples-crrelation-cofficients" class="md-nav__link">
+    1.1.3.2.b. Variance-Covariance of Normalized samples : Crrelation cofficients
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1133-spring-constants" class="md-nav__link">
+    1.1.3.3. Spring Constants
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
-    
-    <li>Lottary Model</li>
-    <li class="wy-breadcrumbs-aside">
+        <li class="md-nav__item">
+  <a href="#12-montecarlo-simulation" class="md-nav__link">
+    1.2 Montecarlo Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Montecarlo Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-thermalization" class="md-nav__link">
+    1.2.1 Thermalization
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.1 Thermalization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-mode" class="md-nav__link">
+    Test mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thermal-mode" class="md-nav__link">
+    Thermal mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurement-of-average-absolute-difference" class="md-nav__link">
+    Measurement of average  absolute difference
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurement-of-root-mean-square-absolute-difference" class="md-nav__link">
+    Measurement of root mean square absolute difference
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+        <li class="md-nav__item">
+  <a href="#13-interpretation" class="md-nav__link">
+    1.3. Interpretation
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Interpretation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-most-probable-samples-using-model-iii-constrained-by-rms-absolute-difference" class="md-nav__link">
+    1.3.1. Most Probable Samples using Model -III : constrained by rms absolute difference
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.1. Most Probable Samples using Model -III : constrained by rms absolute difference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1312-generation-of-many-samples-and-their-actions" class="md-nav__link">
+    1.3.1.2. Generation of many  samples and their actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1313-histogram-plot-of-frequencies" class="md-nav__link">
+    1.3.1.3. Histogram Plot of frequencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1314-generate-some-sample" class="md-nav__link">
+    1.3.1.4.  Generate some sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-most-probable-samples-using-model-i-without-any-constraint-from-thermalization" class="md-nav__link">
+    1.3.2. Most Probable Samples using Model -I : without any constraint from thermalization
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.2. Most Probable Samples using Model -I : without any constraint from thermalization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1321-calculation-of-action-in-each-sample" class="md-nav__link">
+    1.3.2.1. Calculation of action in each sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1322-generation-of-many-n_samples-samples-and-their-actions" class="md-nav__link">
+    1.3.2.2. Generation of many (N_samples) samples and their actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1323-histogram-plot-of-frequencies" class="md-nav__link">
+    1.3.2.3. Histogram Plot of frequencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1324-generate-some-sample" class="md-nav__link">
+    1.3.2.4.  Generate some sample
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
+                
+                
                 <h1 id="lotto-dynamics-in-integer-space">Lotto Dynamics in Integer Space</h1>
 <p>We find a proper model to represent the dynamics of the system in positive integer space [1 to 69] using random number generator. With this model we  run Hybrid Montecarlo(HMC) algorithm to thermalize the system to determine most probable values of quantities like: average absolute difference, root mean square absolute difference and most probable absolute difference, which are helpful to determine the most probable vectors in sample space.</p>
 <p>Import some libraries</p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 <span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">matplotlib.pyplot</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">plt</span>
 <span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">np</span>
 <span style="color: #006699; font-weight: bold">from</span> <span style="color: #00CCFF; font-weight: bold">numpy</span> <span style="color: #006699; font-weight: bold">import</span> linalg <span style="color: #006699; font-weight: bold">as</span> LA
 <span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span> <span style="color: #006699; font-weight: bold">as</span> <span style="color: #00CCFF; font-weight: bold">math</span>
 <span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">pandas</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #555555">%</span>matplotlib inline
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #555555">%</span>matplotlib inline
+</code></pre></div>
 
 
 <p>Maximum no in range of lottery</p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Max <span style="color: #555555">=</span> <span style="color: #FF6600">69</span>
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>Max <span style="color: #555555">=</span> <span style="color: #FF6600">69</span>
+</code></pre></div>
 
 
 <p>This function generates 5 random samples between 1 to 65.</p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">sample_generator</span>(Max):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">sample_generator</span>(Max):
     x <span style="color: #555555">=</span>     np<span style="color: #555555">.</span>sort(random<span style="color: #555555">.</span>sample(<span style="color: #336666">range</span>(<span style="color: #FF6600">1</span>,Max), <span style="color: #FF6600">5</span>) ) 
     <span style="color: #006699; font-weight: bold">return</span> x
-</pre></div>
+</code></pre></div>
 
 
 <hr />
@@ -669,47 +687,47 @@
 <hr />
 <h3 id="112-study-of-distance-matrix">1.1.2. Study of Distance Matrix</h3>
 <p>We can make skew symmetric matrix into traceless symmetric matrix by taking absolute value of each elements.</p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">distance_matrix</span>(x):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">distance_matrix</span>(x):
     D <span style="color: #555555">=</span> [[<span style="color: #FF6600">0.0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>)]<span style="color: #006699; font-weight: bold">for</span> l <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>)]
     <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>):
         <span style="color: #006699; font-weight: bold">for</span> l <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>):
             D[k][l] <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(x[k]<span style="color: #555555">-</span>x[l])
     <span style="color: #006699; font-weight: bold">return</span> D       
-</pre></div>
+</code></pre></div>
 
 
 <p>Lets have a look of distance matrix:</p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>distance_matrix(sample_generator(Max))
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>distance_matrix(sample_generator(Max))
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[[0, 9, 24, 39, 44],
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[[0, 9, 24, 39, 44],
  [9, 0, 15, 30, 35],
  [24, 15, 0, 15, 20],
  [39, 30, 15, 0, 5],
  [44, 35, 20, 5, 0]]
-</pre></div>
+</code></pre></div>
 
 
 <p>We can generate a small bucket of  9 distance matices to visualize distribution of distances.</p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>M <span style="color: #555555">=</span> [np<span style="color: #555555">.</span>array([[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>],[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>],[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>],[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>],[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>]]) <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">9</span>)]
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>M <span style="color: #555555">=</span> [np<span style="color: #555555">.</span>array([[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>],[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>],[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>],[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>],[<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>,<span style="color: #FF6600">0</span>]]) <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">9</span>)]
 <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">9</span>):
     M[k] <span style="color: #555555">=</span> np<span style="color: #555555">.</span>array(distance_matrix(x <span style="color: #555555">=</span> sample_generator(Max)))
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">9</span>):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">9</span>):
     plt<span style="color: #555555">.</span>subplot(<span style="color: #FF6600">3</span>,<span style="color: #FF6600">3</span>,k<span style="color: #555555">+</span><span style="color: #FF6600">1</span>)
     plt<span style="color: #555555">.</span>imshow(M[<span style="color: #FF6600">0</span>], interpolation<span style="color: #555555">=</span><span style="color: #CC3300">&#39;nearest&#39;</span>, cmap<span style="color: #555555">=</span>plt<span style="color: #555555">.</span>cm<span style="color: #555555">.</span>ocean, extent<span style="color: #555555">=</span>(<span style="color: #FF6600">0.5</span>,<span style="color: #FF6600">10.5</span>,<span style="color: #FF6600">0.5</span>,<span style="color: #FF6600">10.5</span>))
     plt<span style="color: #555555">.</span>colorbar()
 
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_34_0.png" /></p>
 <h4 id="1121-enasmble-of-distance-matrices">1.1.2.1 Enasmble of Distance matrices</h4>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>wstor_III <span style="color: #555555">=</span> []
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>wstor_III <span style="color: #555555">=</span> []
 <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">10000</span>):
     x <span style="color: #555555">=</span> sample_generator(Max)
     A <span style="color: #555555">=</span> distance_matrix(x)
@@ -719,40 +737,40 @@ plt<span style="color: #555555">.</span>show()
         <span style="color: #0099FF; font-style: italic">#wstor.append(abs(w[l]))</span>
     wstor_III<span style="color: #555555">.</span>append(<span style="color: #336666">max</span>(w))
     plt<span style="color: #555555">.</span>scatter(k,<span style="color: #336666">max</span>(w))
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_36_0.png" /></p>
 <p>Principle component of eigen values helps us to predict better model by dominancy of principle direction.</p>
 <h4 id="principle-component-analysis-model-iii">Principle Component Analysis - Model -III</h4>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>num_bins <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>num_bins <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
 plt<span style="color: #555555">.</span>grid()
 plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&quot;Plot of feequency of principle component in eigen values&quot;</span>)
 plt<span style="color: #555555">.</span>hist(wstor_III,num_bins, normed<span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>, facecolor<span style="color: #555555">=</span><span style="color: #CC3300">&#39;green&#39;</span>, alpha <span style="color: #555555">=</span> <span style="color: #FF6600">0.5</span>)
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_39_0.png" /></p>
 <h4 id="principle-component-analysis-model-ii">Principle Component Analysis - Model - II</h4>
 <p>In model - II , distance matrix becomes diagonal matrix and hence eigen values are diagonal elements themselves. We can plot distribution of largest difference.</p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>wstor_II <span style="color: #555555">=</span> []
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>wstor_II <span style="color: #555555">=</span> []
 <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">10000</span>):
     x <span style="color: #555555">=</span> sample_generator(Max)
     A <span style="color: #555555">=</span> distance_matrix(x)
     w <span style="color: #555555">=</span> <span style="color: #336666">max</span>(A[<span style="color: #FF6600">0</span>][<span style="color: #FF6600">1</span>],A[<span style="color: #FF6600">1</span>][<span style="color: #FF6600">2</span>],A[<span style="color: #FF6600">2</span>][<span style="color: #FF6600">3</span>],A[<span style="color: #FF6600">3</span>][<span style="color: #FF6600">4</span>],A[<span style="color: #FF6600">4</span>][<span style="color: #FF6600">0</span>])
     wstor_II<span style="color: #555555">.</span>append(w)
     plt<span style="color: #555555">.</span>scatter(k,w)
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_42_0.png" /></p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>num_bins <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>num_bins <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
 plt<span style="color: #555555">.</span>grid()
 plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&quot;Plot of feequency of principle component in eigen values&quot;</span>)
 plt<span style="color: #555555">.</span>hist(wstor_II,num_bins, normed<span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>, facecolor<span style="color: #555555">=</span><span style="color: #CC3300">&#39;green&#39;</span>, alpha <span style="color: #555555">=</span> <span style="color: #FF6600">0.5</span>)
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_43_0.png" /></p>
@@ -764,27 +782,27 @@ plt<span style="color: #555555">.</span>show()
 <ul>
 <li>1 . Lets construct a bag of Nbag = 1000 samples.</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Nbag <span style="color: #555555">=</span> <span style="color: #FF6600">1000</span>
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>Nbag <span style="color: #555555">=</span> <span style="color: #FF6600">1000</span>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>SampleBag <span style="color: #555555">=</span> [sample_generator(Max) <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(Nbag)]
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>SampleBag <span style="color: #555555">=</span> [sample_generator(Max) <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(Nbag)]
+</code></pre></div>
 
 
 <ul>
 <li>2 . Vectorization of 100 samples : where first digit from each sample goes to first column vector  of Vec matrix etc.</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">vactorization</span>(SampleBag):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">vactorization</span>(SampleBag):
     Vec <span style="color: #555555">=</span> [[<span style="color: #FF6600">0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(Nbag)]<span style="color: #006699; font-weight: bold">for</span> l <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>)]
     <span style="color: #006699; font-weight: bold">for</span> l <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>): 
         <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(Nbag):
             Vec[l][k] <span style="color: #555555">=</span> SampleBag[k][l]
     <span style="color: #006699; font-weight: bold">return</span> np<span style="color: #555555">.</span>array(Vec)
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>SB <span style="color: #555555">=</span> vactorization(SampleBag)
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>SB <span style="color: #555555">=</span> vactorization(SampleBag)
 p <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">for</span> l <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>):
     <span style="color: #006699; font-weight: bold">for</span> r <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>):
@@ -792,14 +810,14 @@ p <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
         plt<span style="color: #555555">.</span>scatter(SB[l],SB[r])
         p <span style="color: #555555">=</span> p<span style="color: #555555">+</span><span style="color: #FF6600">1</span>
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_54_0.png" /></p>
 <ul>
 <li>3 . Normalization brings each column vector to have mean equal to zero which helps to visualize variance-covariance of samples.</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">normalization</span>(Vec):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">normalization</span>(Vec):
     mn <span style="color: #555555">=</span> [<span style="color: #FF6600">0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>)]
     vr <span style="color: #555555">=</span> [<span style="color: #FF6600">0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>)]
     rng <span style="color: #555555">=</span> [<span style="color: #FF6600">0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>)]
@@ -812,59 +830,59 @@ plt<span style="color: #555555">.</span>show()
             numVec[l][k] <span style="color: #555555">=</span> (SampleBag[k][l] <span style="color: #555555">-</span> mn[l])<span style="color: #555555">/</span>(math<span style="color: #555555">.</span>sqrt(vr[l]<span style="color: #555555">/</span><span style="color: #336666">float</span>(Nbag)))
             numVec <span style="color: #555555">=</span> np<span style="color: #555555">.</span>array(numVec)
     <span style="color: #006699; font-weight: bold">return</span> numVec
-</pre></div>
+</code></pre></div>
 
 
 <h5 id="1132a-variance-covariance-of-raw-samples">1.1.3.2.a. Variance-Covariance of Raw samples</h5>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Vec <span style="color: #555555">=</span> vactorization(SampleBag)
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>Vec <span style="color: #555555">=</span> vactorization(SampleBag)
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>VCM_raw  <span style="color: #555555">=</span> np<span style="color: #555555">.</span>cov(Vec)
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>VCM_raw  <span style="color: #555555">=</span> np<span style="color: #555555">.</span>cov(Vec)
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&quot;Variance-Covariance of raw sample&quot;</span>)
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&quot;Variance-Covariance of raw sample&quot;</span>)
 plt<span style="color: #555555">.</span>imshow(VCM_raw, interpolation<span style="color: #555555">=</span><span style="color: #CC3300">&#39;nearest&#39;</span>,\
      cmap<span style="color: #555555">=</span>plt<span style="color: #555555">.</span>cm<span style="color: #555555">.</span>hot, extent<span style="color: #555555">=</span>(<span style="color: #FF6600">0.5</span>,<span style="color: #FF6600">10.5</span>,<span style="color: #FF6600">0.5</span>,<span style="color: #FF6600">10.5</span>))
 plt<span style="color: #555555">.</span>colorbar()
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_60_0.png" /></p>
 <h5 id="1132b-variance-covariance-of-normalized-samples-crrelation-cofficients">1.1.3.2.b. Variance-Covariance of Normalized samples : Crrelation cofficients</h5>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Vec <span style="color: #555555">=</span> vactorization(SampleBag)
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>Vec <span style="color: #555555">=</span> vactorization(SampleBag)
 numVec <span style="color: #555555">=</span> normalization(Vec)
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>VCM_normalized <span style="color: #555555">=</span> np<span style="color: #555555">.</span>cov(numVec)
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>VCM_normalized <span style="color: #555555">=</span> np<span style="color: #555555">.</span>cov(numVec)
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&quot;Variance-Covariance of normalized sample&quot;</span>)
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&quot;Variance-Covariance of normalized sample&quot;</span>)
 plt<span style="color: #555555">.</span>imshow(VCM_normalized, interpolation<span style="color: #555555">=</span><span style="color: #CC3300">&#39;nearest&#39;</span>,\
          cmap<span style="color: #555555">=</span>plt<span style="color: #555555">.</span>cm<span style="color: #555555">.</span>hot, extent<span style="color: #555555">=</span>(<span style="color: #FF6600">0.5</span>,<span style="color: #FF6600">10.5</span>,<span style="color: #FF6600">0.5</span>,<span style="color: #FF6600">10.5</span>))
 plt<span style="color: #555555">.</span>colorbar()
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_64_0.png" /></p>
 <h3 id="1133-spring-constants">1.1.3.3. Spring Constants</h3>
 <p>Matrix of spring constants is a symmetric tensor which can be given by square root of normalized correlation cofficients.</p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>K <span style="color: #555555">=</span> np<span style="color: #555555">.</span>sqrt(VCM_normalized<span style="color: #555555">/</span><span style="color: #336666">max</span>(VCM_normalized[<span style="color: #FF6600">0</span>]))
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>K <span style="color: #555555">=</span> np<span style="color: #555555">.</span>sqrt(VCM_normalized<span style="color: #555555">/</span><span style="color: #336666">max</span>(VCM_normalized[<span style="color: #FF6600">0</span>]))
 K
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>array([[ 1.        ,  0.79287801,  0.66542652,  0.56166262,  0.45306335],
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>array([[ 1.        ,  0.79287801,  0.66542652,  0.56166262,  0.45306335],
        [ 0.79287801,  1.        ,  0.84281867,  0.69757696,  0.57453966],
        [ 0.66542652,  0.84281867,  1.        ,  0.83777405,  0.68199933],
        [ 0.56166262,  0.69757696,  0.83777405,  1.        ,  0.80502696],
        [ 0.45306335,  0.57453966,  0.68199933,  0.80502696,  1.        ]])
-</pre></div>
+</code></pre></div>
 
 
 <hr />
@@ -877,16 +895,16 @@ K
 <p>Total energy of the system of (N=100) coupled oscillator in integer space can be expressed as:</p>
 <p>$$H =  \sum_{i=1}^{N} D^{\dagger}KD $$</p>
 <p>Define some useful function for thermalization</p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">action</span>(D):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">action</span>(D):
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;D = distance matrix&#39;&#39;&#39;</span>
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;K = spring constant tensor&#39;&#39;&#39;</span>
     h <span style="color: #555555">=</span> np<span style="color: #555555">.</span>dot(D,np<span style="color: #555555">.</span>dot(K,D))
     htr <span style="color: #555555">=</span> np<span style="color: #555555">.</span>trace(h)
     <span style="color: #006699; font-weight: bold">return</span> htr    
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">hot_start</span>():
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">hot_start</span>():
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;N = total no of coupled oscillators in the system &#39;&#39;&#39;</span>
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;U = bag of N oscillators&#39;&#39;&#39;</span>
     U <span style="color: #555555">=</span> []
@@ -894,10 +912,10 @@ K
         x <span style="color: #555555">=</span> sample_generator(Max)
         U<span style="color: #555555">.</span>append(x)
     <span style="color: #006699; font-weight: bold">return</span> U
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">cold_start</span>():
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">cold_start</span>():
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;N = total no of coupled oscillators in the system &#39;&#39;&#39;</span>
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;U = bag of N oscillators&#39;&#39;&#39;</span>
     U <span style="color: #555555">=</span> []
@@ -905,10 +923,10 @@ K
         x <span style="color: #555555">=</span> [<span style="color: #FF6600">1</span>,<span style="color: #FF6600">1</span>,<span style="color: #FF6600">1</span>,<span style="color: #FF6600">1</span>,<span style="color: #FF6600">1</span>]
         U<span style="color: #555555">.</span>append(x)
     <span style="color: #006699; font-weight: bold">return</span> U
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">hamiltonian</span>(U):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">hamiltonian</span>(U):
     <span style="color: #CC3300; font-style: italic">&#39;&#39;&#39;H = total hamiltonian&#39;&#39;&#39;</span>
     H <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
     <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(N):
@@ -916,17 +934,17 @@ K
         h <span style="color: #555555">=</span> action(D)
         H  <span style="color: #555555">=</span> H<span style="color: #555555">+</span>h
     <span style="color: #006699; font-weight: bold">return</span> H
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">pick_random_particle</span>(printkey):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">pick_random_particle</span>(printkey):
     n <span style="color: #555555">=</span> random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>, N<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)
     <span style="color: #006699; font-weight: bold">if</span> printkey <span style="color: #555555">==</span> <span style="color: #FF6600">1</span>: <span style="color: #336666">print</span> <span style="color: #CC3300">&quot;oscillator picked  at&quot;</span>,n
     <span style="color: #006699; font-weight: bold">return</span> n
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">value_shifter</span>(u,dx):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">value_shifter</span>(u,dx):
     u <span style="color: #555555">=</span> u <span style="color: #555555">+</span> dx
     <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #336666">len</span>(u)):
         <span style="color: #006699; font-weight: bold">if</span> u[k] <span style="color: #555555">&lt;</span> <span style="color: #FF6600">0</span>:
@@ -935,19 +953,19 @@ K
             u[k] <span style="color: #555555">=</span> u[k]<span style="color: #555555">%</span>Max
     u <span style="color: #555555">=</span> np<span style="color: #555555">.</span>sort(u)        
     <span style="color: #006699; font-weight: bold">return</span> u
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>dv <span style="color: #555555">=</span> <span style="color: #FF6600">10</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>dv <span style="color: #555555">=</span> <span style="color: #FF6600">10</span>
 Kb <span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>
 T <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
 N <span style="color: #555555">=</span> <span style="color: #FF6600">20</span>
-</pre></div>
+</code></pre></div>
 
 
 <hr />
 <h3 id="121-thermalization">1.2.1 Thermalization</h3>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">thermalize</span>(U,T,nruns,printkey):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">thermalize</span>(U,T,nruns,printkey):
     irun <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
     h_stor <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span> <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(nrun)]
     U_stor <span style="color: #555555">=</span> []
@@ -1018,18 +1036,18 @@ N <span style="color: #555555">=</span> <span style="color: #FF6600">20</span>
     <span style="color: #006699; font-weight: bold">if</span> printkey <span style="color: #555555">==</span> <span style="color: #FF6600">1</span>:<span style="color: #336666">print</span>  <span style="color: #CC3300">&quot;================================&quot;</span>         
     <span style="color: #336666">print</span>  <span style="color: #CC3300">&quot;Success=&quot;</span> ,success,<span style="color: #CC3300">&quot;%&quot;</span>
     <span style="color: #006699; font-weight: bold">return</span> h_stor,U_stor
-</pre></div>
+</code></pre></div>
 
 
 <h5 id="test-mode">Test mode</h5>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>U <span style="color: #555555">=</span> hot_start()
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>U <span style="color: #555555">=</span> hot_start()
 <span style="color: #0099FF; font-style: italic">#U = cold_start()</span>
 nrun <span style="color: #555555">=</span> <span style="color: #FF6600">5</span>
 H_stor,U_stor <span style="color: #555555">=</span> thermalize(U,T,nrun,<span style="color: #FF6600">1</span>)
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>oscillator picked  at 4
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>oscillator picked  at 4
 ================= 0 ====================
 0 Energy increased! 14490.7437085
 frac = 1.16815288879e-63 b = 0.635801285104
@@ -1068,49 +1086,49 @@ Warning! config changed at 4 : [ 7 32 41 50 52]  replaced by [16 27 45 50 60]
 
 ===========================================
 Success= 60.0 %
-</pre></div>
+</code></pre></div>
 
 
 <h5 id="thermal-mode">Thermal mode</h5>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>U <span style="color: #555555">=</span> hot_start()
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>U <span style="color: #555555">=</span> hot_start()
 <span style="color: #0099FF; font-style: italic">#U = cold_start()</span>
 nrun <span style="color: #555555">=</span> <span style="color: #FF6600">10000</span>
 H_stor,U_stor <span style="color: #555555">=</span> thermalize(U,T,nrun,<span style="color: #FF6600">0</span>)
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Success= 39.32 %
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>Success= 39.32 %
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>X <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(H_stor),<span style="color: #FF6600">1</span>)
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>X <span style="color: #555555">=</span> np<span style="color: #555555">.</span>arange(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(H_stor),<span style="color: #FF6600">1</span>)
 plt<span style="color: #555555">.</span>figure(<span style="color: #FF6600">1</span>)
 plt<span style="color: #555555">.</span>grid()
 plt<span style="color: #555555">.</span>plot(X,H_stor,<span style="color: #CC3300">&quot;-&quot;</span>)
 plt<span style="color: #555555">.</span>show()           
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_90_0.png" /></p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>num_bins <span style="color: #555555">=</span><span style="color: #FF6600">50</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>num_bins <span style="color: #555555">=</span><span style="color: #FF6600">50</span>
 plt<span style="color: #555555">.</span>grid()
 plt<span style="color: #555555">.</span>hist(H_stor,num_bins, normed<span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>, facecolor<span style="color: #555555">=</span><span style="color: #CC3300">&#39;green&#39;</span>, alpha <span style="color: #555555">=</span> <span style="color: #FF6600">0.5</span>)
 plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&quot;histogram of Energy&quot;</span>)
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_91_0.png" /></p>
 <p>This provides sufficient evidence for system in thermal equilibrium.</p>
 <h3 id="measurement-of-average-absolute-difference">Measurement of average  absolute difference</h3>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">abs_diff</span>(x):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">abs_diff</span>(x):
     diff <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(x[<span style="color: #FF6600">0</span>]<span style="color: #555555">-</span>x[<span style="color: #FF6600">1</span>])<span style="color: #555555">+</span><span style="color: #336666">abs</span>(x[<span style="color: #FF6600">1</span>]<span style="color: #555555">-</span>x[<span style="color: #FF6600">2</span>])<span style="color: #555555">+</span><span style="color: #336666">abs</span>(x[<span style="color: #FF6600">2</span>]\
                 <span style="color: #555555">-</span>x[<span style="color: #FF6600">3</span>])<span style="color: #555555">+</span><span style="color: #336666">abs</span>(x[<span style="color: #FF6600">3</span>]<span style="color: #555555">-</span>x[<span style="color: #FF6600">4</span>])<span style="color: #555555">+</span><span style="color: #336666">abs</span>(x[<span style="color: #FF6600">4</span>]<span style="color: #555555">-</span>x[<span style="color: #FF6600">0</span>])
     <span style="color: #006699; font-weight: bold">return</span> diff
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>ln <span style="color: #555555">=</span> <span style="color: #336666">len</span>(U_stor)
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>ln <span style="color: #555555">=</span> <span style="color: #336666">len</span>(U_stor)
 total_abs_diff <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
 Diff <span style="color: #555555">=</span> []
 <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(ln):
@@ -1121,35 +1139,35 @@ Diff <span style="color: #555555">=</span> []
         Diff<span style="color: #555555">.</span>append(diff)
         total_abs_diff <span style="color: #555555">=</span> total_abs_diff <span style="color: #555555">+</span> diff
 average_abs_diff    <span style="color: #555555">=</span> total_abs_diff<span style="color: #555555">/</span><span style="color: #336666">float</span>(ln<span style="color: #555555">*</span>N) 
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>average_abs_diff 
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>average_abs_diff 
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>65.200000000000003
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>65.200000000000003
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>num_bins <span style="color: #555555">=</span><span style="color: #FF6600">50</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>num_bins <span style="color: #555555">=</span><span style="color: #FF6600">50</span>
 plt<span style="color: #555555">.</span>grid()
 plt<span style="color: #555555">.</span>hist(Diff,num_bins, normed<span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>, facecolor<span style="color: #555555">=</span><span style="color: #CC3300">&#39;green&#39;</span>, alpha <span style="color: #555555">=</span> <span style="color: #FF6600">0.5</span>)
 plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&quot;histogram of absolute difference&quot;</span>)
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_97_0.png" /></p>
 <h3 id="measurement-of-root-mean-square-absolute-difference">Measurement of root mean square absolute difference</h3>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">rms_diff</span>(x):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">rms_diff</span>(x):
     diff <span style="color: #555555">=</span> math<span style="color: #555555">.</span>sqrt(<span style="color: #336666">abs</span>(x[<span style="color: #FF6600">0</span>]<span style="color: #555555">-</span>x[<span style="color: #FF6600">1</span>])<span style="color: #555555">**</span><span style="color: #FF6600">2</span><span style="color: #555555">+</span><span style="color: #336666">abs</span>(x[<span style="color: #FF6600">1</span>]<span style="color: #555555">-</span>x[<span style="color: #FF6600">2</span>])<span style="color: #555555">**</span><span style="color: #FF6600">2</span>\
             <span style="color: #555555">+</span><span style="color: #336666">abs</span>(x[<span style="color: #FF6600">2</span>]<span style="color: #555555">-</span>x[<span style="color: #FF6600">3</span>])<span style="color: #555555">**</span><span style="color: #FF6600">2</span><span style="color: #555555">+</span><span style="color: #336666">abs</span>(x[<span style="color: #FF6600">3</span>]<span style="color: #555555">-</span>x[<span style="color: #FF6600">4</span>])<span style="color: #555555">**</span><span style="color: #FF6600">2</span><span style="color: #555555">+</span><span style="color: #336666">abs</span>(x[<span style="color: #FF6600">4</span>]<span style="color: #555555">-</span>x[<span style="color: #FF6600">0</span>])<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)
     <span style="color: #006699; font-weight: bold">return</span> diff
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>ln <span style="color: #555555">=</span> <span style="color: #336666">len</span>(U_stor)
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>ln <span style="color: #555555">=</span> <span style="color: #336666">len</span>(U_stor)
 total_rms_diff <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
 rms_Diff <span style="color: #555555">=</span> []
 <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(ln):
@@ -1160,24 +1178,24 @@ rms_Diff <span style="color: #555555">=</span> []
         rms_Diff<span style="color: #555555">.</span>append(diff)
         total_rms_diff <span style="color: #555555">=</span> total_abs_diff <span style="color: #555555">+</span> diff
 rms_diff    <span style="color: #555555">=</span> total_rms_diff<span style="color: #555555">/</span><span style="color: #336666">float</span>(ln<span style="color: #555555">*</span>N) 
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>rms_diff  
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>rms_diff  
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>65.200247173536098
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>65.200247173536098
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>num_bins <span style="color: #555555">=</span><span style="color: #FF6600">50</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>num_bins <span style="color: #555555">=</span><span style="color: #FF6600">50</span>
 plt<span style="color: #555555">.</span>grid()
 plt<span style="color: #555555">.</span>hist(rms_Diff,num_bins, normed<span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>, \
             facecolor<span style="color: #555555">=</span><span style="color: #CC3300">&#39;green&#39;</span>, alpha <span style="color: #555555">=</span> <span style="color: #FF6600">0.5</span>)
 plt<span style="color: #555555">.</span>title(<span style="color: #CC3300">&quot;histogram of rms difference&quot;</span>)
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_102_0.png" /></p>
@@ -1185,7 +1203,7 @@ plt<span style="color: #555555">.</span>show()
 <h2 id="13-interpretation">1.3. Interpretation</h2>
 <h3 id="131-most-probable-samples-using-model-iii-constrained-by-rms-absolute-difference">1.3.1. Most Probable Samples using Model -III : constrained by rms absolute difference</h3>
 <h4 id="1312-generation-of-many-samples-and-their-actions">1.3.1.2. Generation of many  samples and their actions</h4>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">simulation_III</span>(N_sample,Max):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">simulation_III</span>(N_sample,Max):
     Lstor <span style="color: #555555">=</span> []
     Xstor <span style="color: #555555">=</span> []
     k<span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
@@ -1197,30 +1215,30 @@ plt<span style="color: #555555">.</span>show()
         Lstor<span style="color: #555555">.</span>append(atn)
         k <span style="color: #555555">=</span> k<span style="color: #555555">+</span><span style="color: #FF6600">1</span>
     <span style="color: #006699; font-weight: bold">return</span> Xstor,Lstor     
-</pre></div>
+</code></pre></div>
 
 
 <h4 id="1313-histogram-plot-of-frequencies">1.3.1.3. Histogram Plot of frequencies</h4>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>N_sample <span style="color: #555555">=</span> <span style="color: #FF6600">100000</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>N_sample <span style="color: #555555">=</span> <span style="color: #FF6600">100000</span>
 Xstor,Lstor <span style="color: #555555">=</span> simulation_III(N_sample,Max)
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>num_bins <span style="color: #555555">=</span> <span style="color: #FF6600">50</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>num_bins <span style="color: #555555">=</span> <span style="color: #FF6600">50</span>
 plt<span style="color: #555555">.</span>grid()
 plt<span style="color: #555555">.</span>hist(Lstor,num_bins, normed<span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>, \
                 facecolor<span style="color: #555555">=</span><span style="color: #CC3300">&#39;green&#39;</span>, alpha <span style="color: #555555">=</span> <span style="color: #FF6600">0.5</span>)
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_110_0.png" /></p>
 <h3 id="1314-generate-some-sample">1.3.1.4.  Generate some sample</h3>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>sample_required <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>sample_required <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>count <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>count <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">while</span> count <span style="color: #555555">&lt;</span> sample_required:
     x <span style="color: #555555">=</span> sample_generator(Max)
     rmsdiff <span style="color: #555555">=</span> math<span style="color: #555555">.</span>sqrt(<span style="color: #336666">abs</span>(x[<span style="color: #FF6600">0</span>]<span style="color: #555555">-</span>x[<span style="color: #FF6600">1</span>])<span style="color: #555555">**</span><span style="color: #FF6600">2</span><span style="color: #555555">+</span><span style="color: #336666">abs</span>(x[<span style="color: #FF6600">1</span>]<span style="color: #555555">-</span>\
@@ -1232,10 +1250,10 @@ plt<span style="color: #555555">.</span>show()
         <span style="color: #006699; font-weight: bold">if</span> rmsdiff <span style="color: #555555">&lt;</span> <span style="color: #FF6600">70</span> <span style="color: #000000; font-weight: bold">and</span> rmsdiff <span style="color: #555555">&gt;</span> <span style="color: #FF6600">50</span>: 
             count <span style="color: #555555">=</span> count<span style="color: #555555">+</span><span style="color: #FF6600">1</span>
             <span style="color: #336666">print</span> <span style="color: #CC3300">&quot;rms test passed!&quot;</span>,x,act
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>rms test passed! [22 31 34 36 63] 23213.3113095
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>rms test passed! [22 31 34 36 63] 23213.3113095
 rms test passed! [ 7 13 35 39 50] 33691.0412054
 rms test passed! [18 46 51 61 62] 31851.0262931
 rms test passed! [ 1  5 24 25 48] 35954.8593645
@@ -1255,20 +1273,20 @@ rms test passed! [ 6 21 24 41 55] 37746.4051962
 rms test passed! [ 8 17 19 20 57] 33609.5413481
 rms test passed! [18 37 53 60 63] 35902.0551094
 rms test passed! [12 25 30 53 57] 37347.9295182
-</pre></div>
+</code></pre></div>
 
 
 <p>Take these samples and buy lottery! Enjoy!</p>
 <h3 id="132-most-probable-samples-using-model-i-without-any-constraint-from-thermalization">1.3.2. Most Probable Samples using Model -I : without any constraint from thermalization</h3>
 <h4 id="1321-calculation-of-action-in-each-sample">1.3.2.1. Calculation of action in each sample</h4>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">action_I</span>(x):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">action_I</span>(x):
     act <span style="color: #555555">=</span>  <span style="color: #FF6600">0.5</span><span style="color: #555555">*</span>((x[<span style="color: #FF6600">0</span>] <span style="color: #555555">-</span>x[<span style="color: #FF6600">1</span>])<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> (x[<span style="color: #FF6600">1</span>] <span style="color: #555555">-</span>x[<span style="color: #FF6600">2</span>])<span style="color: #555555">**</span><span style="color: #FF6600">2</span> <span style="color: #555555">+</span> (x[<span style="color: #FF6600">2</span>] <span style="color: #555555">-</span>x[<span style="color: #FF6600">3</span>])<span style="color: #555555">**</span><span style="color: #FF6600">2</span>  <span style="color: #555555">+</span>(x[<span style="color: #FF6600">3</span>] <span style="color: #555555">-</span>x[<span style="color: #FF6600">4</span>])<span style="color: #555555">**</span><span style="color: #FF6600">2</span>)
     <span style="color: #006699; font-weight: bold">return</span> act
-</pre></div>
+</code></pre></div>
 
 
 <h4 id="1322-generation-of-many-n_samples-samples-and-their-actions">1.3.2.2. Generation of many (N_samples) samples and their actions</h4>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">simulation_I</span>(N_sample,Max):
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">simulation_I</span>(N_sample,Max):
     Lstor <span style="color: #555555">=</span> []
     Xstor <span style="color: #555555">=</span> []
     k <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
@@ -1279,38 +1297,38 @@ rms test passed! [12 25 30 53 57] 37347.9295182
         Lstor<span style="color: #555555">.</span>append(atn)
         k <span style="color: #555555">=</span> k<span style="color: #555555">+</span><span style="color: #FF6600">1</span>
     <span style="color: #006699; font-weight: bold">return</span> Xstor,Lstor    
-</pre></div>
+</code></pre></div>
 
 
 <h4 id="1323-histogram-plot-of-frequencies">1.3.2.3. Histogram Plot of frequencies</h4>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>N_sample <span style="color: #555555">=</span> <span style="color: #FF6600">10000</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>N_sample <span style="color: #555555">=</span> <span style="color: #FF6600">10000</span>
 Xstor,Lstor <span style="color: #555555">=</span> simulation_I(N_sample,Max)
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>plt<span style="color: #555555">.</span>grid()
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>plt<span style="color: #555555">.</span>grid()
 plt<span style="color: #555555">.</span>hist(Lstor,num_bins, normed<span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>, facecolor<span style="color: #555555">=</span><span style="color: #CC3300">&#39;green&#39;</span>, alpha <span style="color: #555555">=</span> <span style="color: #FF6600">0.5</span>)
 plt<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_122_0.png" /></p>
 <h3 id="1324-generate-some-sample">1.3.2.4.  Generate some sample</h3>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>sample_required <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>sample_required <span style="color: #555555">=</span> <span style="color: #FF6600">100</span>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>k <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>k <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">while</span> k <span style="color: #555555">&lt;</span> sample_required:
     x <span style="color: #555555">=</span> sample_generator(Max)
     act <span style="color: #555555">=</span> action_I(x)
     <span style="color: #006699; font-weight: bold">if</span> act <span style="color: #555555">&gt;</span> <span style="color: #FF6600">250</span> <span style="color: #000000; font-weight: bold">and</span> act <span style="color: #555555">&lt;</span> <span style="color: #FF6600">350</span>:
         <span style="color: #336666">print</span> x,act
         k <span style="color: #555555">=</span> k<span style="color: #555555">+</span><span style="color: #FF6600">1</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[14 27 29 43 56] 269.0
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[14 27 29 43 56] 269.0
 [11 21 42 48 54] 306.5
 [ 3  6  9 13 35] 259.0
 [ 6 20 33 37 51] 288.5
@@ -1332,58 +1350,57 @@ plt<span style="color: #555555">.</span>show()
 [ 5 13 31 33 45] 268.0
 [ 5  9 20 22 42] 270.5
 [ 2 19 32 37 46] 282.0
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Take these samples <span style="color: #000000; font-weight: bold">and</span> buy lottery<span style="color: #AA0000; background-color: #FFAAAA">!</span> Enjoy<span style="color: #AA0000; background-color: #FFAAAA">!</span>
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>Take these samples <span style="color: #000000; font-weight: bold">and</span> buy lottery<span style="color: #AA0000; background-color: #FFAAAA">!</span> Enjoy<span style="color: #AA0000; background-color: #FFAAAA">!</span>
+</code></pre></div>
+                
               
-            </div>
+              
+                
+
+
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../IdealGas/IdealGas/" class="btn btn-neutral float-right" title="Ideal Gas">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../../GettingStarted/intro/" class="btn btn-neutral" title="Algorithms"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
       
     </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
   </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
-        <span><a href="../../GettingStarted/intro/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
-      
-        <span style="margin-left: 15px"><a href="../../IdealGas/IdealGas/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '../../..';</script>
-    <script src="../../../js/theme.js" defer></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
-      <script src="../../../search/main.js" defer></script>
-
-</body>
+    
+  </body>
 </html>

@@ -1,326 +1,370 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Quantum Monte Carlo - Computational Physics</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Quantum Monte Carlo";
-    var mkdocs_page_input_path = "Montecarlo/Levy/levy.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> Computational Physics</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+    
+    
+      
+        <title>Quantum Monte Carlo - Tutorials in Statistical Physics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#levy-quantum-path" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Tutorials in Statistical Physics" class="md-header-nav__button md-logo" aria-label="Tutorials in Statistical Physics">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Tutorials in Statistical Physics
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Quantum Monte Carlo
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Tutorials in Statistical Physics" class="md-nav__button md-logo" aria-label="Tutorials in Statistical Physics">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="tocbase current">
+    </a>
+    Tutorials in Statistical Physics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
-    
+      
+      
       
 
 
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../..">Home</a>
-  </li>
-    
-      
-
-
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../../WhyComputationalPhysics/">Why Computational Physics</a>
-  </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Scipy</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/intro/Numerical-Methods/">Introduction</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/Harmonics/Harmonics/">Spherical Harmonics</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/Bessel/Bessel/">Oscillating Membrane</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/Laplace/laplace/">Laplace Equation</a>
-  </li>
-        
-      </ul>
-    </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Monte Carlo Simulation</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../GettingStarted/intro/">Introduction</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../GettingStarted/intro/">Algorithms</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Lotto/lotto/">Lottary Model</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../IdealGas/IdealGas/">Ideal Gas</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Oscillator/Oscillator/">Harmonic Oscillator</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../IzingModel/Izing2D/">Ising Model</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Percolation/percol/">Percolation</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../HardDisk/hd/">Hard Disk</a>
-  </li>
-        
-          
-
-
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        Quantum Monte Carlo
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-  <li class="toctree-l2 current with-children">
-    <a href="#levy-quantum-path">
-      Levy Quantum Path
-      <span class="toctree-expand"></span>
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
     </a>
   </li>
 
-
-
+    
+      
+      
       
 
-  <li class="toctree-l2">
-    <a href="#tutorial">
-      TUTORIAL
-      <span class="toctree-expand"></span>
+
+  <li class="md-nav__item">
+    <a href="../../../WhyComputationalPhysics/" class="md-nav__link">
+      Why Computational Physics
     </a>
   </li>
 
-
-
-
-  
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../BEC/bec/">Bose-Einstein Condensation</a>
-  </li>
-        
-      </ul>
-    </li>
     
       
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Optimization</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../optimization/intro/Optimization/">Optimization</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../optimization/SimulatedAnealing/simulatedAnn/">Simulated Annealing</a>
-  </li>
-        
-      </ul>
-    </li>
-    
       
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Path Integral</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../PathIntegral/Intro/Intro/">Path Integral</a>
-  </li>
-        
-      </ul>
-    </li>
-    
       
 
 
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../../References/">References</a>
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/intro/" class="md-nav__link">
+      Introduction
+    </a>
   </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/intro/" class="md-nav__link">
+      Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../IdealGas/IdealGas/" class="md-nav__link">
+      Ideal Gas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Oscillator/Oscillator/" class="md-nav__link">
+      Harmonic Oscillator
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../IzingModel/Izing2D/" class="md-nav__link">
+      Ising Model
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Percolation/percol/" class="md-nav__link">
+      Percolation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../HardDisk/hd/" class="md-nav__link">
+      Hard Disk
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Quantum Monte Carlo
+    </a>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../BEC/bec/" class="md-nav__link">
+      Bose-Einstein Condensation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../optimization/SimulatedAnealing/simulatedAnn/" class="md-nav__link">
+      Simulated Annealing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../PathIntegral/Intro/Intro/" class="md-nav__link">
+      Path Integral
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../References/" class="md-nav__link">
+      References
+    </a>
+  </li>
+
     
   </ul>
-      </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">Computational Physics</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../..">Docs</a> &raquo;</li>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
     
-      
-        
-          <li>Monte Carlo Simulation &raquo;</li>
-        
-      
-    
-    <li>Quantum Monte Carlo</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
+                
+                
                 <h1 id="levy-quantum-path">Levy Quantum Path</h1>
 <hr />
 <ul>
 <li>Continuous Random Walk</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #555555">%</span>matplotlib inline
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #555555">%</span>matplotlib inline
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 beta <span style="color: #555555">=</span> <span style="color: #FF6600">4.0</span>
 N <span style="color: #555555">=</span> <span style="color: #FF6600">8</span>
@@ -329,17 +373,17 @@ x <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span>
 <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(N <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>):
     x<span style="color: #555555">.</span>append(random<span style="color: #555555">.</span>gauss(x[<span style="color: #555555">-</span><span style="color: #FF6600">1</span>], sigma))
 <span style="color: #336666">print</span> x
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[0.0, 1.01509231498381, 0.8954574749069657, 0.4475173962954569, -0.6617069586993383, -0.38473534012694194, -0.6521628289908354, -1.550921896951777]
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[0.0, 1.01509231498381, 0.8954574749069657, 0.4475173962954569, -0.6617069586993383, -0.38473534012694194, -0.6521628289908354, -1.550921896951777]
+</code></pre></div>
 
 
 <ul>
 <li>Trivial Free Path</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 beta <span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>
 N <span style="color: #555555">=</span> <span style="color: #FF6600">8</span>
@@ -351,17 +395,17 @@ Upsilon <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0<
 x <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span>] <span style="color: #555555">+</span> [Upsilon[k] <span style="color: #555555">+</span> (xend <span style="color: #555555">-</span> Upsilon[<span style="color: #555555">-</span><span style="color: #FF6600">1</span>]) <span style="color: #555555">*</span> \
              k <span style="color: #555555">/</span> <span style="color: #336666">float</span>(N) <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">1</span>, N <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>)]
 <span style="color: #336666">print</span> x
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[0.0, 0.16650886545595994, 0.6100876683233167, 1.2878936165304946, 1.522730604023694, 1.8655448259378942, 1.8779816089586798, 1.4174193447820458, 1.0]
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[0.0, 0.16650886545595994, 0.6100876683233167, 1.2878936165304946, 1.522730604023694, 1.8655448259378942, 1.8779816089586798, 1.4174193447820458, 1.0]
+</code></pre></div>
 
 
 <ul>
 <li>Levy Free Path</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 beta <span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>
 N <span style="color: #555555">=</span> <span style="color: #FF6600">4</span>
@@ -378,10 +422,10 @@ xstart, xend <span style="color: #555555">=</span> <span style="color: #FF6600">
         x<span style="color: #555555">.</span>append(random<span style="color: #555555">.</span>gauss(x_mean, sigma))
     x<span style="color: #555555">.</span>append(xend)
     <span style="color: #336666">print</span> x
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[0.0, 0.5707795321525617, 0.5866019527578654, 0.8089609595648815, 1.0]
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[0.0, 0.5707795321525617, 0.5866019527578654, 0.8089609595648815, 1.0]
 [0.0, -0.3396754967087857, 0.7235057663520837, 1.1315669585984993, 1.0]
 [0.0, 0.018063918143963353, 0.16434572728171748, 0.592993315765318, 1.0]
 [0.0, 0.2246140968885552, 0.966182738296046, 0.746201579459617, 1.0]
@@ -391,13 +435,13 @@ xstart, xend <span style="color: #555555">=</span> <span style="color: #FF6600">
 [0.0, 0.1404369341832184, 0.4541880825433704, 0.8673479702904441, 1.0]
 [0.0, 0.7425438080805121, 0.8693731794283786, 1.3336622912118516, 1.0]
 [0.0, 0.12440416711297678, 0.2510353241093216, 1.1245847853705508, 1.0]
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Naive Harmonic Path </li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">rho_free</span>(x, y, beta):    <span style="color: #0099FF; font-style: italic"># free off-diagonal density matrix</span>
     <span style="color: #006699; font-weight: bold">return</span> math<span style="color: #555555">.</span>exp(<span style="color: #555555">-</span>(x <span style="color: #555555">-</span> y) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span> <span style="color: #555555">/</span> (<span style="color: #FF6600">2.0</span> <span style="color: #555555">*</span> beta))
@@ -421,10 +465,10 @@ x <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span>
     <span style="color: #006699; font-weight: bold">if</span> random<span style="color: #555555">.</span>random() <span style="color: #555555">&lt;</span> new_weight <span style="color: #555555">/</span> old_weight:
         x[k] <span style="color: #555555">=</span> x_new
     <span style="color: #336666">print</span> x
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[0.0, 0.28998171631723735, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[0.0, 0.28998171631723735, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 [0.0, 0.28998171631723735, -0.4471023666935825, 0.0, 0.0, 0.0, 0.0, 0.0]
 [0.0, 0.28998171631723735, -0.4471023666935825, 0.0, -0.6140259897130926, 0.0, 0.0, 0.0]
 [0.0, 0.28998171631723735, -0.4471023666935825, 0.0, -0.6140259897130926, 0.186270538173831, 0.0, 0.0]
@@ -444,13 +488,13 @@ x <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span>
 [0.0, 0.28998171631723735, -0.21280606021069515, 0.0, -0.6758460008351141, -0.5351955742208034, 0.0, 0.7585771385895701]
 [0.4700080333224783, 0.28998171631723735, -0.21280606021069515, 0.0, -0.6758460008351141, -0.5351955742208034, 0.0, 0.7585771385895701]
 [0.4700080333224783, 0.28998171631723735, -0.21280606021069515, 0.0, -0.6758460008351141, -0.5351955742208034, 0.0, 0.7585771385895701]
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Naive Path Slice</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">rho_free</span>(x, y, beta):
     <span style="color: #006699; font-weight: bold">return</span> math<span style="color: #555555">.</span>exp(<span style="color: #555555">-</span>(x <span style="color: #555555">-</span> y) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span> <span style="color: #555555">/</span> (<span style="color: #FF6600">2.0</span> <span style="color: #555555">*</span> beta))
@@ -471,10 +515,10 @@ xk <span style="color: #555555">=</span> <span style="color: #FF6600">0.0</span>
     <span style="color: #006699; font-weight: bold">if</span> random<span style="color: #555555">.</span>random() <span style="color: #555555">&lt;</span> new_weight <span style="color: #555555">/</span> old_weight:
         xk <span style="color: #555555">=</span> xk_new
     <span style="color: #336666">print</span> xk
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>0.095401252446
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>0.095401252446
 0.095401252446
 0.512795106019
 0.512795106019
@@ -484,13 +528,13 @@ xk <span style="color: #555555">=</span> <span style="color: #FF6600">0.0</span>
 0.512795106019
 0.901968228505
 0.901968228505
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Naive Path Slice Movie</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">rho_free</span>(x, y, beta):
     <span style="color: #006699; font-weight: bold">return</span> math<span style="color: #555555">.</span>exp(<span style="color: #555555">-</span>(x <span style="color: #555555">-</span> y) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span> <span style="color: #555555">/</span> (<span style="color: #FF6600">2.0</span> <span style="color: #555555">*</span> beta))
@@ -526,14 +570,14 @@ pylab<span style="color: #555555">.</span>xlabel(<span style="color: #CC3300">&#
 pylab<span style="color: #555555">.</span>ylabel(<span style="color: #CC3300">&#39;$\pi(x_k)$&#39;</span>, fontsize<span style="color: #555555">=</span><span style="color: #FF6600">18</span>)
 <span style="color: #0099FF; font-style: italic">#pylab.savefig(&#39;plot-path_slice.png&#39;)</span>
 pylab<span style="color: #555555">.</span>show()
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_14_0.png" /></p>
 <ul>
 <li>Levy Harmonic Path</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 beta <span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>
 N <span style="color: #555555">=</span> <span style="color: #FF6600">4</span>
@@ -550,17 +594,17 @@ x <span style="color: #555555">=</span> [xstart]
              <span style="color: #FF6600">1.0</span> <span style="color: #555555">/</span> math<span style="color: #555555">.</span>sqrt(Ups1)))
 x<span style="color: #555555">.</span>append(xend)
 <span style="color: #336666">print</span> x
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[0.0, -0.3585400331470993, -0.46657041443239394, 0.01352956236855482, 1.0]
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[0.0, -0.3585400331470993, -0.46657041443239394, 0.01352956236855482, 1.0]
+</code></pre></div>
 
 
 <ul>
 <li>Levy Harmonic Path 3D</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">levy_harmonic_1d</span>(start, end, dtau):
     x <span style="color: #555555">=</span> [start]
@@ -585,10 +629,10 @@ y <span style="color: #555555">=</span> levy_harmonic_1d(ystart, yend, dtau)
 z <span style="color: #555555">=</span> levy_harmonic_1d(zstart, zend, dtau)
 <span style="color: #006699; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(N <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>):
     <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;slice </span><span style="color: #AA0000">%2i</span><span style="color: #CC3300">:  &#39;</span> <span style="color: #555555">%</span> i, x[i], y[i], z[i]
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>slice  0:   1.0 -2.0 1.5
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>slice  0:   1.0 -2.0 1.5
 slice  1:   0.777748893943 -2.10539607648 1.73826482099
 slice  2:   0.763931019379 -2.14387236587 1.54684977036
 slice  3:   0.500747263585 -2.08049210773 1.58757506994
@@ -609,13 +653,13 @@ slice 17:   -1.75822763813 -0.389265378081 0.0467617492471
 slice 18:   -2.35917386101 -0.396104505937 0.367460418148
 slice 19:   -2.39839736996 -0.0739252507074 -0.239433962495
 slice 20:   -2.5 0.0 -0.5
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Levy Harmonic Path Movie</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
 
 beta <span style="color: #555555">=</span> <span style="color: #FF6600">2.0</span>
 N <span style="color: #555555">=</span> <span style="color: #FF6600">10</span>
@@ -641,7 +685,7 @@ xstart, xend <span style="color: #555555">=</span> <span style="color: #FF6600">
     pylab<span style="color: #555555">.</span>xlim(<span style="color: #555555">-</span><span style="color: #FF6600">2.0</span>, <span style="color: #FF6600">4.0</span>)
     pylab<span style="color: #555555">.</span>show()
     <span style="color: #0099FF; font-style: italic">#pylab.close()</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_20_0.png" /></p>
@@ -654,7 +698,7 @@ xstart, xend <span style="color: #555555">=</span> <span style="color: #FF6600">
 <ul>
 <li>Naive Single Particle</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Emax <span style="color: #555555">=</span> <span style="color: #FF6600">5</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>Emax <span style="color: #555555">=</span> <span style="color: #FF6600">5</span>
 States <span style="color: #555555">=</span> []
 <span style="color: #006699; font-weight: bold">for</span> E_x <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(Emax):
     <span style="color: #006699; font-weight: bold">for</span> E_y <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(Emax):
@@ -663,21 +707,21 @@ States <span style="color: #555555">=</span> []
 States<span style="color: #555555">.</span>sort()
 <span style="color: #006699; font-weight: bold">for</span> k <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(<span style="color: #FF6600">5</span>):
     <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;</span><span style="color: #AA0000">%3d</span><span style="color: #CC3300">&#39;</span> <span style="color: #555555">%</span> k, States[k][<span style="color: #FF6600">0</span>], States[k][<span style="color: #FF6600">1</span>]
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>  0 0 (0, 0, 0)
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>  0 0 (0, 0, 0)
   1 1 (0, 0, 1)
   2 1 (0, 1, 0)
   3 1 (1, 0, 0)
   4 2 (0, 0, 2)
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Naive Boson Trap</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span>
 
 Energy <span style="color: #555555">=</span> [<span style="color: #FF6600">0.0</span>] <span style="color: #555555">+</span> [<span style="color: #FF6600">1.0</span>] <span style="color: #555555">*</span> <span style="color: #FF6600">3</span> <span style="color: #555555">+</span> [<span style="color: #FF6600">2.0</span>] <span style="color: #555555">*</span> <span style="color: #FF6600">6</span> <span style="color: #555555">+</span> [<span style="color: #FF6600">3.0</span>] <span style="color: #555555">*</span> <span style="color: #FF6600">10</span> <span style="color: #555555">+</span> [<span style="color: #FF6600">4.0</span>] <span style="color: #555555">*</span> <span style="color: #FF6600">15</span>
 beta <span style="color: #555555">=</span> <span style="color: #FF6600">1.0</span>
@@ -698,58 +742,92 @@ E_mean <span style="color: #555555">=</span> <span style="color: #FF6600">0.0</s
                     N0_mean <span style="color: #555555">+=</span> state<span style="color: #555555">.</span>count(<span style="color: #FF6600">0</span>) <span style="color: #555555">*</span>\
                                math<span style="color: #555555">.</span>exp(<span style="color: #555555">-</span>beta <span style="color: #555555">*</span> E)
 <span style="color: #336666">print</span> n_states, Z, E_mean <span style="color: #555555">/</span> Z <span style="color: #555555">/</span> <span style="color: #FF6600">5.0</span>, N0_mean <span style="color: #555555">/</span> Z <span style="color: #555555">/</span> <span style="color: #FF6600">5.0</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>575757 17.3732972183 1.03133265311 0.446969501933
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>575757 17.3732972183 1.03133265311 0.446969501933
+</code></pre></div>
+                
               
-            </div>
+              
+                
+
+
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../BEC/bec/" class="btn btn-neutral float-right" title="Bose-Einstein Condensation">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../../HardDisk/hd/" class="btn btn-neutral" title="Hard Disk"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../HardDisk/hd/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Hard Disk
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../BEC/bec/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Bose-Einstein Condensation
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
   </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
-        <span><a href="../../HardDisk/hd/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
-      
-        <span style="margin-left: 15px"><a href="../../BEC/bec/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '../../..';</script>
-    <script src="../../../js/theme.js" defer></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
-      <script src="../../../search/main.js" defer></script>
-
-</body>
+    
+  </body>
 </html>

@@ -1,328 +1,425 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Hard Disk - Computational Physics</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Hard Disk";
-    var mkdocs_page_input_path = "Montecarlo/HardDisk/hd.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> Computational Physics</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+    
+    
+      
+        <title>Hard Disk - Tutorials in Statistical Physics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#from-classical-to-statistical-mechanics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Tutorials in Statistical Physics" class="md-header-nav__button md-logo" aria-label="Tutorials in Statistical Physics">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Tutorials in Statistical Physics
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Hard Disk
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Tutorials in Statistical Physics" class="md-nav__button md-logo" aria-label="Tutorials in Statistical Physics">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="tocbase current">
+    </a>
+    Tutorials in Statistical Physics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
-    
+      
+      
       
 
 
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../..">Home</a>
-  </li>
-    
-      
-
-
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../../WhyComputationalPhysics/">Why Computational Physics</a>
-  </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Scipy</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/intro/Numerical-Methods/">Introduction</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/Harmonics/Harmonics/">Spherical Harmonics</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/Bessel/Bessel/">Oscillating Membrane</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../Scipy/Laplace/laplace/">Laplace Equation</a>
-  </li>
-        
-      </ul>
-    </li>
-    
-      
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Monte Carlo Simulation</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../GettingStarted/intro/">Introduction</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../GettingStarted/intro/">Algorithms</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Lotto/lotto/">Lottary Model</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../IdealGas/IdealGas/">Ideal Gas</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Oscillator/Oscillator/">Harmonic Oscillator</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../IzingModel/Izing2D/">Ising Model</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Percolation/percol/">Percolation</a>
-  </li>
-        
-          
-
-
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        Hard Disk
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-  <li class="toctree-l2 current with-children">
-    <a href="#from-classical-to-statistical-mechanics">
-      From Classical to Statistical Mechanics
-      <span class="toctree-expand"></span>
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
     </a>
   </li>
 
-
-
-  <li class="toctree-l2 current">
-    <ul class="subnav-l2 current">
     
       
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#molecular-dynamics-of-hard-disk">Molecular Dynamics of Hard Disk</a>
-        </li>
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../WhyComputationalPhysics/" class="md-nav__link">
+      Why Computational Physics
+    </a>
+  </li>
+
     
       
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#tutorial">TUTORIAL</a>
-        </li>
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GettingStarted/intro/" class="md-nav__link">
+      Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../IdealGas/IdealGas/" class="md-nav__link">
+      Ideal Gas
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Oscillator/Oscillator/" class="md-nav__link">
+      Harmonic Oscillator
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../IzingModel/Izing2D/" class="md-nav__link">
+      Ising Model
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Percolation/percol/" class="md-nav__link">
+      Percolation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Hard Disk
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Hard Disk
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#molecular-dynamics-of-hard-disk" class="md-nav__link">
+    Molecular Dynamics of Hard Disk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial" class="md-nav__link">
+    TUTORIAL
+  </a>
+  
+</li>
+      
     </ul>
-  </li>
-
-
   
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../Levy/levy/">Quantum Monte Carlo</a>
+</nav>
+    
   </li>
-        
-          
 
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../BEC/bec/">Bose-Einstein Condensation</a>
-  </li>
-        
-      </ul>
-    </li>
     
       
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Optimization</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../optimization/intro/Optimization/">Optimization</a>
-  </li>
-        
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../optimization/SimulatedAnealing/simulatedAnn/">Simulated Annealing</a>
-  </li>
-        
-      </ul>
-    </li>
-    
       
-  <li class="navtree toctree-l1 label">
-    <p class="caption">Path Integral</p>
-  </li>
-
-
-  
-
-  
-    <li class="navtree toctree-l1 group">
-      <ul class="navtree subnav-l1 current">
-          
-
-
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../../PathIntegral/Intro/Intro/">Path Integral</a>
-  </li>
-        
-      </ul>
-    </li>
-    
       
 
 
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../../../References/">References</a>
+  <li class="md-nav__item">
+    <a href="../../Levy/levy/" class="md-nav__link">
+      Quantum Monte Carlo
+    </a>
   </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../BEC/bec/" class="md-nav__link">
+      Bose-Einstein Condensation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../optimization/SimulatedAnealing/simulatedAnn/" class="md-nav__link">
+      Simulated Annealing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../PathIntegral/Intro/Intro/" class="md-nav__link">
+      Path Integral
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../References/" class="md-nav__link">
+      References
+    </a>
+  </li>
+
     
   </ul>
-      </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">Computational Physics</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../..">Docs</a> &raquo;</li>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
     
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
       
-        
-          <li>Monte Carlo Simulation &raquo;</li>
-        
+        <li class="md-nav__item">
+  <a href="#molecular-dynamics-of-hard-disk" class="md-nav__link">
+    Molecular Dynamics of Hard Disk
+  </a>
+  
+</li>
       
-    
-    <li>Hard Disk</li>
-    <li class="wy-breadcrumbs-aside">
+        <li class="md-nav__item">
+  <a href="#tutorial" class="md-nav__link">
+    TUTORIAL
+  </a>
+  
+</li>
       
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
+                
+                
                 <h1 id="from-classical-to-statistical-mechanics">From Classical to Statistical Mechanics</h1>
 <hr />
 <h3 id="molecular-dynamics-of-hard-disk">Molecular Dynamics of Hard Disk</h3>
 <ul>
 <li>Direct Disc Box</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span>
 
 N <span style="color: #555555">=</span> <span style="color: #FF6600">4</span>
 sigma <span style="color: #555555">=</span> <span style="color: #FF6600">0.2</span>
@@ -339,17 +436,17 @@ condition <span style="color: #555555">=</span> <span style="color: #006699; fon
             L<span style="color: #555555">.</span>append(a)
             condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">True</span>
 <span style="color: #336666">print</span> L
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[(0.7040822912665547, 0.2838326710047917), (0.39342373803132735, 0.7421281133983488), (0.22142950612928214, 0.3458410218455974), (0.7925829007636611, 0.7013410752456171)]
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[(0.7040822912665547, 0.2838326710047917), (0.39342373803132735, 0.7421281133983488), (0.22142950612928214, 0.3458410218455974), (0.7925829007636611, 0.7013410752456171)]
+</code></pre></div>
 
 
 <ul>
 <li>Direct Disk Box Multirun</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span>
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">direct_disks_box</span>(N, sigma):
     condition <span style="color: #555555">=</span> <span style="color: #006699; font-weight: bold">False</span>
@@ -371,10 +468,10 @@ sigma <span style="color: #555555">=</span> <span style="color: #FF6600">0.2</sp
 n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">10</span>
 <span style="color: #006699; font-weight: bold">for</span> run <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n_runs):
     <span style="color: #336666">print</span> run, direct_disks_box(N, sigma)
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>0 [(0.751356313701969, 0.7908289343521684), (0.24313895825655835, 0.7973141414323697), (0.7507021517199071, 0.2714537639453098), (0.3426034108818664, 0.25674882938107063)]
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>0 [(0.751356313701969, 0.7908289343521684), (0.24313895825655835, 0.7973141414323697), (0.7507021517199071, 0.2714537639453098), (0.3426034108818664, 0.25674882938107063)]
 1 [(0.7001130563019435, 0.712536202933747), (0.7789122711097405, 0.21613491258078213), (0.26983653980009353, 0.2199783600278326), (0.25072808927037593, 0.6851623784867935)]
 2 [(0.27105063881736857, 0.6886358310439302), (0.7644440210934729, 0.284338623092072), (0.7010507662892869, 0.6836895516220605), (0.26760130925261805, 0.2011960174940446)]
 3 [(0.7117322082996034, 0.7923158146795577), (0.20576363915920695, 0.33938157321671625), (0.6867409813215277, 0.3649824434229453), (0.2923911189377729, 0.7825731272388934)]
@@ -384,17 +481,17 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">10</sp
 7 [(0.389813730050234, 0.7708075320063368), (0.6868787305435617, 0.2611610652253845), (0.2654758128109487, 0.24841543305461442), (0.7983355323897738, 0.7423829503625712)]
 8 [(0.339797971819223, 0.7785840995102176), (0.22143753469214858, 0.23470027601609306), (0.7785801571980291, 0.774135930262885), (0.7506325168837178, 0.2827089622089741)]
 9 [(0.24318601622049738, 0.3458768932480638), (0.2964140949544102, 0.7758479941402523), (0.6929994951070302, 0.2861686259992965), (0.7290840925214166, 0.7150475327560442)]
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Direct Disk Box Movie</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #555555">%</span>matplotlib inline
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #555555">%</span>matplotlib inline
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">os</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">os</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
 
 output_dir <span style="color: #555555">=</span> <span style="color: #CC3300">&#39;direct_disks_box_movie&#39;</span>
 
@@ -437,7 +534,7 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">4</spa
 <span style="color: #006699; font-weight: bold">for</span> run <span style="color: #000000; font-weight: bold">in</span> <span style="color: #336666">range</span>(n_runs):
     pos <span style="color: #555555">=</span> direct_disks_box(N, sigma)
     snapshot(pos, colors)
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_9_0.png" /></p>
@@ -447,7 +544,7 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">4</spa
 <ul>
 <li>Marcov Disk Box </li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 L <span style="color: #555555">=</span> [[<span style="color: #FF6600">0.25</span>, <span style="color: #FF6600">0.25</span>], [<span style="color: #FF6600">0.75</span>, <span style="color: #FF6600">0.25</span>], [<span style="color: #FF6600">0.25</span>, <span style="color: #FF6600">0.75</span>], [<span style="color: #FF6600">0.75</span>, <span style="color: #FF6600">0.75</span>]]
 sigma <span style="color: #555555">=</span> <span style="color: #FF6600">0.15</span>
@@ -462,17 +559,17 @@ n_steps <span style="color: #555555">=</span> <span style="color: #FF6600">1000<
     <span style="color: #006699; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">not</span> (box_cond <span style="color: #000000; font-weight: bold">or</span> min_dist <span style="color: #555555">&lt;</span> <span style="color: #FF6600">4.0</span> <span style="color: #555555">*</span> sigma <span style="color: #555555">**</span> <span style="color: #FF6600">2</span>):
         a[:] <span style="color: #555555">=</span> b
 <span style="color: #336666">print</span> L
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[[0.45422994214163115, 0.3713914635605748], [0.7844238520523379, 0.4224856102112645], [0.15518208223429647, 0.5396419610447033], [0.7314291546873124, 0.842673491596291]]
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[[0.45422994214163115, 0.3713914635605748], [0.7844238520523379, 0.4224856102112645], [0.15518208223429647, 0.5396419610447033], [0.7314291546873124, 0.842673491596291]]
+</code></pre></div>
 
 
 <ul>
 <li>Marcove Disk Box Movie</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">os</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">os</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
 
 output_dir <span style="color: #555555">=</span> <span style="color: #CC3300">&#39;markov_disks_box_movie&#39;</span>
 
@@ -506,7 +603,7 @@ n_steps <span style="color: #555555">=</span> <span style="color: #FF6600">5</sp
     box_cond <span style="color: #555555">=</span> <span style="color: #336666">min</span>(b[<span style="color: #FF6600">0</span>], b[<span style="color: #FF6600">1</span>]) <span style="color: #555555">&lt;</span> sigma <span style="color: #000000; font-weight: bold">or</span> <span style="color: #336666">max</span>(b[<span style="color: #FF6600">0</span>], b[<span style="color: #FF6600">1</span>]) <span style="color: #555555">&gt;</span> <span style="color: #FF6600">1.0</span> <span style="color: #555555">-</span> sigma
     <span style="color: #006699; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">not</span> (box_cond <span style="color: #000000; font-weight: bold">or</span> min_dist <span style="color: #555555">&lt;</span> <span style="color: #FF6600">4.0</span> <span style="color: #555555">*</span> sigma <span style="color: #555555">**</span> <span style="color: #FF6600">2</span>):
         a[:] <span style="color: #555555">=</span> b
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_13_0.png" /></p>
@@ -517,7 +614,7 @@ n_steps <span style="color: #555555">=</span> <span style="color: #FF6600">5</sp
 <ul>
 <li>Event Disk Box </li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">math</span>
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">wall_time</span>(pos_a, vel_a, sigma):
     <span style="color: #006699; font-weight: bold">if</span> vel_a <span style="color: #555555">&gt;</span> <span style="color: #FF6600">0.0</span>:
@@ -571,10 +668,10 @@ n_events <span style="color: #555555">=</span> <span style="color: #FF6600">10</
     <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;time&#39;</span>, t
     <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;pos&#39;</span>, pos
     <span style="color: #336666">print</span> <span style="color: #CC3300">&#39;vel&#39;</span>, vel
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>event 0
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>event 0
 time 0.128205128205
 pos [[0.27692307692307694, 0.2653846153846154], [0.841025641025641, 0.27307692307692305], [0.2205128205128205, 0.6487179487179487], [0.85, 0.7650897435897436]]
 vel [[0.21, 0.12], [0.71, 0.18], [-0.23, -0.79], [-0.78, 0.1177]]
@@ -614,13 +711,13 @@ event 9
 time 0.764669954349
 pos [[0.4263871561770383, 0.19250632422888558], [0.6051980095104381, 0.4983213323755524], [0.1821305037122126, 0.5931091029589469], [0.4409518643273318, 0.7493655591414552]]
 vel [[0.2896767021129778, -0.21233369509579214], [0.596499748925584, -0.5938596011324015], [-0.6607492297641436, 0.023497791053664008], [-0.7834991763021756, 0.07590305507683315]]
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Event Disk Box Movie</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">os</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">os</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span>
 
 output_dir <span style="color: #555555">=</span> <span style="color: #CC3300">&quot;event_disks_box_movie&quot;</span>
 colors <span style="color: #555555">=</span> [<span style="color: #CC3300">&#39;r&#39;</span>, <span style="color: #CC3300">&#39;b&#39;</span>, <span style="color: #CC3300">&#39;g&#39;</span>, <span style="color: #CC3300">&#39;orange&#39;</span>]
@@ -719,10 +816,10 @@ snapshot(t, pos, vel, colors)
 <span style="color: #336666">print</span>(<span style="color: #CC3300">&#39;Producing animation.gif using ImageMagick...&#39;</span>)
 os<span style="color: #555555">.</span>system(<span style="color: #CC3300">&quot;convert -delay 1 -dispose Background +page &quot;</span> <span style="color: #555555">+</span> <span style="color: #336666">str</span>(output_dir)
           <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;/*.png -loop 0 &quot;</span> <span style="color: #555555">+</span> <span style="color: #336666">str</span>(output_dir) <span style="color: #555555">+</span> <span style="color: #CC3300">&quot;/animation.gif&quot;</span>)
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>time 0.02
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>time 0.02
 time 0.04
 time 0.06
 time 0.08
@@ -734,7 +831,7 @@ Producing animation.gif using ImageMagick...
 
 
 32512
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_17_2.png" /></p>
@@ -743,7 +840,7 @@ Producing animation.gif using ImageMagick...
 <ul>
 <li>Direct Discrete </li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 configurations <span style="color: #555555">=</span> {(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">3</span>): <span style="color: #CC3300">&#39;a&#39;</span>, (<span style="color: #FF6600">0</span>, <span style="color: #FF6600">4</span>): <span style="color: #CC3300">&#39;b&#39;</span>, (<span style="color: #FF6600">1</span>, <span style="color: #FF6600">4</span>): <span style="color: #CC3300">&#39;c&#39;</span>,
                   (<span style="color: #FF6600">3</span>, <span style="color: #FF6600">0</span>): <span style="color: #CC3300">&#39;d&#39;</span>, (<span style="color: #FF6600">4</span>, <span style="color: #FF6600">0</span>): <span style="color: #CC3300">&#39;e&#39;</span>, (<span style="color: #FF6600">4</span>, <span style="color: #FF6600">1</span>): <span style="color: #CC3300">&#39;f&#39;</span>}
@@ -758,22 +855,22 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">10000<
     counts[conf] <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">for</span> conf <span style="color: #000000; font-weight: bold">in</span> counts:
     <span style="color: #336666">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>a 0.1606
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>a 0.1606
 c 0.1744
 b 0.1651
 e 0.1688
 d 0.1666
 f 0.1645
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Direct Disk Any</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 configurations <span style="color: #555555">=</span> {(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">3</span>): <span style="color: #CC3300">&#39;a&#39;</span>, (<span style="color: #FF6600">0</span>, <span style="color: #FF6600">4</span>): <span style="color: #CC3300">&#39;b&#39;</span>, (<span style="color: #FF6600">1</span>, <span style="color: #FF6600">4</span>): <span style="color: #CC3300">&#39;c&#39;</span>, 
                   (<span style="color: #FF6600">3</span>, <span style="color: #FF6600">0</span>): <span style="color: #CC3300">&#39;d&#39;</span>, (<span style="color: #FF6600">4</span>, <span style="color: #FF6600">0</span>): <span style="color: #CC3300">&#39;e&#39;</span>, (<span style="color: #FF6600">4</span>, <span style="color: #FF6600">1</span>): <span style="color: #CC3300">&#39;f&#39;</span>}
@@ -789,22 +886,22 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">10000<
     counts[conf] <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">for</span> conf <span style="color: #000000; font-weight: bold">in</span> counts: 
     <span style="color: #336666">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)    
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>a 0.125
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>a 0.125
 c 0.2535
 b 0.1282
 e 0.1236
 d 0.2448
 f 0.1249
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Direct Disk Slow</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 N <span style="color: #555555">=</span> <span style="color: #FF6600">4</span>
 sigma <span style="color: #555555">=</span> <span style="color: #FF6600">0.2</span>
@@ -814,17 +911,17 @@ pairs <span style="color: #555555">=</span> [(i, j) <span style="color: #006699;
     <span style="color: #006699; font-weight: bold">if</span>  <span style="color: #336666">min</span>((L[i][<span style="color: #FF6600">0</span>] <span style="color: #555555">-</span> L[j][<span style="color: #FF6600">0</span>]) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span> <span style="color: #555555">+</span> (L[i][<span style="color: #FF6600">1</span>] <span style="color: #555555">-</span> L[j][<span style="color: #FF6600">1</span>]) <span style="color: #555555">**</span> <span style="color: #FF6600">2</span> <span style="color: #006699; font-weight: bold">for</span> i, j <span style="color: #000000; font-weight: bold">in</span> pairs) <span style="color: #555555">&gt;</span> <span style="color: #FF6600">4.0</span> <span style="color: #555555">*</span> sigma <span style="color: #555555">**</span> <span style="color: #FF6600">2</span>: 
         <span style="color: #006699; font-weight: bold">break</span>
 <span style="color: #336666">print</span> L
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>[(0.21551840405127012, 0.6946062982572399), (0.7165001545926342, 0.7818232246535084), (0.23604717555981464, 0.20175467827936644), (0.7369665863408736, 0.22746836079162713)]
-</pre></div>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>[(0.21551840405127012, 0.6946062982572399), (0.7165001545926342, 0.7818232246535084), (0.23604717555981464, 0.20175467827936644), (0.7369665863408736, 0.22746836079162713)]
+</code></pre></div>
 
 
 <ul>
 <li>Direct Disk Multy Run</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span>
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">dist</span>(x,y):
     d_x <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(x[<span style="color: #FF6600">0</span>] <span style="color: #555555">-</span> y[<span style="color: #FF6600">0</span>]) <span style="color: #555555">%</span> <span style="color: #FF6600">1.0</span>
@@ -861,10 +958,10 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">3</spa
     <span style="color: #336666">print</span> iterations <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>, <span style="color: #CC3300">&#39;tabula rasa wipe-outs before producing the following configuration&#39;</span>
     <span style="color: #336666">print</span> config
     <span style="color: #336666">print</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>Note that this program might take a while!
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>Note that this program might take a while!
 run 0
 31605 tabula rasa wipe-outs before producing the following configuration
 [(0.194889385979373, 0.39881902164303773), (0.2422007285687603, 0.7366374459128198), (0.35318282136090084, 0.5379884266619391), (0.5010455241583772, 0.4351768931362382), (0.6651055976532885, 0.4638578576617244), (0.9930426536472047, 0.4807095480519158), (0.17504742382982807, 0.10058142284791849), (0.055224973814334, 0.8728958780045791), (0.8132249354226135, 0.976570654646086), (0.6479652398072496, 0.05414388830919192), (0.01589908172878507, 0.2662968574596569), (0.6838513187488974, 0.19681773278090198), (0.9368744315347303, 0.685040874598465), (0.6148616792388668, 0.8576188696976752), (0.38396787071111793, 0.9725957113091733), (0.7881129382924161, 0.6785640836009906)]
@@ -876,13 +973,13 @@ run 1
 run 2
 52422 tabula rasa wipe-outs before producing the following configuration
 [(0.5873980387542752, 0.03679282835548914), (0.11907075962976255, 0.44081971114056717), (0.9080215465908837, 0.671213015105709), (0.09022299677404289, 0.9507269787134838), (0.3001832219134687, 0.9687529174595204), (0.024158935597102804, 0.8117170627395138), (0.8457396014770665, 0.45224114982654495), (0.28763080699756904, 0.523078745591618), (0.8915709907417944, 0.1654529589377659), (0.205399596915937, 0.14035571179162276), (0.9776855981260978, 0.37045935309310907), (0.22316762060964956, 0.3302967536169472), (0.3872637064501423, 0.7600916230737015), (0.7138292384724666, 0.11545586820923892), (0.46404649182910096, 0.8999851793352671), (0.15322468771280318, 0.7070784377536645)]
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Direct Disk Multirun Movie</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">os</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">math</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">os</span>
 
 <span style="color: #006699; font-weight: bold">def</span> <span style="color: #CC00FF">dist</span>(x,y):
     d_x <span style="color: #555555">=</span> <span style="color: #336666">abs</span>(x[<span style="color: #FF6600">0</span>] <span style="color: #555555">-</span> y[<span style="color: #FF6600">0</span>]) <span style="color: #555555">%</span> <span style="color: #FF6600">1.0</span>
@@ -943,41 +1040,41 @@ colors <span style="color: #555555">=</span> [<span style="color: #CC3300">&#39;
     <span style="color: #336666">print</span>
     config_per <span style="color: #555555">=</span> periodicize(config)
     snapshot(config_per, colors, border_color <span style="color: #555555">=</span> <span style="color: #CC3300">&#39;k&#39;</span>)
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>run 0
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>run 0
 131155 tabula rasa wipe-outs before producing the following configuration
 [(0.37751482770484623, 0.09826945819054489), (0.9042803838379859, 0.9899090068252806), (0.6599172275086992, 0.13514484949079997), (0.3069710953434255, 0.9492470432337818), (0.812561619375132, 0.40987724481013443), (0.08056164082415274, 0.9742623716403652), (0.17768767689521647, 0.36507790353189173), (0.7472387120689303, 0.6515254273168409), (0.4823057447690441, 0.966105763619611), (0.8439633788642334, 0.22358147605283396), (0.2773016015309173, 0.5814435581054298), (0.9889618140696187, 0.1438503101976658), (0.14326378711556154, 0.7477166886625792), (0.9583168761426655, 0.7453819253487872), (0.6958450554989644, 0.833667878473739), (0.03867224868418362, 0.45119012797766134)]
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_29_1.png" /></p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>run 1
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>run 1
 151638 tabula rasa wipe-outs before producing the following configuration
 [(0.06663014301020642, 0.031012554991157848), (0.964969664612716, 0.3118932568228565), (0.5264170452307265, 0.21975704506305127), (0.6756537746594122, 0.4041417433687611), (0.29476393772557075, 0.48140722828952787), (0.04654217216799017, 0.7996306905990145), (0.3608861327100239, 0.977618260879936), (0.6681113244137261, 0.6090611715960019), (0.12110126452367742, 0.22017356776253005), (0.8799686683355867, 0.6697177890430397), (0.5562558075938777, 0.010767930248896995), (0.47925142273497534, 0.6082991245007762), (0.8951272729365909, 0.868123465117719), (0.7441835171796956, 0.20179368489656824), (0.29000010977447666, 0.2067871038708291), (0.10233368264294007, 0.54745216577934)]
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_29_3.png" /></p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>run 2
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>run 2
 40762 tabula rasa wipe-outs before producing the following configuration
 [(0.3260865108779446, 0.3148486233563623), (0.17803174008736766, 0.871851631193864), (0.8642532654525102, 0.08718797467709805), (0.4535702388344728, 0.1972919882412194), (0.07246890805097073, 0.5355473801360247), (0.3167501018585722, 0.7681798596800488), (0.671929948288115, 0.08427537345070424), (0.8644955101334825, 0.41613572562559775), (0.9021147383601401, 0.23196647448286645), (0.1780243297944175, 0.07236748708775964), (0.9632055830413773, 0.920103872618813), (0.90024339362327, 0.6917231317784356), (0.6185771240906243, 0.5665103724765188), (0.6793688570302557, 0.7331932103505989), (0.5239912054538993, 0.9604405020823239), (0.07573035699193864, 0.21241500055444595)]
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_29_5.png" /></p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>run 3
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>run 3
 1734 tabula rasa wipe-outs before producing the following configuration
 [(0.2969684910325956, 0.7370119193950877), (0.9483844593486023, 0.6061018303643925), (0.1845637095681364, 0.11755918194051718), (0.9224199053841572, 0.869609425930199), (0.8519294493087842, 0.10902428512765583), (0.5101493777903654, 0.2872301781881832), (0.9875828733480082, 0.04180666162781088), (0.6831331006373645, 0.8465660961464345), (0.6993010504747139, 0.6378153765843604), (0.5672049317965627, 0.5350506678949322), (0.36850545523016154, 0.4642146828212168), (0.39988375455206737, 0.862433823125543), (0.7437881541243506, 0.3123760520673676), (0.6030356510965643, 0.10933875059004539), (0.9864351374492086, 0.2778717125787915), (0.16589795291507614, 0.5442153195383387)]
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_29_7.png" /></p>
 <ul>
 <li>Random Sequential Discrete</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
 
 configurations <span style="color: #555555">=</span> {(<span style="color: #FF6600">0</span>, <span style="color: #FF6600">3</span>): <span style="color: #CC3300">&#39;a&#39;</span>, (<span style="color: #FF6600">0</span>, <span style="color: #FF6600">4</span>): <span style="color: #CC3300">&#39;b&#39;</span>, (<span style="color: #FF6600">1</span>, <span style="color: #FF6600">4</span>): <span style="color: #CC3300">&#39;c&#39;</span>, 
                   (<span style="color: #FF6600">3</span>, <span style="color: #FF6600">0</span>): <span style="color: #CC3300">&#39;d&#39;</span>, (<span style="color: #FF6600">4</span>, <span style="color: #FF6600">0</span>): <span style="color: #CC3300">&#39;e&#39;</span>, (<span style="color: #FF6600">4</span>, <span style="color: #FF6600">1</span>): <span style="color: #CC3300">&#39;f&#39;</span>}
@@ -993,22 +1090,22 @@ n_runs <span style="color: #555555">=</span> <span style="color: #FF6600">10000<
     counts[conf] <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">for</span> conf <span style="color: #000000; font-weight: bold">in</span> counts: 
     <span style="color: #336666">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)    
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>a 0.1281
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>a 0.1281
 c 0.2548
 b 0.122
 e 0.1238
 d 0.2474
 f 0.1239
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Random Sequential Discrete Movie</li>
 </ul>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">os</span>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">pylab</span><span style="color: #555555">,</span> <span style="color: #00CCFF; font-weight: bold">os</span>
 
 output_dir <span style="color: #555555">=</span> <span style="color: #CC3300">&#39;random_sequential_discrete_movie&#39;</span>
 <span style="color: #006699; font-weight: bold">if</span> <span style="color: #000000; font-weight: bold">not</span> os<span style="color: #555555">.</span>path<span style="color: #555555">.</span>exists(output_dir): os<span style="color: #555555">.</span>makedirs(output_dir)
@@ -1051,7 +1148,7 @@ trial <span style="color: #555555">=</span> <span style="color: #FF6600">0</span
     counts[conf] <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
 <span style="color: #006699; font-weight: bold">for</span> conf <span style="color: #000000; font-weight: bold">in</span> counts:
     <span style="color: #336666">print</span> conf, counts[conf] <span style="color: #555555">/</span> <span style="color: #336666">float</span>(n_runs)
-</pre></div>
+</code></pre></div>
 
 
 <p><img alt="png" src="../output_33_0.png" /></p>
@@ -1065,60 +1162,94 @@ trial <span style="color: #555555">=</span> <span style="color: #FF6600">0</span
 <p><img alt="png" src="../output_33_8.png" /></p>
 <p><img alt="png" src="../output_33_9.png" /></p>
 <p><img alt="png" src="../output_33_10.png" /></p>
-<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>a 0.4
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span><code>a 0.4
 c 0.2
 b 0.0
 e 0.2
 d 0.2
 f 0.0
-</pre></div>
+</code></pre></div>
+                
               
-            </div>
+              
+                
+
+
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../Levy/levy/" class="btn btn-neutral float-right" title="Quantum Monte Carlo">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../../Percolation/percol/" class="btn btn-neutral" title="Percolation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../Percolation/percol/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Percolation
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../Levy/levy/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Quantum Monte Carlo
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
   </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
-        <span><a href="../../Percolation/percol/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
-      
-        <span style="margin-left: 15px"><a href="../../Levy/levy/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '../../..';</script>
-    <script src="../../../js/theme.js" defer></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
-      <script src="../../../search/main.js" defer></script>
-
-</body>
+    
+  </body>
 </html>
