@@ -1,5 +1,4 @@
-site_name: Computational Physics
-
+site_name: Tutorials in Statistical Physics
 
 
 extra_javascript: 
@@ -7,13 +6,13 @@ extra_javascript:
 
 markdown_extensions:
     - mdx_math
-
+    
 
 
 theme:
-  name: 'rtd-dropdown'
+  name: 'material'
   highlightjs: true
-  hljs_languages: []
+  hljs_languages: [python]
   include_homepage_in_sidebar: true
   prev_next_buttons_location: bottom
   navigation_depth: 4
@@ -21,9 +20,9 @@ theme:
   sticky_navigation: true
   collapse_navigation: true
  
- 
+
   
-      
+  
 markdown_extensions:
   - codehilite:
       linenums: false
@@ -31,38 +30,23 @@ markdown_extensions:
       use_pygments: true
       noclasses: true
       pygments_style: manni
+      
 
 
 nav:
 - Home: index.md
 - Why Computational Physics: WhyComputationalPhysics.md
-
-  
-- Scipy:
-  - Introduction : Scipy/intro/Numerical-Methods.md
-  - Spherical Harmonics : Scipy/Harmonics/Harmonics.md
-  - Oscillating Membrane : Scipy/Bessel/Bessel.md
-  - Laplace Equation: Scipy/Laplace/laplace.md
-  
-- Monte Carlo Simulation:
-  - Introduction : Montecarlo/GettingStarted/intro.md
-  - Algorithms : Montecarlo/GettingStarted/intro.md
-  - Lottary Model: Montecarlo/Lotto/lotto.md
-  - Ideal Gas: Montecarlo/IdealGas/IdealGas.md
-  - Harmonic Oscillator: Montecarlo/Oscillator/Oscillator.md
-  - Ising Model: Montecarlo/IzingModel/Izing2D.md
-  - Percolation : Montecarlo/Percolation/percol.md
-  - Hard Disk : Montecarlo/HardDisk/hd.md
-  - Quantum Monte Carlo: Montecarlo/Levy/levy.md
-  - Bose-Einstein Condensation: Montecarlo/BEC/bec.md
-  
-- Optimization:
-  - Optimization: optimization/intro/Optimization.md
-  - Simulated Annealing: optimization/SimulatedAnealing/simulatedAnn.md
-
-- Path Integral:
-  - Path Integral: PathIntegral/Intro/Intro.md
-        
+- Introduction : Montecarlo/GettingStarted/intro.md
+- Algorithms : Montecarlo/GettingStarted/intro.md
+- Ideal Gas: Montecarlo/IdealGas/IdealGas.md
+- Harmonic Oscillator: Montecarlo/Oscillator/Oscillator.md
+- Ising Model: Montecarlo/IzingModel/Izing2D.md
+- Percolation : Montecarlo/Percolation/percol.md
+- Hard Disk : Montecarlo/HardDisk/hd.md
+- Quantum Monte Carlo: Montecarlo/Levy/levy.md
+- Bose-Einstein Condensation: Montecarlo/BEC/bec.md
+- Simulated Annealing: optimization/SimulatedAnealing/simulatedAnn.md
+- Path Integral: PathIntegral/Intro/Intro.md
 - References: References.md
   
    
